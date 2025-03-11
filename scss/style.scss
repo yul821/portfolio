@@ -1,0 +1,31 @@
+$color-main: #fff;
+$color-sub: #000;
+
+
+$font-main: "Copperplate Gothic Bold"; //폰트 적용안됨
+$font-sub: "Copperplate Gothic Light";
+
+
+$font-size-150: 150px;
+$font-size-80: 80px;
+$font-size-50: 50px;
+$font-size-40: 40px;
+$font-size-30: 30px;
+$font-size-25: 25px;
+$font-size-20: 20px;
+$font-size-18: 18px;
+
+$mobile-title-sub: calc(18px + 0.5vw);
+$mobile-title-main: calc(25px + 0.5vw);
+$mobile-content-sub: calc(35px + 0.5vw);
+
+$desktop-title-sub: calc(50px + 0.2vw);
+$desktop-title-main: calc(80px + 0.2vw);
+$desktop-content-sub: calc(40px + 0.5vw);
+
+$width-wide: 100%;
+$width-half: 50%;
+
+$break-small: 360px;
+$break-medium: 768px;
+$break-large: 1440px;

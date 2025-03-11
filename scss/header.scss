@@ -1,0 +1,36 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+
+.container {
+    width: $width-wide;
+    max-width: $break-large;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include responsive(large-screens) {
+        padding: 0 10px;
+    }
+}
+
+//*****************header*****************
+header {
+    background-color: blanchedalmond;
+
+    .portfolio-menu {
+        .logo {
+            a {
+                img { 
+                    width: 100px;
+                }
+            }
+        }
+        .main-menu-mypage {
+            #menu-box {
+                .gnb {
+                    display: flex;
+                }
+            }
+        }
+    } //portfolio-menu
+}

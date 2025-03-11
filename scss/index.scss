@@ -1,0 +1,17 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+
+
+body {
+    background: url(../images/background_blue_mobile.png) no-repeat;
+    background-size: cover;
+
+    @include responsive(large-screens) {
+        background: url(../images/background_blue_pc.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+

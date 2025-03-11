@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: calc(50px + 0.2vw);
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+body {
+  background: url(../images/background_blue_mobile.png) no-repeat;
+  background-size: cover;
+}
+@media (min-width: 1440px) {
+  body {
+    background: url(../images/background_blue_pc.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}/*# sourceMappingURL=index.css.map */

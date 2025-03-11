@@ -66,6 +66,7 @@ main .symbol img:first-child {
 @media (min-width: 1440px) {
   main .symbol img:first-child {
     width: 612px;
+    margin-top: 120px;
     margin-bottom: 95px;
   }
 }

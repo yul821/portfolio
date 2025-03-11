@@ -10,10 +10,12 @@ ol {
 }
 
 a {
+  color: #fff;
   text-decoration: none;
 }
 
 img {
+  display: block;
   width: 100%;
 }
 
@@ -43,11 +45,55 @@ p {
 }
 
 header {
-  background-color: blanchedalmond;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  font-family: "Copperplate Gothic";
+  z-index: 500;
 }
-header .portfolio-menu .logo a img {
-  width: 100px;
+@media (min-width: 1440px) {
+  header {
+    height: 100px;
+  }
 }
-header .portfolio-menu .main-menu-mypage #menu-box .gnb {
+header .portfolio-menu {
+  background-color: #000;
+}
+header .portfolio-menu .menu-flex-box {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .portfolio-menu .menu-flex-box .logo li a {
+  color: #fff;
+}
+header .portfolio-menu .menu-flex-box .logo li a img {
+  width: 50px;
+  height: 50px;
+}
+@media (min-width: 1440px) {
+  header .portfolio-menu .menu-flex-box .logo li a img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (min-width: 1440px) {
+  header .portfolio-menu .menu-flex-box #mobile-btn-open #btn-open img {
+    display: none;
+  }
+}
+header .portfolio-menu .menu-flex-box #menu-box {
+  display: none;
+}
+@media (min-width: 1440px) {
+  header .portfolio-menu .menu-flex-box #menu-box {
+    display: block;
+  }
+}
+header .portfolio-menu .menu-flex-box #menu-box .gnb {
+  display: flex;
+}
+header .portfolio-menu .menu-flex-box #menu-box .gnb li .submenu {
+  display: none;
 }/*# sourceMappingURL=header.css.map */

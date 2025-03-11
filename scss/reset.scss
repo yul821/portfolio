@@ -10,9 +10,11 @@ ol {
     list-style: none;
 }
 a {
+    color: $color-main;
     text-decoration: none;
 }
 img {
+    display: block;
     width: $width-wide;
 }
 h1 {

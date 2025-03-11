@@ -4,14 +4,79 @@
 
 
 body {
-    background: url(../images/background_blue_mobile.png) no-repeat;
+    background: url(../images/background_orange_mobile.png) no-repeat;
     background-size: cover;
+    background-position: center;
 
     @include responsive(large-screens) {
         background: url(../images/background_blue_pc.png) no-repeat;
         background-size: cover;
-        background-position: center;
     }
 }
 
 
+main {
+    .symbol {
+        display: flex; // flexbox 사용
+        flex-direction: column; // 세로 방향으로 정렬
+        align-items: center; // 수평 중앙 정렬
+        justify-content: center; // 수직 중앙 정렬
+        height: 50vh; 
+    
+        @include responsive(large-screens) {
+            height: 120vh;
+        }
+        
+        img {
+            &:first-child {
+                width: 200px;
+                margin: 0 auto; 
+    
+                @include responsive(large-screens) {
+                    width: 612px;
+                    margin-bottom: 95px;
+                }
+            }
+            &:last-child {
+                display: none;
+    
+                @include responsive(large-screens) {
+                    display: block;
+                }
+            }
+        }
+    } /**********************symbol**********************/
+
+    .aboutme {
+        .container {
+            h1 {
+                font-family: $font-main;
+                font-size: $mobile-title-main;
+                text-align: center;
+                color: $color-main;
+                margin-bottom: 24px;
+
+                @include responsive(large-screens) {
+                    font-size: $desktop-title-main;
+                    margin-bottom: 127px;
+                }
+            }
+            .flex-box {
+                color: $color-main;
+                font-family: $font-sub2;
+                text-align: center;
+                img {
+                    width: 117px;
+                }
+                h3 {
+                    font-size: $mobile-title-sub;
+                    margin-top: 40px;
+                    margin-bottom: 32px;
+                }
+                p {
+                    font-size: $font-size-14;
+                }
+            }
+        }
+    }
+}

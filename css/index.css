@@ -10,10 +10,12 @@ ol {
 }
 
 a {
+  color: #fff;
   text-decoration: none;
 }
 
 img {
+  display: block;
   width: 100%;
 }
 
@@ -31,13 +33,76 @@ p {
 }
 
 body {
-  background: url(../images/background_blue_mobile.png) no-repeat;
+  background: url(../images/background_orange_mobile.png) no-repeat;
   background-size: cover;
+  background-position: center;
 }
 @media (min-width: 1440px) {
   body {
     background: url(../images/background_blue_pc.png) no-repeat;
     background-size: cover;
-    background-position: center;
   }
+}
+
+main {
+  /**********************symbol**********************/
+}
+main .symbol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+@media (min-width: 1440px) {
+  main .symbol {
+    height: 120vh;
+  }
+}
+main .symbol img:first-child {
+  width: 200px;
+  margin: 0 auto;
+}
+@media (min-width: 1440px) {
+  main .symbol img:first-child {
+    width: 612px;
+    margin-bottom: 95px;
+  }
+}
+main .symbol img:last-child {
+  display: none;
+}
+@media (min-width: 1440px) {
+  main .symbol img:last-child {
+    display: block;
+  }
+}
+main .aboutme .container h1 {
+  font-family: "Copperplate Gothic";
+  font-size: calc(25px + 0.5vw);
+  text-align: center;
+  color: #fff;
+  margin-bottom: 24px;
+}
+@media (min-width: 1440px) {
+  main .aboutme .container h1 {
+    font-size: calc(80px + 0.2vw);
+    margin-bottom: 127px;
+  }
+}
+main .aboutme .container .flex-box {
+  color: #fff;
+  font-family: "Noto Sans KR";
+  text-align: center;
+}
+main .aboutme .container .flex-box img {
+  width: 117px;
+}
+main .aboutme .container .flex-box h3 {
+  font-size: calc(18px + 0.5vw);
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+main .aboutme .container .flex-box p {
+  font-size: 14px;
 }/*# sourceMappingURL=index.css.map */

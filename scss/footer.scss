@@ -1,3 +1,21 @@
 @import "./style.scss";
 @import "./reset.scss";
 @import "./mixin.scss";
+
+.container {
+    // background-color: aqua;
+    width: $width-wide;
+    max-width: $break-large;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include responsive(large-screens) {
+        padding: 0 10px;
+    }
+}
+
+// footer {
+//     @include responsive(large-screens) {
+//         height: 1080px;
+//     }
+// }

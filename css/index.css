@@ -33,9 +33,15 @@ p {
 }
 
 body {
-  background: url(../images/background_orange_mobile.png) no-repeat;
+  height: 5146px;
+  background: url(../images/background_blue_mobile.png) no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media (min-width: 1440px) {
+  body {
+    height: 11022px;
+  }
 }
 @media (min-width: 1440px) {
   body {
@@ -50,17 +56,21 @@ main {
   /********************** aboutme **********************/
   /********************** skill **********************/
   /********************** renewal-page **********************/
+  /********************** detailed-page **********************/
+  /********************** app-design **********************/
+  /********************** cardnews-design **********************/
+  /********************** cardnews-design **********************/
 }
 main .symbol {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  height: 45vh;
 }
 @media (min-width: 1440px) {
   main .symbol {
-    height: 120vh;
+    height: 980px;
   }
 }
 main .symbol img:first-child {
@@ -86,6 +96,11 @@ main .aboutme {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 1440px) {
+  main .aboutme {
+    height: 1080px;
+  }
 }
 main .aboutme h1 {
   font-family: "Copperplate Gothic";
@@ -113,6 +128,7 @@ main .aboutme .flex-box {
   }
 }
 main .aboutme .flex-box img {
+  margin: 0 auto;
   width: 117px;
 }
 @media (min-width: 1440px) {
@@ -152,6 +168,11 @@ main .aboutme .flex-box .introduc p span {
     font-size: 25px;
   }
 }
+@media (min-width: 1440px) {
+  main .skill {
+    height: 1080px;
+  }
+}
 main .skill h1 {
   font-family: "Copperplate Gothic";
   font-size: calc(25px + 0.5vw);
@@ -172,6 +193,11 @@ main .skill .icon-box {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 1440px) {
+  main .skill .icon-box {
+    margin-bottom: 122px;
+  }
 }
 main .skill .icon-box .icon {
   display: flex;
@@ -200,8 +226,19 @@ main .skill .icon-box .icon9 {
 }
 @media (min-width: 1440px) {
   main .skill .icon-box .icon9 {
-    width: 250px;
+    width: 33.33%;
     margin-right: 0;
+  }
+}
+@media (min-width: 1440px) {
+  main .skill .icon-box .icon9 img {
+    width: 250px;
+    margin: 0 auto 30px;
+  }
+}
+@media (min-width: 1440px) {
+  main .renewal-page {
+    height: 1080px;
   }
 }
 main .renewal-page h1 {
@@ -216,16 +253,31 @@ main .renewal-page h1 {
     font-size: calc(80px + 0.2vw);
   }
 }
+main .renewal-page .flex-box {
+  position: relative;
+  height: 645px;
+}
 @media (min-width: 1440px) {
   main .renewal-page .flex-box {
+    display: block;
     display: flex;
     justify-content: space-between;
+    height: 1080px;
+    align-items: center;
     margin-top: 60px;
   }
 }
 main .renewal-page .flex-box .intro-txt {
+  height: 120px;
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 1440px) {
+  main .renewal-page .flex-box .intro-txt {
+    flex-direction: column;
+    width: 550px;
+    height: 440px;
+  }
 }
 main .renewal-page .flex-box .intro-txt .intro {
   color: #fff;
@@ -234,6 +286,7 @@ main .renewal-page .flex-box .intro-txt .intro h3 {
   text-align: center;
   font-family: "Copperplate Gothic";
   font-size: 18px;
+  margin-bottom: 35px;
 }
 @media (min-width: 1440px) {
   main .renewal-page .flex-box .intro-txt .intro h3 {
@@ -257,7 +310,7 @@ main .renewal-page .flex-box .intro-txt .more-btn {
   justify-content: space-between;
   width: 120px;
   height: 20px;
-  margin-top: 65px;
+  margin-top: 100px;
   border: 1px solid white;
   border-radius: 30px;
   padding: 12px;
@@ -266,35 +319,158 @@ main .renewal-page .flex-box .intro-txt .more-btn {
   main .renewal-page .flex-box .intro-txt .more-btn {
     width: 428px;
     height: 80px;
-    margin-top: 120px;
+    margin-top: 40px;
     border-radius: 50px;
     padding: 30px;
   }
 }
-main .renewal-page .flex-box .intro-txt .more-btn p:first-child {
+main .renewal-page .flex-box .intro-txt .more-btn p {
   font-family: "Copperplate Gothic";
   font-size: 12px;
   color: #fff;
 }
 @media (min-width: 1440px) {
-  main .renewal-page .flex-box .intro-txt .more-btn p:first-child {
+  main .renewal-page .flex-box .intro-txt .more-btn p {
     font-size: 25px;
   }
 }
-main .renewal-page .flex-box .intro-txt .more-btn p:last-child {
+main .renewal-page .flex-box .intro-txt .more-btn a {
   width: 25%;
   cursor: pointer;
 }
 @media (min-width: 1440px) {
-  main .renewal-page .flex-box .intro-txt .more-btn p:last-child {
+  main .renewal-page .flex-box .intro-txt .more-btn a {
     width: 38px;
   }
 }
 main .renewal-page .flex-box .page-img img {
   width: 194px;
+  height: 358px;
 }
 @media (min-width: 1440px) {
   main .renewal-page .flex-box .page-img img {
     width: 454px;
+    height: 824px;
+  }
+}
+@media (min-width: 1440px) {
+  main .detailed-page {
+    height: 1663px;
+  }
+}
+@media (min-width: 1440px) {
+  main .detailed-page .flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+  }
+}
+main .detailed-page .flex-box .page-img {
+  margin-top: 44px;
+}
+@media (min-width: 1440px) {
+  main .detailed-page .flex-box .page-img img {
+    width: 913px;
+    margin-top: 135px;
+  }
+}
+main .detailed-page .flex-box .intro-txt {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 1440px) {
+  main .detailed-page .flex-box .intro-txt {
+    display: block;
+  }
+}
+main .detailed-page .flex-box .intro-txt .intro {
+  color: #fff;
+}
+main .detailed-page .flex-box .intro-txt .intro h3 {
+  text-align: center;
+  font-family: "Copperplate Gothic";
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+@media (min-width: 1440px) {
+  main .detailed-page .flex-box .intro-txt .intro h3 {
+    font-size: calc(50px + 0.2vw);
+    font-weight: lighter;
+    margin-bottom: 30px;
+  }
+}
+main .detailed-page .flex-box .intro-txt .intro p {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+}
+@media (min-width: 1440px) {
+  main .detailed-page .flex-box .intro-txt .intro p {
+    font-size: 20px;
+  }
+}
+main .detailed-page .flex-box .more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  height: 20px;
+  margin-top: 100px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 12px;
+}
+@media (min-width: 1440px) {
+  main .detailed-page .flex-box .more-btn {
+    width: 428px;
+    height: 80px;
+    margin-top: 40px;
+    border-radius: 50px;
+    padding: 30px;
+  }
+}
+main .detailed-page .flex-box .more-btn p {
+  font-family: "Copperplate Gothic";
+  font-size: 12px;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .detailed-page .flex-box .more-btn p {
+    font-size: 25px;
+  }
+}
+main .detailed-page .flex-box .more-btn a {
+  width: 25%;
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  main .detailed-page .flex-box .more-btn a {
+    width: 38px;
+  }
+}
+@media (min-width: 1440px) {
+  main .app-design {
+    height: 1080px;
+  }
+}
+main .app-design .flex-box .intro-txt .intro img {
+  display: none;
+}
+@media (min-width: 1440px) {
+  main .app-design .flex-box .intro-txt .intro img {
+    display: block;
+  }
+}
+main .app-design .flex-box .page-img img {
+  width: 186px;
+}
+@media (min-width: 1440px) {
+  main .cardnews-design {
+    height: 1080px;
+  }
+}
+@media (min-width: 1440px) {
+  main .teamproject {
+    height: 1854px;
   }
 }/*# sourceMappingURL=index.css.map */

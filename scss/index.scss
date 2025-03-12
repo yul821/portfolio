@@ -11,6 +11,7 @@ body {
     @include responsive(large-screens) {
         background: url(../images/background_blue_pc.png) no-repeat;
         background-size: cover;
+        background-position: center;
     }
 }
 
@@ -49,35 +50,220 @@ main {
     } /**********************symbol**********************/
 
     .aboutme {
-        .container {
-            h1 {
-                font-family: $font-main;
-                font-size: $mobile-title-main;
-                text-align: center;
-                color: $color-main;
-                margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            font-family: $font-main;
+            font-size: $mobile-title-main;
+            text-align: center;
+            color: $color-main;
+            margin-bottom: 24px;
+
+            @include responsive(large-screens) {
+                font-size: $desktop-title-main;
+                margin-bottom: 127px;
+            }
+        }
+        .flex-box {
+            color: $color-main;
+            font-family: $font-sub2;
+            text-align: center;
+            @include responsive(large-screens) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            img {
+                width: 117px;
 
                 @include responsive(large-screens) {
-                    font-size: $desktop-title-main;
-                    margin-bottom: 127px;
+                    width: 390px;
+                    margin-right: 330px;
                 }
             }
-            .flex-box {
-                color: $color-main;
-                font-family: $font-sub2;
-                text-align: center;
-                img {
-                    width: 117px;
+            .introduc {
+                @include responsive(large-screens) {
+                    text-align: left;
                 }
                 h3 {
                     font-size: $mobile-title-sub;
                     margin-top: 40px;
                     margin-bottom: 32px;
+
+                    @include responsive(large-screens) {
+                        font-size: $font-size-40;
+                    }
+
+                    br {
+                        @media (max-width: 768px) { //768px 이하일때 <br>숨김.
+                                display: none;
+                        }
+                    }
                 }
                 p {
                     font-size: $font-size-14;
+                    span {
+                        color: $color-span;
+                    }
+
+                    @include responsive(large-screens) {
+                        font-size: $font-size-25;
+                    }
                 }
             }
         }
-    }
-}
+    } /********************** aboutme **********************/
+
+    .skill {
+        h1 {
+            font-family: $font-main;
+            font-size: $mobile-title-main;
+            text-align: center;
+            color: $color-main;
+            margin-top: 60px;
+            margin-bottom: 24px;
+
+            @include responsive(large-screens) {
+                font-size: $desktop-title-main;
+                margin-top: 270px;
+                margin-bottom: 127px;
+            }
+        }
+        .icon-box {
+            // background-color: red;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            
+            .icon {
+                display: flex;
+                justify-content: center;
+                width: calc(50%);
+                margin-bottom: 10px;
+                
+                
+                @include responsive(large-screens) {
+                    width: calc(33.33%);
+                    margin-bottom: 30px;
+                }
+                
+                img {
+                    width: 75px;
+
+                    @include responsive(large-screens) {
+                        width: 250px;
+                    }
+                }
+            }
+            .icon9 {
+                width: 75px;
+                justify-content: flex-start;
+                margin-right: 165px;
+
+                @include responsive(large-screens) {
+                    width: 250px;
+                    margin-right: 0;
+                }
+            }
+        }
+    }  /********************** skill **********************/
+
+    .renewal-page {
+        h1 {
+            // position: relative;
+            font-family: $font-main;
+            font-size: $mobile-title-main;
+            text-align: center;
+            color: $color-main;
+            margin-top: 35px;
+
+            @include responsive(large-screens) {
+                font-size: $desktop-title-main;
+            }
+        }
+        .flex-box {
+            @include responsive(large-screens) {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 60px;
+            }
+            .intro-txt {
+                display: flex;
+                justify-content: space-between;
+                .intro {
+                    color: $color-main;
+                    h3 {
+                        text-align: center;
+                        font-family: $font-main;
+                        font-size: $font-size-18;
+
+                        @include responsive(large-screens) {
+                            font-size: $desktop-title-sub;
+                            font-weight: lighter;
+                            margin-bottom: 30px;
+                        }
+                    }
+                    p {
+                        font-family: $font-sub2;
+                        font-size: $font-size-14;
+
+                        @include responsive(large-screens) {
+                            font-size: $font-size-20;
+                        }
+                    }
+                }
+    
+                .more-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 120px; height: 20px;
+                    margin-top: 65px;
+                    border: 1px solid white;
+                    border-radius: 30px;
+                    padding: 12px;
+
+                    @include responsive(large-screens) {
+                        width: 428px; height: 80px;
+                        margin-top: 120px;
+                        border-radius: 50px;
+                        padding: 30px;
+                    }
+                    
+                    p {
+                        &:first-child {
+                            font-family: $font-main;
+                            font-size: $font-size-12;
+                            color: $color-main;
+
+                            @include responsive(large-screens) {
+                                font-size: $font-size-25;
+                            }
+                        }
+                        &:last-child {
+                            width: 25%;
+                            cursor: pointer;
+
+                            @include responsive(large-screens) {
+                                width: 38px;
+                            }
+                        }
+                    }
+                }
+            } //intro-txt
+
+            .page-img {
+                img {
+                    width: 194px;
+
+                    @include responsive(large-screens) {
+                        width: 454px;
+                    }
+                }
+            }
+        } 
+    } /********************** renewal-page **********************/
+
+} ////////////////////////////// main ///////////////////////////////////

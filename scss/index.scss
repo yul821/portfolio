@@ -216,33 +216,37 @@ main {
         }
         .flex-box {
             // background-color: aquamarine;
-            position: relative;
-            height: 645px;
+            // position: relative;
             @include responsive(large-screens) {
-                display: block;
                 display: flex;
+                flex-direction: row-reverse;
                 justify-content: space-between;
                 height: 1080px; 
                 align-items: center;
-                margin-top: 60px;
+                // margin-top: 60px;
+            }
+            .page-img {
+                // justify-content: center;
+                img {
+                    width: 194px; 
+                    height: 358px;
+                    @include responsive(large-screens) {
+                        width: 454px;
+                        height: 824px;
+                    }
+                }
             }
             .intro-txt {
-                // position: absolute;
-                // left: 0; 
-                // bottom: 40px;
-                height: 120px;
                 display: flex;
                 justify-content: space-between;
 
                 @include responsive(large-screens) {
-                    flex-direction: column;
-                    width: 550px;
-                    height: 440px;
+                    display: block;
                 }
+
                 .intro {
                     color: $color-main;
                     h3 {
-                        text-align: center;
                         font-family: $font-main;
                         font-size: $font-size-18;
                         margin-bottom: 35px;
@@ -300,17 +304,6 @@ main {
                 }
             } //intro-txt
 
-            .page-img {
-                img {
-                    width: 194px; 
-                    height: 358px;
-
-                    @include responsive(large-screens) {
-                        width: 454px;
-                        height: 824px;
-                    }
-                }
-            }
         } 
     } /********************** renewal-page **********************/
 
@@ -327,10 +320,11 @@ main {
                 margin-top: 60px;
             }
             .page-img {
-                margin-top: 44px;
+                // margin-top: 44px;
                 img {
+                    width:329px;
                     @include responsive(large-screens) {
-                        width: 913px;
+                        width: 844px;
                         margin-top: 135px;
                     }
                 }
@@ -413,22 +407,106 @@ main {
             height: 1080px;
         }
         .flex-box {
-            .intro-txt{
-                .intro {
-                    img {
-                        display: none;
-
-                        @include responsive(large-screens) {
-                            display: block;
-                        }
+            @include responsive(large-screens) {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                // margin-top: 60px;
+            }
+            .page-img {
+                margin-top: 44px;
+                // justify-content: center;
+                img {
+                    width: 186px;
+                    @include responsive(large-screens) {
+                        width: 504px;
+                        // margin-top: 135px;
                     }
                 }
             }
-            .page-img {
-                img {
-                    width: 186px;
+            .intro-txt{
+                display: flex;
+                justify-content: space-between;
+
+                @include responsive(large-screens) {
+                    display: block;
                 }
+                .intro {
+                    color: $color-main;
+                    h3 {
+                        text-align: left;
+                        font-family: $font-main;
+                        font-size: $font-size-18;
+                        margin-bottom: 35px;
+
+                        @include responsive(large-screens) {
+                            font-size: $desktop-title-sub;
+                            font-weight: lighter;
+                            margin-bottom: 30px;
+                        }
+                    }
+                    img {
+                        display: none;
+    
+                        @include responsive(large-screens) {
+                            display: block;
+                            width: 357px;
+                            margin-bottom: 30px;
+                        }
+                    }
+                    h4 {
+                        @include responsive(large-screens) {
+                            font-size: $font-size-30;
+                            margin-bottom: 30px;
+                        }
+                    }
+                    p {
+                        font-family: $font-sub2;
+                        font-size: $font-size-14;
+
+                        @include responsive(large-screens) {
+                            font-size: $font-size-20;
+                        }
+                    }
+                } //intro
             }
+
+            .more-btn {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 120px; height: 20px;
+                margin-top: 124px; 
+                border: 1px solid white;
+                border-radius: 30px;
+                padding: 12px;
+
+                @include responsive(large-screens) {
+                    width: 428px; height: 80px;
+                    margin-top: 40px;
+                    border-radius: 50px;
+                    padding: 30px;
+                }
+                
+                p {
+                    font-family: $font-main;
+                    font-size: $font-size-12;
+                    color: $color-main;
+
+                    @include responsive(large-screens) {
+                        font-size: $font-size-25;
+                    }
+                }
+                a {
+                    width: 25%;
+                    cursor: pointer;
+
+                    @include responsive(large-screens) {
+                        width: 38px;
+                    }
+                }
+            } //more-btn
         } //flex-box
     } /********************** app-design **********************/
 
@@ -437,6 +515,102 @@ main {
         @include responsive(large-screens) {
             height: 1080px;
         }
+        .flex-box {
+            @include responsive(large-screens) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 60px;
+            }
+            .page-img {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 152px;
+                    margin: 10px;
+                    &:not(:last-child) { //사이의 마진을 제외한 나머지 없애기
+                        margin-right: 10px;
+                    }
+                    @include responsive(large-screens) {
+                        width: 391px;
+                        margin-right: 180px; //임의로 위치 조정 
+                        // margin-top: 135px;
+                    }
+                }
+            }
+
+            .intro-txt {
+                display: flex;
+                
+                @include responsive(large-screens) {
+                    // justify-content: space-between;
+                    display: block;
+                }
+
+                .intro {
+                    color: $color-main;
+                    h3 {
+                        // text-align: center;
+                        font-family: $font-main;
+                        font-size: $font-size-18;
+                        margin-bottom: 35px;
+
+                        @include responsive(large-screens) {
+                            font-size: $desktop-title-sub;
+                            font-weight: lighter;
+                            margin-bottom: 30px;
+                        }
+                    }
+                    p {
+                        font-family: $font-sub2;
+                        font-size: $font-size-14;
+
+                        @include responsive(large-screens) {
+                            font-size: $font-size-20;
+                        }
+                    }
+                } //intro
+            } //intro-txt
+
+            .more-btn {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 120px; height: 20px;
+                margin-top: 100px;
+                border: 1px solid white;
+                border-radius: 30px;
+                padding: 12px;
+
+                @include responsive(large-screens) {
+                    width: 428px; height: 80px;
+                    margin-top: 40px;
+                    border-radius: 50px;
+                    padding: 30px;
+                }
+                
+                p {
+                    font-family: $font-main;
+                    font-size: $font-size-12;
+                    color: $color-main;
+
+                    @include responsive(large-screens) {
+                        font-size: $font-size-25;
+                    }
+                }
+                a {
+                    width: 25%;
+                    cursor: pointer;
+
+                    @include responsive(large-screens) {
+                        width: 38px;
+                    }
+                }
+            } //more-btn
+        }
+
+        
     } /********************** cardnews-design **********************/
 
     .teamproject {
@@ -445,13 +619,106 @@ main {
             height: 1854px;
         }
         .flex-box {
-            .intro-txt {
-                .intro {
-
+            .page-img {
+                img {
+                    width: 291px;
                 }
             }
+            .intro-txt {
+                display: flex;
+                .intro {
+                    color: $color-main;
+                    h3 {
+                        // text-align: center;
+                        font-family: $font-main;
+                        font-size: $font-size-18;
+                        margin-bottom: 35px;
 
+                        @include responsive(large-screens) {
+                            font-size: $desktop-title-sub;
+                            font-weight: lighter;
+                            margin-bottom: 30px;
+                        }
+                    }
+                    p {
+                        font-family: $font-sub2;
+                        font-size: $font-size-14;
+
+                        @include responsive(large-screens) {
+                            font-size: $font-size-20;
+                        }
+                    }
+                }
+            } //intro-txt
+
+            .more-btn {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 120px; height: 20px;
+                margin-top: 100px;
+                border: 1px solid white;
+                border-radius: 30px;
+                padding: 12px;
+
+                @include responsive(large-screens) {
+                    width: 428px; height: 80px;
+                    margin-top: 40px;
+                    border-radius: 50px;
+                    padding: 30px;
+                }
+                
+                p {
+                    font-family: $font-main;
+                    font-size: $font-size-12;
+                    color: $color-main;
+
+                    @include responsive(large-screens) {
+                        font-size: $font-size-25;
+                    }
+                }
+                a {
+                    width: 25%;
+                    cursor: pointer;
+
+                    @include responsive(large-screens) {
+                        width: 38px;
+                    }
+                }
+            } //more-btn
         }
     } /********************** cardnews-design **********************/
+
+    .top-btn {
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        width: 80px; height: 80px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            border-radius: 50%;
+            background-color: $color-main;
+            opacity: 80%;
+        }
+        a {
+            color: $color-main;
+            font-family: $font-main;
+            font-size: 25px;
+            padding: 0;
+            margin: 0;
+
+            &:hover {
+                color: black;
+                font-weight: bold;
+            }
+        }
+    } /********************** top-btn **********************/
 
 } ////////////////////////////// main ///////////////////////////////////

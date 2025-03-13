@@ -28,6 +28,7 @@ h2 {
 }
 
 p {
+  color: #fff;
   font-size: 20px;
   line-height: 1.8;
 }
@@ -60,6 +61,7 @@ main {
   /********************** app-design **********************/
   /********************** cardnews-design **********************/
   /********************** cardnews-design **********************/
+  /********************** top-btn **********************/
 }
 main .symbol {
   display: flex;
@@ -253,37 +255,38 @@ main .renewal-page h1 {
     font-size: calc(80px + 0.2vw);
   }
 }
-main .renewal-page .flex-box {
-  position: relative;
-  height: 645px;
-}
 @media (min-width: 1440px) {
   main .renewal-page .flex-box {
-    display: block;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     height: 1080px;
     align-items: center;
-    margin-top: 60px;
+  }
+}
+main .renewal-page .flex-box .page-img img {
+  width: 194px;
+  height: 358px;
+}
+@media (min-width: 1440px) {
+  main .renewal-page .flex-box .page-img img {
+    width: 454px;
+    height: 824px;
   }
 }
 main .renewal-page .flex-box .intro-txt {
-  height: 120px;
   display: flex;
   justify-content: space-between;
 }
 @media (min-width: 1440px) {
   main .renewal-page .flex-box .intro-txt {
-    flex-direction: column;
-    width: 550px;
-    height: 440px;
+    display: block;
   }
 }
 main .renewal-page .flex-box .intro-txt .intro {
   color: #fff;
 }
 main .renewal-page .flex-box .intro-txt .intro h3 {
-  text-align: center;
   font-family: "Copperplate Gothic";
   font-size: 18px;
   margin-bottom: 35px;
@@ -343,16 +346,6 @@ main .renewal-page .flex-box .intro-txt .more-btn a {
     width: 38px;
   }
 }
-main .renewal-page .flex-box .page-img img {
-  width: 194px;
-  height: 358px;
-}
-@media (min-width: 1440px) {
-  main .renewal-page .flex-box .page-img img {
-    width: 454px;
-    height: 824px;
-  }
-}
 @media (min-width: 1440px) {
   main .detailed-page {
     height: 1663px;
@@ -366,12 +359,12 @@ main .renewal-page .flex-box .page-img img {
     margin-top: 60px;
   }
 }
-main .detailed-page .flex-box .page-img {
-  margin-top: 44px;
+main .detailed-page .flex-box .page-img img {
+  width: 329px;
 }
 @media (min-width: 1440px) {
   main .detailed-page .flex-box .page-img img {
-    width: 913px;
+    width: 844px;
     margin-top: 135px;
   }
 }
@@ -453,16 +446,113 @@ main .detailed-page .flex-box .more-btn a {
     height: 1080px;
   }
 }
+@media (min-width: 1440px) {
+  main .app-design .flex-box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main .app-design .flex-box .page-img {
+  margin-top: 44px;
+}
+main .app-design .flex-box .page-img img {
+  width: 186px;
+}
+@media (min-width: 1440px) {
+  main .app-design .flex-box .page-img img {
+    width: 504px;
+  }
+}
+main .app-design .flex-box .intro-txt {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 1440px) {
+  main .app-design .flex-box .intro-txt {
+    display: block;
+  }
+}
+main .app-design .flex-box .intro-txt .intro {
+  color: #fff;
+}
+main .app-design .flex-box .intro-txt .intro h3 {
+  text-align: left;
+  font-family: "Copperplate Gothic";
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+@media (min-width: 1440px) {
+  main .app-design .flex-box .intro-txt .intro h3 {
+    font-size: calc(50px + 0.2vw);
+    font-weight: lighter;
+    margin-bottom: 30px;
+  }
+}
 main .app-design .flex-box .intro-txt .intro img {
   display: none;
 }
 @media (min-width: 1440px) {
   main .app-design .flex-box .intro-txt .intro img {
     display: block;
+    width: 357px;
+    margin-bottom: 30px;
   }
 }
-main .app-design .flex-box .page-img img {
-  width: 186px;
+@media (min-width: 1440px) {
+  main .app-design .flex-box .intro-txt .intro h4 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+main .app-design .flex-box .intro-txt .intro p {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+}
+@media (min-width: 1440px) {
+  main .app-design .flex-box .intro-txt .intro p {
+    font-size: 20px;
+  }
+}
+main .app-design .flex-box .more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  height: 20px;
+  margin-top: 124px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 12px;
+}
+@media (min-width: 1440px) {
+  main .app-design .flex-box .more-btn {
+    width: 428px;
+    height: 80px;
+    margin-top: 40px;
+    border-radius: 50px;
+    padding: 30px;
+  }
+}
+main .app-design .flex-box .more-btn p {
+  font-family: "Copperplate Gothic";
+  font-size: 12px;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .app-design .flex-box .more-btn p {
+    font-size: 25px;
+  }
+}
+main .app-design .flex-box .more-btn a {
+  width: 25%;
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  main .app-design .flex-box .more-btn a {
+    width: 38px;
+  }
 }
 @media (min-width: 1440px) {
   main .cardnews-design {
@@ -470,7 +560,202 @@ main .app-design .flex-box .page-img img {
   }
 }
 @media (min-width: 1440px) {
+  main .cardnews-design .flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+  }
+}
+main .cardnews-design .flex-box .page-img {
+  display: flex;
+  justify-content: center;
+}
+main .cardnews-design .flex-box .page-img img {
+  width: 152px;
+  margin: 10px;
+}
+main .cardnews-design .flex-box .page-img img:not(:last-child) {
+  margin-right: 10px;
+}
+@media (min-width: 1440px) {
+  main .cardnews-design .flex-box .page-img img {
+    width: 391px;
+    margin-right: 180px;
+  }
+}
+main .cardnews-design .flex-box .intro-txt {
+  display: flex;
+}
+@media (min-width: 1440px) {
+  main .cardnews-design .flex-box .intro-txt {
+    display: block;
+  }
+}
+main .cardnews-design .flex-box .intro-txt .intro {
+  color: #fff;
+}
+main .cardnews-design .flex-box .intro-txt .intro h3 {
+  font-family: "Copperplate Gothic";
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+@media (min-width: 1440px) {
+  main .cardnews-design .flex-box .intro-txt .intro h3 {
+    font-size: calc(50px + 0.2vw);
+    font-weight: lighter;
+    margin-bottom: 30px;
+  }
+}
+main .cardnews-design .flex-box .intro-txt .intro p {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+}
+@media (min-width: 1440px) {
+  main .cardnews-design .flex-box .intro-txt .intro p {
+    font-size: 20px;
+  }
+}
+main .cardnews-design .flex-box .more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  height: 20px;
+  margin-top: 100px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 12px;
+}
+@media (min-width: 1440px) {
+  main .cardnews-design .flex-box .more-btn {
+    width: 428px;
+    height: 80px;
+    margin-top: 40px;
+    border-radius: 50px;
+    padding: 30px;
+  }
+}
+main .cardnews-design .flex-box .more-btn p {
+  font-family: "Copperplate Gothic";
+  font-size: 12px;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .cardnews-design .flex-box .more-btn p {
+    font-size: 25px;
+  }
+}
+main .cardnews-design .flex-box .more-btn a {
+  width: 25%;
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  main .cardnews-design .flex-box .more-btn a {
+    width: 38px;
+  }
+}
+@media (min-width: 1440px) {
   main .teamproject {
     height: 1854px;
   }
+}
+main .teamproject .flex-box .page-img img {
+  width: 291px;
+}
+main .teamproject .flex-box .intro-txt {
+  display: flex;
+}
+main .teamproject .flex-box .intro-txt .intro {
+  color: #fff;
+}
+main .teamproject .flex-box .intro-txt .intro h3 {
+  font-family: "Copperplate Gothic";
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+@media (min-width: 1440px) {
+  main .teamproject .flex-box .intro-txt .intro h3 {
+    font-size: calc(50px + 0.2vw);
+    font-weight: lighter;
+    margin-bottom: 30px;
+  }
+}
+main .teamproject .flex-box .intro-txt .intro p {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+}
+@media (min-width: 1440px) {
+  main .teamproject .flex-box .intro-txt .intro p {
+    font-size: 20px;
+  }
+}
+main .teamproject .flex-box .more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  height: 20px;
+  margin-top: 100px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 12px;
+}
+@media (min-width: 1440px) {
+  main .teamproject .flex-box .more-btn {
+    width: 428px;
+    height: 80px;
+    margin-top: 40px;
+    border-radius: 50px;
+    padding: 30px;
+  }
+}
+main .teamproject .flex-box .more-btn p {
+  font-family: "Copperplate Gothic";
+  font-size: 12px;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .teamproject .flex-box .more-btn p {
+    font-size: 25px;
+  }
+}
+main .teamproject .flex-box .more-btn a {
+  width: 25%;
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  main .teamproject .flex-box .more-btn a {
+    width: 38px;
+  }
+}
+main .top-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+main .top-btn:hover {
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 80%;
+}
+main .top-btn a {
+  color: #fff;
+  font-family: "Copperplate Gothic";
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
+main .top-btn a:hover {
+  color: black;
+  font-weight: bold;
 }/*# sourceMappingURL=index.css.map */

@@ -103,6 +103,10 @@ header .portfolio-menu .menu-flex-box #menu-box .gnb li {
     background-color: red;
     padding-left: 230px;
   }
+  header .portfolio-menu .menu-flex-box #menu-box .gnb li .main-menu-a:hover {
+    color: chocolate;
+    transition: 1.5s;
+  }
 }
 header .portfolio-menu .menu-flex-box #menu-box .gnb li .submenu {
   display: none;

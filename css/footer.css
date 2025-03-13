@@ -42,4 +42,8 @@ p {
   .container {
     padding: 0 10px;
   }
+}
+
+footer .flex-box p {
+  color: #fff;
 }/*# sourceMappingURL=footer.css.map */

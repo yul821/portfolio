@@ -75,6 +75,11 @@ header {
                             @include responsive(large-screens) {
                                 background-color: red;
                                 padding-left: 230px;
+
+                                &:hover {
+                                    color: chocolate;
+                                    transition: 1.5s;
+                                }
                             }
                         }
                         .submenu {

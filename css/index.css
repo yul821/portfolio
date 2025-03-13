@@ -307,6 +307,14 @@ main .renewal-page .flex-box .intro-txt .intro p {
     font-size: 20px;
   }
 }
+main .renewal-page .flex-box .intro-txt .intro p:last-child br {
+  display: block;
+}
+@media (min-width: 1440px) {
+  main .renewal-page .flex-box .intro-txt .intro p:last-child br {
+    display: none;
+  }
+}
 main .renewal-page .flex-box .intro-txt .more-btn {
   display: flex;
   align-items: center;
@@ -708,6 +716,14 @@ main .teamproject .flex-box .intro-txt .intro p {
 @media (min-width: 1440px) {
   main .teamproject .flex-box .intro-txt .intro p {
     font-size: 20px;
+  }
+}
+main .teamproject .flex-box .intro-txt .intro p:last-child br {
+  display: block;
+}
+@media (min-width: 1440px) {
+  main .teamproject .flex-box .intro-txt .intro p:last-child br {
+    display: none;
   }
 }
 main .teamproject .flex-box .more-btn {

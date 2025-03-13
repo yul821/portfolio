@@ -268,6 +268,15 @@ main {
                         @include responsive(large-screens) {
                             font-size: $font-size-20;
                         }
+                        &:last-child {
+                            br {
+                                display: block;
+                               
+                                @include responsive(large-screens) {
+                                    display: none;
+                                }
+                            }
+                        }
                     }
                 }
     
@@ -671,6 +680,16 @@ main {
 
                         @include responsive(large-screens) {
                             font-size: $font-size-20;
+                        }
+
+                        &:last-child {
+                            br {
+                                display: block;
+
+                                @include responsive(large-screens) {
+                                    display: none;
+                                }
+                            }
                         }
                     }
                 }

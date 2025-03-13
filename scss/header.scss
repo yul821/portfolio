@@ -3,7 +3,7 @@
 @import "./mixin.scss";
 
 .container {
-    // background-color: aqua;
+    // background-color: cornflowerblue;
     width: $width-wide;
     max-width: $break-large;
     margin: 0 auto;
@@ -28,7 +28,7 @@ header {
     }
 
     .portfolio-menu {
-        background-color: #000;
+        // background-color: #000;
         .menu-flex-box {
             display: flex;
             align-items: center;

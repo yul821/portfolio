@@ -22,8 +22,32 @@
 
 footer {
     .flex-box {
-        p {
-            color: $color-main;
+        margin-top: 70px;
+
+        @include responsive(large-screens) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .contact {
+            font-family: $font-main;
+            // font-weight: bold;
+            font-size: 35px;
+            text-align: center;
+            @include responsive(large-screens) {
+                font-size: 150px;
+            }
+        }
+        .p-txt {
+            font-family: $font-sub2;
+            p {
+                font-size: $font-size-14;
+                @include responsive(large-screens) {
+                    font-size: 25px;
+                }
+            }
+
         }
     }
 }

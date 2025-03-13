@@ -28,7 +28,7 @@ h2 {
 }
 
 p {
-  font-size: 20px;
+  color: #fff;
   line-height: 1.8;
 }
 
@@ -44,6 +44,35 @@ p {
   }
 }
 
-footer .flex-box p {
-  color: #fff;
+footer .flex-box {
+  margin-top: 70px;
+}
+@media (min-width: 1440px) {
+  footer .flex-box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+footer .flex-box .contact {
+  font-family: "Copperplate Gothic";
+  font-size: 35px;
+  text-align: center;
+}
+@media (min-width: 1440px) {
+  footer .flex-box .contact {
+    font-size: 150px;
+  }
+}
+footer .flex-box .p-txt {
+  font-family: "Noto Sans KR";
+}
+footer .flex-box .p-txt p {
+  font-size: 14px;
+}
+@media (min-width: 1440px) {
+  footer .flex-box .p-txt p {
+    font-size: 25px;
+  }
 }/*# sourceMappingURL=footer.css.map */

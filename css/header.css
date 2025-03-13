@@ -28,7 +28,7 @@ h2 {
 }
 
 p {
-  font-size: 20px;
+  color: #fff;
   line-height: 1.8;
 }
 
@@ -56,9 +56,6 @@ header {
   header {
     height: 100px;
   }
-}
-header .portfolio-menu {
-  background-color: #000;
 }
 header .portfolio-menu .menu-flex-box {
   display: flex;

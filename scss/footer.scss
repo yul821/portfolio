@@ -15,16 +15,20 @@
 }
 
 // footer {
-//     @include responsive(large-screens) {
-//         height: 1080px;
-//     }
+
 // }
 
 footer {
-    .flex-box {
-        margin-top: 70px;
-
+    background-color: greenyellow;
         @include responsive(large-screens) {
+        }
+        .flex-box {
+            margin-top: 70px;
+            margin-bottom: 50px;
+            
+            @include responsive(large-screens) {
+                height: 1080px;
+                // margin: 0 auto;
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;

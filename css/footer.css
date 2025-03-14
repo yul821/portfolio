@@ -44,11 +44,16 @@ p {
   }
 }
 
+footer {
+  background-color: greenyellow;
+}
 footer .flex-box {
   margin-top: 70px;
+  margin-bottom: 50px;
 }
 @media (min-width: 1440px) {
   footer .flex-box {
+    height: 1080px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;

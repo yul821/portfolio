@@ -33,14 +33,13 @@ p {
 }
 
 body {
-  height: 5146px;
-  background: url(..//images/background_blue_mobile.png) no-repeat;
+  background: url(../images/background_blue_mobile.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (min-width: 1440px) {
   body {
-    height: 11022px;
+    height: 11275px;
   }
 }
 @media (min-width: 1440px) {
@@ -70,7 +69,7 @@ main .symbol {
 }
 @media (min-width: 1440px) {
   main .symbol {
-    height: 980px;
+    height: 1080px;
   }
 }
 main .symbol img:first-child {
@@ -170,7 +169,7 @@ main .aboutme .flex-box .introduc p span:hover {
 }
 @media (min-width: 1440px) {
   main .skill {
-    height: 1080px;
+    height: 1370px;
   }
 }
 main .skill h1 {
@@ -184,7 +183,7 @@ main .skill h1 {
 @media (min-width: 1440px) {
   main .skill h1 {
     font-size: calc(80px + 0.2vw);
-    margin-top: 270px;
+    margin-top: 100px;
     margin-bottom: 127px;
   }
 }
@@ -216,22 +215,22 @@ main .skill .icon-box .icon img {
 }
 @media (min-width: 1440px) {
   main .skill .icon-box .icon img {
-    width: 250px;
+    width: 254px;
   }
 }
-main .skill .icon-box .icon9 {
+main .skill .icon-box .icon10 {
   width: 75px;
   justify-content: flex-start;
   margin-right: 165px;
 }
 @media (min-width: 1440px) {
-  main .skill .icon-box .icon9 {
+  main .skill .icon-box .icon10 {
     width: 33.33%;
     margin-right: 0;
   }
 }
 @media (min-width: 1440px) {
-  main .skill .icon-box .icon9 img {
+  main .skill .icon-box .icon10 img {
     width: 250px;
     margin: 0 auto 30px;
   }
@@ -254,6 +253,10 @@ main .renewal-page h1 {
     font-size: calc(80px + 0.2vw);
   }
 }
+main .renewal-page .flex-box {
+  display: flex;
+  flex-direction: column;
+}
 @media (min-width: 1440px) {
   main .renewal-page .flex-box {
     display: flex;
@@ -262,6 +265,9 @@ main .renewal-page h1 {
     height: 1080px;
     align-items: center;
   }
+}
+main .renewal-page .flex-box .page-img {
+  margin: 0 auto;
 }
 main .renewal-page .flex-box .page-img img {
   width: 194px;
@@ -356,7 +362,7 @@ main .renewal-page .flex-box .intro-txt .more-btn a {
 }
 @media (min-width: 1440px) {
   main .detailed-page {
-    height: 1663px;
+    height: 1400px;
   }
 }
 @media (min-width: 1440px) {
@@ -453,6 +459,10 @@ main .detailed-page .flex-box .more-btn a {
     height: 1080px;
   }
 }
+main .app-design .flex-box {
+  display: flex;
+  flex-direction: column;
+}
 @media (min-width: 1440px) {
   main .app-design .flex-box {
     display: flex;
@@ -462,6 +472,7 @@ main .detailed-page .flex-box .more-btn a {
   }
 }
 main .app-design .flex-box .page-img {
+  margin: 0 auto;
   margin-top: 44px;
 }
 main .app-design .flex-box .page-img img {
@@ -664,7 +675,7 @@ main .cardnews-design .flex-box .more-btn a {
 }
 @media (min-width: 1440px) {
   main .teamproject {
-    height: 1854px;
+    height: 1780px;
   }
 }
 main .teamproject .flex-box {
@@ -699,7 +710,6 @@ main .teamproject .flex-box .page-img img {
 main .teamproject .flex-box .intro-txt {
   display: flex;
   justify-content: center;
-  background: red;
 }
 @media (min-width: 1440px) {
   main .teamproject .flex-box .intro-txt {

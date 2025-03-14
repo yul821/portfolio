@@ -4,11 +4,11 @@
 
 
 body {
-    height: 5146px; // 모바일 버전 섹션에 높이값 지정
+    // height: 5146px; // 모바일 버전 섹션에 높이값 지정
     @include responsive(large-screens) {
-        height: 11022px; // 페이지 전체의 높이값 지정.
+        height: 11275px; // 페이지 전체의 높이값 지정.
     }
-    background: url(..//images/background_blue_mobile.png) no-repeat;
+    background: url(../images/background_blue_mobile.png) no-repeat;
     background-size: cover;
     background-position: center;
 
@@ -30,7 +30,7 @@ main {
         // height: 330px; // 모바일 버전 섹션에 높이값 지정
     
         @include responsive(large-screens) {
-            height: 980px;
+            height: 1080px;
         }
         
         img {
@@ -131,7 +131,7 @@ main {
     .skill {
         // height: 480px; // 모바일 버전 섹션에 높이값 지정
         @include responsive(large-screens) {
-            height: 1080px; // 섹션명에 높이값 지정 1080px
+            height: 1370px; // 섹션명에 높이값 지정 1080px
         }
         h1 {
             font-family: $font-main;
@@ -143,7 +143,7 @@ main {
 
             @include responsive(large-screens) {
                 font-size: $desktop-title-main;
-                margin-top: 270px;
+                margin-top: 100px;
                 margin-bottom: 127px;
             }
         }
@@ -174,11 +174,11 @@ main {
                     width: 75px;
 
                     @include responsive(large-screens) {
-                        width: 250px;
+                        width: 254px;
                     }
                 }
             }
-            .icon9 {
+            .icon10 {
                 width: 75px;
                 justify-content: flex-start;
                 margin-right: 165px;
@@ -200,7 +200,6 @@ main {
     }  /********************** skill **********************/
 
     .renewal-page {
-        // height: 584px; // 모바일 버전 섹션에 높이값 지정
         @include responsive(large-screens) {
             height: 1080px; // 섹션명에 높이값 지정 1080px
         }
@@ -218,18 +217,17 @@ main {
             }
         }
         .flex-box {
-            // background-color: aquamarine;
-            // position: relative;
+            display: flex;
+            flex-direction: column;
             @include responsive(large-screens) {
                 display: flex;
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 height: 1080px; 
                 align-items: center;
-                // margin-top: 60px;
             }
             .page-img {
-                // justify-content: center;
+                margin: 0 auto;
                 img {
                     width: 194px; 
                     height: 358px;
@@ -323,7 +321,7 @@ main {
     .detailed-page {
         // height: 740px; // 모바일 버전 섹션에 높이값 지정
         @include responsive(large-screens) {
-            height: 1663px; // 섹션명에 높이값 지정 1080px
+            height: 1400px; // 섹션명에 높이값 지정 1080px
         }
         .flex-box {
             @include responsive(large-screens) {
@@ -415,11 +413,12 @@ main {
     } /********************** detailed-page **********************/
 
     .app-design {
-        // height: 568px; // 모바일 버전 섹션에 높이값 지정
         @include responsive(large-screens) {
             height: 1080px;
         }
         .flex-box {
+            display: flex;
+            flex-direction: column;
             @include responsive(large-screens) {
                 display: flex;
                 flex-direction: row-reverse;
@@ -428,6 +427,7 @@ main {
                 // margin-top: 60px;
             }
             .page-img {
+                margin: 0 auto;
                 margin-top: 44px;
                 // justify-content: center;
                 img {
@@ -630,7 +630,7 @@ main {
         // background-color: cadetblue;
         // height: 1375px; // 모바일 버전 섹션에 높이값 지정
         @include responsive(large-screens) {
-            height: 1854px;
+            height: 1780px;
         }
         .flex-box {
             display: flex;
@@ -662,7 +662,6 @@ main {
             .intro-txt {
                 display: flex;
                 justify-content: center;
-                background: red;
                 
                 @include responsive(large-screens) {
                     font-size: $font-size-20;

@@ -667,9 +667,17 @@ main .cardnews-design .flex-box .more-btn a {
     height: 1854px;
   }
 }
+main .teamproject .flex-box {
+  display: flex;
+  flex-direction: column;
+}
+main .teamproject .flex-box .page-img {
+  margin: 0 auto;
+}
 @media (min-width: 1440px) {
   main .teamproject .flex-box .page-img {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 }
@@ -687,6 +695,11 @@ main .teamproject .flex-box .page-img img {
   main .teamproject .flex-box .page-img img:last-child {
     width: 573px;
   }
+}
+main .teamproject .flex-box .intro-txt {
+  display: flex;
+  justify-content: center;
+  background: red;
 }
 @media (min-width: 1440px) {
   main .teamproject .flex-box .intro-txt {
@@ -732,7 +745,7 @@ main .teamproject .flex-box .more-btn {
   justify-content: space-between;
   width: 120px;
   height: 20px;
-  margin-top: 35px;
+  margin-top: 100px;
   border: 1px solid white;
   border-radius: 30px;
   padding: 12px;

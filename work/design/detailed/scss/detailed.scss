@@ -14,11 +14,7 @@
     }
 }
 
-body {
-    @include responsive(large-screens) {
-        height: 12425px; // 페이지 전체의 높이값 지정.
-    }
-    
+body { 
     background: url(../../../../images/background_blue_mobile_2.png) no-repeat;
     background-size: cover;
     background-position: center;
@@ -27,5 +23,62 @@ body {
         background: url(../../../../images/background_blue_pc_2.png) no-repeat;
         background-size: cover;
         background-position: center;
+    }
+}
+
+main {
+    .flex-box {
+        .intro-txt {
+            @include responsive(large-screens) {
+                margin-bottom: 35px;
+            }
+            .intro {
+                h3 {
+                    color: $color-main;
+                    font-family: $font-main;
+                    margin-bottom: 30px;
+                    @include responsive(large-screens) {
+                        font-size: $desktop-content-sub2;   
+                        margin-bottom: 30px;
+                    }
+
+                    .pbox {
+                        p {
+                            font-size: $font-size-18;
+                        }
+                    }
+                }
+            } //intro
+        } //intro-txt
+
+        .page-img {
+            margin-top: 30px;
+            @include responsive(large-screens) {
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            img {
+                width: 100%; height: 100%;
+
+                &:first-child {
+                    margin-bottom: 50px;
+
+                    @include responsive(large-screens) {
+                        width: 600px;
+                        margin-right: 20px;
+                    }
+                }
+                &:last-child {
+                    @include responsive(large-screens) {
+                        width: 600px;
+                    }
+                }
+                
+                @include responsive(large-screens) {
+                    width: 50%;
+                }
+            }
+        }
     }
 }

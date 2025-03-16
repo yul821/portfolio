@@ -65,6 +65,7 @@ body {
 main .flex-box .intro-txt .intro h3 {
   color: #fff;
   font-family: "Copperplate Gothic";
+  margin-bottom: 30px;
 }
 @media (min-width: 1440px) {
   main .flex-box .intro-txt .intro h3 {
@@ -74,6 +75,9 @@ main .flex-box .intro-txt .intro h3 {
 }
 main .flex-box .intro-txt .intro h3 .pbox p {
   font-size: 18px;
+}
+main .flex-box .page-img {
+  margin-top: 30px;
 }
 @media (min-width: 1440px) {
   main .flex-box .page-img {

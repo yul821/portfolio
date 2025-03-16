@@ -36,6 +36,7 @@ main {
                 h3 {
                     color: $color-main;
                     font-family: $font-main;
+                    margin-bottom: 30px;
                     @include responsive(large-screens) {
                         font-size: $desktop-content-sub2;   
                         margin-bottom: 30px;
@@ -51,6 +52,8 @@ main {
         } //intro-txt
 
         .page-img {
+            margin-top: 30px;
+            
             @include responsive(large-screens) {
                 display: flex;
                 

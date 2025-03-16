@@ -342,6 +342,7 @@ main .renewal-page .flex-box .intro-txt .more-btn {
   border: 1px solid white;
   border-radius: 30px;
   padding: 12px;
+  cursor: pointer;
 }
 @media (min-width: 1440px) {
   main .renewal-page .flex-box .intro-txt .more-btn {
@@ -362,12 +363,11 @@ main .renewal-page .flex-box .intro-txt .more-btn p {
     font-size: 25px;
   }
 }
-main .renewal-page .flex-box .intro-txt .more-btn a {
+main .renewal-page .flex-box .intro-txt .more-btn img {
   width: 25%;
-  cursor: pointer;
 }
 @media (min-width: 1440px) {
-  main .renewal-page .flex-box .intro-txt .more-btn a {
+  main .renewal-page .flex-box .intro-txt .more-btn img {
     width: 38px;
   }
 }
@@ -384,6 +384,9 @@ main .renewal-page .flex-box .intro-txt .more-btn a {
     margin-top: 80px;
   }
 }
+main .detailed-page .flex-box .page-img {
+  margin-bottom: 35px;
+}
 main .detailed-page .flex-box .page-img img {
   width: 329px;
 }
@@ -393,6 +396,7 @@ main .detailed-page .flex-box .page-img img {
   }
 }
 main .detailed-page .flex-box .intro-txt {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin-bottom: 35px;
@@ -422,12 +426,15 @@ main .detailed-page .flex-box .intro-txt .intro h3 {
     margin-bottom: 30px;
   }
 }
-main .detailed-page .flex-box .intro-txt .intro p {
+main .detailed-page .flex-box .intro-txt .intro .pbox {
+  margin-top: 30px;
+}
+main .detailed-page .flex-box .intro-txt .intro .pbox p {
   font-family: "Noto Sans KR";
   font-size: 14px;
 }
 @media (min-width: 1440px) {
-  main .detailed-page .flex-box .intro-txt .intro p {
+  main .detailed-page .flex-box .intro-txt .intro .pbox p {
     font-size: 20px;
   }
 }
@@ -437,10 +444,11 @@ main .detailed-page .flex-box .more-btn {
   justify-content: space-between;
   width: 120px;
   height: 20px;
-  margin-top: 100px;
+  margin-top: 75px;
   border: 1px solid white;
   border-radius: 30px;
   padding: 12px;
+  cursor: pointer;
 }
 @media (min-width: 1440px) {
   main .detailed-page .flex-box .more-btn {
@@ -461,12 +469,11 @@ main .detailed-page .flex-box .more-btn p {
     font-size: 25px;
   }
 }
-main .detailed-page .flex-box .more-btn a {
+main .detailed-page .flex-box .more-btn img {
   width: 25%;
-  cursor: pointer;
 }
 @media (min-width: 1440px) {
-  main .detailed-page .flex-box .more-btn a {
+  main .detailed-page .flex-box .more-btn img {
     width: 38px;
   }
 }
@@ -488,7 +495,14 @@ main .banner-design .flex-box {
   }
 }
 main .banner-design .flex-box .page-img {
+  margin: 0 auto;
+  margin-bottom: 35px;
   display: flex;
+}
+@media (min-width: 1440px) {
+  main .banner-design .flex-box .page-img {
+    margin: 0;
+  }
 }
 main .banner-design .flex-box .page-img img {
   width: 150px;
@@ -531,12 +545,15 @@ main .banner-design .flex-box .intro-txt .intro h3 {
     margin-bottom: 30px;
   }
 }
-main .banner-design .flex-box .intro-txt .intro p {
+main .banner-design .flex-box .intro-txt .intro .pbox {
+  margin-top: 30px;
+}
+main .banner-design .flex-box .intro-txt .intro .pbox p {
   font-family: "Noto Sans KR";
   font-size: 14px;
 }
 @media (min-width: 1440px) {
-  main .banner-design .flex-box .intro-txt .intro p {
+  main .banner-design .flex-box .intro-txt .intro .pbox p {
     font-size: 20px;
   }
 }
@@ -546,10 +563,11 @@ main .banner-design .flex-box .more-btn {
   justify-content: space-between;
   width: 120px;
   height: 20px;
-  margin-top: 100px;
+  margin-top: 75px;
   border: 1px solid white;
   border-radius: 30px;
   padding: 12px;
+  cursor: pointer;
 }
 @media (min-width: 1440px) {
   main .banner-design .flex-box .more-btn {
@@ -570,12 +588,11 @@ main .banner-design .flex-box .more-btn p {
     font-size: 25px;
   }
 }
-main .banner-design .flex-box .more-btn a {
+main .banner-design .flex-box .more-btn img {
   width: 25%;
-  cursor: pointer;
 }
 @media (min-width: 1440px) {
-  main .banner-design .flex-box .more-btn a {
+  main .banner-design .flex-box .more-btn img {
     width: 38px;
   }
 }
@@ -586,16 +603,18 @@ main .banner-design .flex-box .more-btn a {
 }
 main .app-design .flex-box {
   display: flex;
+  flex-direction: column;
 }
 @media (min-width: 1440px) {
   main .app-design .flex-box {
+    display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
   }
 }
 main .app-design .flex-box .page-img {
   margin: 0 auto;
-  margin-top: 44px;
 }
 @media (min-width: 1440px) {
   main .app-design .flex-box .page-img {
@@ -624,7 +643,9 @@ main .app-design .flex-box .intro-txt .intro {
   color: #fff;
 }
 main .app-design .flex-box .intro-txt .intro h3 {
-  text-align: left;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: "Copperplate Gothic";
   font-size: 18px;
   margin-top: 35px;
@@ -632,6 +653,8 @@ main .app-design .flex-box .intro-txt .intro h3 {
 }
 @media (min-width: 1440px) {
   main .app-design .flex-box .intro-txt .intro h3 {
+    position: static;
+    transform: translateX(0);
     font-size: calc(50px + 0.2vw);
     font-weight: lighter;
     margin-bottom: 30px;
@@ -653,12 +676,15 @@ main .app-design .flex-box .intro-txt .intro img {
     margin-bottom: 30px;
   }
 }
-main .app-design .flex-box .intro-txt .intro p {
+main .app-design .flex-box .intro-txt .intro .pbox {
+  margin-top: 30px;
+}
+main .app-design .flex-box .intro-txt .intro .pbox p {
   font-family: "Noto Sans KR";
   font-size: 14px;
 }
 @media (min-width: 1440px) {
-  main .app-design .flex-box .intro-txt .intro p {
+  main .app-design .flex-box .intro-txt .intro .pbox p {
     font-size: 20px;
   }
 }
@@ -672,6 +698,7 @@ main .app-design .flex-box .more-btn {
   border: 1px solid white;
   border-radius: 30px;
   padding: 12px;
+  cursor: pointer;
 }
 @media (min-width: 1440px) {
   main .app-design .flex-box .more-btn {
@@ -692,12 +719,11 @@ main .app-design .flex-box .more-btn p {
     font-size: 25px;
   }
 }
-main .app-design .flex-box .more-btn a {
+main .app-design .flex-box .more-btn img {
   width: 25%;
-  cursor: pointer;
 }
 @media (min-width: 1440px) {
-  main .app-design .flex-box .more-btn a {
+  main .app-design .flex-box .more-btn img {
     width: 38px;
   }
 }
@@ -734,6 +760,7 @@ main .cardnews-design .flex-box .page-img {
 main .cardnews-design .flex-box .page-img img {
   width: 152px;
   margin: 10px;
+  margin-bottom: 35px;
 }
 main .cardnews-design .flex-box .page-img img:not(:last-child) {
   margin-right: 10px;
@@ -746,6 +773,7 @@ main .cardnews-design .flex-box .page-img img:not(:last-child) {
 }
 main .cardnews-design .flex-box .intro-txt {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 35px;
 }
 @media (min-width: 1440px) {
@@ -757,24 +785,35 @@ main .cardnews-design .flex-box .intro-txt .intro {
   color: #fff;
 }
 main .cardnews-design .flex-box .intro-txt .intro h3 {
+  width: 250px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: "Copperplate Gothic";
   font-size: 18px;
-  margin-top: 35px;
   margin-bottom: 35px;
 }
 @media (min-width: 1440px) {
   main .cardnews-design .flex-box .intro-txt .intro h3 {
+    width: 365px;
+    text-align: left;
+    position: static;
+    transform: translateX(0);
     font-size: calc(50px + 0.2vw);
     font-weight: lighter;
     margin-bottom: 30px;
   }
 }
-main .cardnews-design .flex-box .intro-txt .intro p {
+main .cardnews-design .flex-box .intro-txt .intro .pbox {
+  margin-top: 30px;
+}
+main .cardnews-design .flex-box .intro-txt .intro .pbox p {
   font-family: "Noto Sans KR";
   font-size: 14px;
 }
 @media (min-width: 1440px) {
-  main .cardnews-design .flex-box .intro-txt .intro p {
+  main .cardnews-design .flex-box .intro-txt .intro .pbox p {
     font-size: 20px;
   }
 }
@@ -788,6 +827,7 @@ main .cardnews-design .flex-box .more-btn {
   border: 1px solid white;
   border-radius: 30px;
   padding: 12px;
+  cursor: pointer;
 }
 @media (min-width: 1440px) {
   main .cardnews-design .flex-box .more-btn {
@@ -808,12 +848,11 @@ main .cardnews-design .flex-box .more-btn p {
     font-size: 25px;
   }
 }
-main .cardnews-design .flex-box .more-btn a {
+main .cardnews-design .flex-box .more-btn img {
   width: 25%;
-  cursor: pointer;
 }
 @media (min-width: 1440px) {
-  main .cardnews-design .flex-box .more-btn a {
+  main .cardnews-design .flex-box .more-btn img {
     width: 38px;
   }
 }
@@ -828,6 +867,7 @@ main .teamproject .flex-box {
 }
 main .teamproject .flex-box .page-img {
   margin: 0 auto;
+  margin-bottom: 35px;
 }
 @media (min-width: 1440px) {
   main .teamproject .flex-box .page-img {
@@ -868,32 +908,39 @@ main .teamproject .flex-box .intro-txt .intro {
   color: #fff;
 }
 main .teamproject .flex-box .intro-txt .intro h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: "Copperplate Gothic";
   font-size: 18px;
-  margin-top: 35px;
   margin-bottom: 35px;
 }
 @media (min-width: 1440px) {
   main .teamproject .flex-box .intro-txt .intro h3 {
+    position: static;
+    transform: translateX(0);
     font-size: calc(50px + 0.2vw);
     font-weight: lighter;
     margin-bottom: 30px;
   }
 }
-main .teamproject .flex-box .intro-txt .intro p {
+main .teamproject .flex-box .intro-txt .intro .pbox {
+  margin-top: 35px;
+}
+main .teamproject .flex-box .intro-txt .intro .pbox p {
   font-family: "Noto Sans KR";
   font-size: 14px;
 }
 @media (min-width: 1440px) {
-  main .teamproject .flex-box .intro-txt .intro p {
+  main .teamproject .flex-box .intro-txt .intro .pbox p {
     font-size: 20px;
   }
 }
-main .teamproject .flex-box .intro-txt .intro p:last-child br {
+main .teamproject .flex-box .intro-txt .intro .pbox p:last-child br {
   display: block;
 }
 @media (min-width: 1440px) {
-  main .teamproject .flex-box .intro-txt .intro p:last-child br {
+  main .teamproject .flex-box .intro-txt .intro .pbox p:last-child br {
     display: none;
   }
 }
@@ -903,10 +950,11 @@ main .teamproject .flex-box .more-btn {
   justify-content: space-between;
   width: 120px;
   height: 20px;
-  margin-top: 150px;
+  margin-top: 130px;
   border: 1px solid white;
   border-radius: 30px;
   padding: 12px;
+  cursor: pointer;
 }
 @media (min-width: 1440px) {
   main .teamproject .flex-box .more-btn {
@@ -927,12 +975,11 @@ main .teamproject .flex-box .more-btn p {
     font-size: 25px;
   }
 }
-main .teamproject .flex-box .more-btn a {
+main .teamproject .flex-box .more-btn img {
   width: 25%;
-  cursor: pointer;
 }
 @media (min-width: 1440px) {
-  main .teamproject .flex-box .more-btn a {
+  main .teamproject .flex-box .more-btn img {
     width: 38px;
   }
 }

@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: cornflowerblue;
+}
+.container > h2 {
+    font-family: 'Berlin Sans FB';
+}
+.product-card {
+    width: 280px;
+    height: 375px;
+    background-color: #d9d9d9;
+
+    display: grid;
+    grid-template-columns: repeat(4 ,375px);/*2행 + 크기 4열 2행*/
+    grid-auto-rows: minmax(100px,auto);
+    grid-gap: 20px 20px; /* 행사이의 간격 */
+    margin-bottom: 195px; /* 푸터와의 간격 */
+}
+.product-card > h3,
+.product-card > p {
+
+}

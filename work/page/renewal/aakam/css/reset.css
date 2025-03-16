@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font: 16px '맑은 고딕';
+    width: 100%;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th,
+td {
+    padding: 20px;
+}
+img,
+input,
+textarea,
+select {
+    vertical-align: middle;
+}
+img {
+    display: block;
+    width: 100%;
+}
+strong {
+    display: block;
+}
+address {
+    font-style: normal;
+}
+h1 {
+    font-size: 36px;
+}
+h2 {
+    font-size: 34px;
+    font-weight: normal;
+}
+h3 {
+    font-size: 18px;
+}
+p {
+    line-height: 1.6;
+}

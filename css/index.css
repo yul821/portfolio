@@ -188,7 +188,6 @@ main .skill h1 {
   }
 }
 main .skill .icon-box {
-  background-color: blue;
   width: 90%;
   margin: 0 auto;
   display: grid;
@@ -209,7 +208,6 @@ main .skill .icon-box {
 @media (min-width: 1440px) {
   main .skill .icon-box .icon {
     margin-bottom: 30px;
-    background-color: green;
   }
 }
 main .skill .icon-box .icon img {
@@ -701,9 +699,6 @@ main .cardnews-design .flex-box .more-btn a {
   main .cardnews-design .flex-box .more-btn a {
     width: 38px;
   }
-}
-main .teamproject {
-  background-color: cadetblue;
 }
 @media (min-width: 1440px) {
   main .teamproject {

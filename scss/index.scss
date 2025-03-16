@@ -146,7 +146,7 @@ main {
             }
         }
         .icon-box {
-            background-color: blue;
+            // background-color: blue;
             width: 90%;
             margin: 0 auto;
             display: grid;
@@ -175,7 +175,7 @@ main {
                 @include responsive(large-screens) {
                     // width: 20%;
                     margin-bottom: 30px;
-                    background-color: green;
+                    // background-color: green;
                 }
                 
                 img {
@@ -666,7 +666,7 @@ main {
     } /********************** cardnews-design **********************/
 
     .teamproject {
-        background-color: cadetblue;
+        // background-color: cadetblue;
         @include responsive(large-screens) {
             height: 1780px;
         }

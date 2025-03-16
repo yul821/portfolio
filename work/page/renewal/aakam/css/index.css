@@ -1,0 +1,400 @@
+@charset "utf-8";
+
+/* 그리드 시스템 */
+.container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    /* background-color: bisque; */
+}
+
+/*===== header =====*/
+header {
+    position: fixed;
+    width: 100%; 
+    padding: 30px 0;
+    z-index: 999;
+    font-family: Arial;
+}
+.header-menu {
+    /* background-color: #000; */
+    
+}
+.menu-logo-flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contents-menu {
+    width: 715px;
+    align-items: center;
+}
+.contents-menu > ul {
+    justify-content: space-between;
+    /*background-color: green;*/
+}
+.contents-menu > ul > li > a {
+    color: white;
+    font-size: 18px;
+}
+.contents-menu > .gnb {
+    display: flex;
+}
+.contents-menu > .gnb > li:last-child {
+    width: 21px;
+    height: 21px;
+}
+
+/*===== main =====*/
+.main_banner  {
+    width: 100%;
+    height: 100vh;  /* viewport height 사이즈 크기의 퍼센트 만큼의 높이(세로) */
+    background: url(../images/background_img.png) no-repeat center top;
+    background-size: cover; /* 화면에 꽉 채움 */
+}
+.concept {
+    position: relative;
+    padding: 124px 0;
+    background-color: black;
+}
+.aa  {
+    position: absolute;
+    top: -13%;
+    left: -28%;
+}
+
+.kam  {
+    position: absolute;
+    bottom: -13%;
+    right: -28%;
+}
+.concept-text {
+    position: absolute;
+    bottom: 3%;
+    left: -3.5%;
+    transform: rotate(-90deg);
+    color: white;
+    font-family: 'Berlin Sans FB';
+    font-size: 18px;
+}
+.concept-img-list {
+    position: relative;
+    display: flex;
+    z-index: 2;
+    gap: 20px;
+    justify-content: center;
+}
+.concept-img-list li {
+    flex: 1;
+}
+.concept-img-list img {
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+/* 69 collection */
+.collection .container {
+    width: 1200px;
+    margin: 125px auto;
+    padding: 70px 30px 30px;
+    border: 2px solid #000;
+    display: flex;
+}
+.collection .title {
+    margin-left: 50px;
+}
+.collection .title h2 {
+    font-family: 'Berlin Sans FB';
+    font-size: 45px;
+} 
+.collection .title p {
+    margin-bottom: 38px;
+    font-family: 'Berlin Sans FB';
+    font-size: 24px;
+    color: #32200f;
+}
+.collection .container .contents {
+    width: 40%;
+}
+.collection .container .contents 
+.collection-img {
+    margin-top: 125px;
+}
+.collection .container .contents 
+.collection-img .collection-img-first {
+    margin-bottom: 8px;
+}
+.collection .container .contents 
+.collection-img .collection-img-first ul {
+    display: flex;
+    gap: 8px;
+}
+.collection .container .contents 
+.collection-img .collection-img-second {
+    display: flex;
+    gap: 8px;
+}
+.collection .container .contents 
+.collection-img .collection-img-second .img-left {
+    width: 200px;
+}
+.collection .container .contents 
+.collection-img .collection-img-second .img-right li:first-child {
+    margin-bottom: 8px;
+}
+.collection .container .contents 
+.collection-img .collection-img-second .img-right li {
+    width: 97px;
+}
+.collection .container .fw-img {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    gap: 15px;
+    width: 60%;
+}
+.collection .container .fw-img .left-btn,
+.collection .container .fw-img .right-btn {
+    cursor: pointer;
+}
+
+
+/* 104 aakam-concept */
+.aakam-concept {
+    height: 755px; /* cap 끝부터 이미지 높이 */
+    background:url(../images/vinyl.jpg) no-repeat center;
+    background-size: cover;
+    margin-bottom: 210px;
+}
+.aakam-concept .container {
+    position: relative;
+    height: 100%;
+}
+.aakam-concept .container .aakam-concept-text {
+    position: absolute;
+    display: flex;
+    left: 0;
+    bottom: 17%;
+    width: 650px;
+    height: 507px;
+
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    line-height: 45px;
+}
+.aakam-concept .container .aakam-concept-hat {
+    position: absolute;
+    bottom: 100px;
+    left: 550px;
+    width: 356px;
+}
+.aakam-concept-model img {
+    position: absolute;
+    left: 78%;
+    top: -10%;
+    width: 540px;
+    height: 830px;
+}
+
+
+
+
+/* 121 high-neck */
+.high-neck .container {
+    /* background-color: #888; */
+}
+.high-neck .container h2 {
+    margin-bottom: 170px;
+    width: 360px;
+    font-family: 'Berlin Sans FB';
+    font-size: 36px;
+}
+.high-neck .container .product-card {
+    position: relative;
+}
+.high-neck .container .product-card > img {
+    position: absolute;
+    left: -65px;
+    bottom: -40px;
+    width: 265px;
+    height: 670px;
+}
+.high-neck .container .product-card ul {
+    display: flex;
+    justify-content: flex-end;
+}
+.high-neck .container .product-card ul li {
+    margin-left: 20px;
+    width: 280px;
+}
+.high-neck .container .product-card ul li h3 { 
+    height: 48px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+/* 이미지 앞,뒤 호버 */
+.high-neck .container .product-card .first-hover:hover {
+    content: url(../images/leather_3.jpg);
+}
+.high-neck .container .product-card .hover1:hover {
+    content: url(../images/jaket_2.png);
+}
+.high-neck .container .product-card .hover2:hover {
+    content: url(../images/bottom_2.png);
+}
+.high-neck .container .product-card .hover3:hover {
+    content: url(../images/top_2.png);
+}
+.high-neck .container .product-card ul li > img {
+    margin-bottom: 40px;
+    background-color: #d9d9d9;
+}
+.high-neck .container .product-card ul li .info img {
+    width: 52px;
+}
+.high-neck .container .product-card ul li .info p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+
+
+
+/* 157 product-gallery */
+.product-gallery {
+    margin-bottom: 150px;
+}
+.product-gallery .container .box {
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);/* 4열 2행*/
+    grid-auto-rows: minmax(100px,auto);
+    column-gap: 20px;
+    row-gap: 40px;
+}
+.product-gallery h2 {
+    font-family: 'Berlin Sans FB';
+    font-size: 36px;
+    margin: 185px 0 30px;
+}
+.product-gallery .container .box li h3 {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+/* 이미지 앞,뒤 호버 */
+/* 첫번째 행 */
+.product-gallery .container .hover10:hover {
+    content: url(../images/acc_1\(1\).png);
+}
+.product-gallery .container .hover11:hover {
+    content: url(../images/acc_2\(1\).png);
+}
+.product-gallery .container .hover12:hover {
+    content: url(../images/acc_3\(1\).png);
+}
+.product-gallery .container .hover13:hover {
+    content: url(../images/acc_4\(!\).png);
+}
+/* 두번째 행 */
+.product-gallery .container .hover14:hover {
+    content: url(../images/acc_5\(1\).png);
+}
+.product-gallery .container .hover15:hover {
+    content: url(../images/acc_6\(1\).png);
+}
+.product-gallery .container .hover16:hover {
+    content: url(../images/acc_7\(1\).png);
+}
+.product-gallery .container .hover17:hover {
+    content: url(../images/acc_8\(1\).png);
+}
+
+.product-gallery .container .box li p {
+    margin-bottom: 20px; 
+    font-size: 14px;   
+}
+.product-gallery .container .box .product-card > img {
+    height: 375px;
+    background-color: #d9d9d9;
+}
+.product-gallery .container .box .product-card .info {
+    margin-top: 30px;
+}
+.product-gallery .container .box .product-card .info img {
+    width: 52px;
+}
+
+
+/*===== talk 고정영역 =====*/
+.talk {
+    position: fixed;
+    right: 10%;
+    bottom: 196px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 6px;
+    width: 90px;
+    height: 40px;
+    border: 1px solid #888;
+    border-radius: 20px;
+    background-color: #fff;
+
+    cursor: pointer;
+}
+.talk div {
+    position: absolute;
+    left: -2px;
+    top: -1px;
+    padding: 9px 8px;
+    width: 40px;
+    height: 40px;
+    border: 0.5px solid #888;
+    border-radius: 20px;
+}
+.talk p {
+    font-size: 13px;
+    color: #131313;
+    line-height: 1;
+}
+
+/*===== footer =====*/
+footer {
+    padding: 40px 0 57px;
+    height: 300px;
+    border-top: 1px solid #d9d9d9;
+}
+footer .menu-sns-box {
+    margin-bottom: 60px;
+}
+footer .menu-sns-box > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 120px;
+}
+footer .menu-sns-box > ul > li {
+    width: 26px;
+}
+footer .footer-info-security .info ul {
+    display: flex;
+    margin-bottom: 20px;
+}
+footer .footer-info-security .info ul li {
+    margin-right: 15px;
+}
+footer .footer-info-security .info ul li:last-child {
+    margin-right: 0;
+}
+footer .footer-info-security .info ul li a, p, address {
+    font-family: 'Arial';
+    font-size: 12px;
+}
+footer .footer-info-security .info address {
+    margin-bottom: 30px;
+}

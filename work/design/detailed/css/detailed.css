@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: calc(50px + 0.2vw);
+}
+
+p {
+  color: #fff;
+  line-height: 1.8;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+body {
+  background: url(../../../../images/background_orange_mobile.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 1440px) {
+  body {
+    height: 11275px;
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    background: url(../../../../images/background_orange_pc.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}/*# sourceMappingURL=detailed.css.map */

@@ -45,18 +45,18 @@ p {
 }
 
 body {
-  background: url(../../../../images/background_blue_mobile.png) no-repeat;
+  background: url(../../../../images/background_blue_mobile_2.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (min-width: 1440px) {
   body {
-    height: 11275px;
+    height: 12425px;
   }
 }
 @media (min-width: 1440px) {
   body {
-    background: url(../../../../images/background_blue_pc.png) no-repeat;
+    background: url(../../../../images/background_blue_pc_2.png) no-repeat;
     background-size: cover;
     background-position: center;
   }

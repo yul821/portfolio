@@ -33,18 +33,18 @@ p {
 }
 
 body {
-  background: url(../images/background_blue_mobile.png) no-repeat;
+  background: url(../images/background_blue_mobile_2.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (min-width: 1440px) {
   body {
-    height: 11275px;
+    height: 12425px;
   }
 }
 @media (min-width: 1440px) {
   body {
-    background: url(../images/background_blue_pc.png) no-repeat;
+    background: url(../images/background_blue_pc_2.png) no-repeat;
     background-size: cover;
     background-position: center;
   }
@@ -56,6 +56,7 @@ main {
   /********************** skill **********************/
   /********************** renewal-page **********************/
   /********************** detailed-page **********************/
+  /********************** banner-design **********************/
   /********************** app-design **********************/
   /********************** cardnews-design **********************/
   /********************** cardnews-design **********************/
@@ -470,18 +471,124 @@ main .detailed-page .flex-box .more-btn a {
   }
 }
 @media (min-width: 1440px) {
+  main .banner-design {
+    height: 1080px;
+  }
+}
+main .banner-design .flex-box {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1440px) {
+  main .banner-design .flex-box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main .banner-design .flex-box .page-img {
+  display: flex;
+}
+main .banner-design .flex-box .page-img img {
+  width: 150px;
+}
+main .banner-design .flex-box .page-img img:first-child {
+  padding-right: 10px;
+}
+@media (min-width: 1440px) {
+  main .banner-design .flex-box .page-img img {
+    width: 421px;
+  }
+}
+main .banner-design .flex-box .intro-txt {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+@media (min-width: 1440px) {
+  main .banner-design .flex-box .intro-txt {
+    display: block;
+  }
+}
+main .banner-design .flex-box .intro-txt .intro {
+  color: #fff;
+}
+main .banner-design .flex-box .intro-txt .intro h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Copperplate Gothic";
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+@media (min-width: 1440px) {
+  main .banner-design .flex-box .intro-txt .intro h3 {
+    position: static;
+    transform: translateX(0);
+    font-size: calc(50px + 0.2vw);
+    font-weight: lighter;
+    margin-bottom: 30px;
+  }
+}
+main .banner-design .flex-box .intro-txt .intro p {
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+}
+@media (min-width: 1440px) {
+  main .banner-design .flex-box .intro-txt .intro p {
+    font-size: 20px;
+  }
+}
+main .banner-design .flex-box .more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  height: 20px;
+  margin-top: 100px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 12px;
+}
+@media (min-width: 1440px) {
+  main .banner-design .flex-box .more-btn {
+    width: 428px;
+    height: 80px;
+    margin-top: 40px;
+    border-radius: 50px;
+    padding: 30px;
+  }
+}
+main .banner-design .flex-box .more-btn p {
+  font-family: "Copperplate Gothic";
+  font-size: 12px;
+  color: #fff;
+}
+@media (min-width: 1440px) {
+  main .banner-design .flex-box .more-btn p {
+    font-size: 25px;
+  }
+}
+main .banner-design .flex-box .more-btn a {
+  width: 25%;
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  main .banner-design .flex-box .more-btn a {
+    width: 38px;
+  }
+}
+@media (min-width: 1440px) {
   main .app-design {
     height: 1080px;
   }
 }
 main .app-design .flex-box {
   display: flex;
-  flex-direction: column;
 }
 @media (min-width: 1440px) {
   main .app-design .flex-box {
-    display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
   }
@@ -602,9 +709,14 @@ main .cardnews-design {
     height: 1080px;
   }
 }
+main .cardnews-design .flex-box {
+  display: flex;
+  flex-direction: column;
+}
 @media (min-width: 1440px) {
   main .cardnews-design .flex-box {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     margin-top: 60px;
@@ -613,6 +725,11 @@ main .cardnews-design {
 main .cardnews-design .flex-box .page-img {
   display: flex;
   justify-content: center;
+}
+@media (min-width: 1440px) {
+  main .cardnews-design .flex-box .page-img {
+    justify-content: space-between;
+  }
 }
 main .cardnews-design .flex-box .page-img img {
   width: 152px;

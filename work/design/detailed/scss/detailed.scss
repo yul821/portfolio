@@ -19,12 +19,12 @@ body {
         height: 11275px; // 페이지 전체의 높이값 지정.
     }
     
-    background: url(../../../../images/background_orange_mobile.png) no-repeat;
+    background: url(../../../../images/background_blue_mobile.png) no-repeat;
     background-size: cover;
     background-position: center;
 
     @include responsive(large-screens) {
-        background: url(../../../../images/background_orange_pc.png) no-repeat;
+        background: url(../../../../images/background_blue_pc.png) no-repeat;
         background-size: cover;
         background-position: center;
     }

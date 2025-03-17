@@ -73,6 +73,24 @@ main {
                 a {
                     display: flex;
                 }
+
+                p {
+                    font-family: $font-main;
+                    font-size: $font-size-12;
+                    color: $color-main;
+
+                    @include responsive(large-screens) {
+                        font-size: $font-size-16;
+                        font-weight: bold;
+                    }
+                }
+                img {
+                    width: 25%;
+
+                    @include responsive(large-screens) {
+                        width: 38px;
+                    }
+                }
             
             }
 

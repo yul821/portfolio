@@ -30,7 +30,7 @@ main {
     .flex-box {
         .intro-txt {
             @include responsive(large-screens) {
-                margin-bottom: 35px;
+                margin-top: 150px;
             }
             .intro {
                 h3 {

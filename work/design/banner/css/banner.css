@@ -59,7 +59,7 @@ body {
 
 @media (min-width: 1440px) {
   main .flex-box .intro-txt {
-    margin-bottom: 35px;
+    margin-top: 150px;
   }
 }
 main .flex-box .intro-txt .intro h3 {

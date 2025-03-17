@@ -814,12 +814,10 @@ main {
                 justify-content: space-between;
                 align-items: center;
                 // margin-top: 60px;
-                background-color: red;
             }
             .page-img {
                 display: flex;
                 justify-content: space-between;
-                background-color: chartreuse;
                 
                 @include responsive(large-screens) {
                     width: 57.3%;

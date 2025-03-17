@@ -866,13 +866,11 @@ main .cardnews-design .flex-box {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
   }
 }
 main .cardnews-design .flex-box .page-img {
   display: flex;
   justify-content: space-between;
-  background-color: chartreuse;
 }
 @media (min-width: 1440px) {
   main .cardnews-design .flex-box .page-img {

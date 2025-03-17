@@ -5,7 +5,7 @@
 
 body {
     @include responsive(large-screens) {
-        height: 12425px; // 페이지 전체의 높이값 지정.
+        height: 13505px; // 페이지 전체의 높이값 지정.
     }
     background: url(../images/background_blue_mobile_2.png) no-repeat;
     background-size: cover;
@@ -684,9 +684,124 @@ main {
         } //flex-box
     } /********************** app-design **********************/
 
+    .package-design {
+        @include responsive(large-screens) {
+            height: 1080px; // 섹션명에 높이값 지정 1080px
+        }
+        .flex-box {
+            display: flex;
+            flex-direction: column;
+            @include responsive(large-screens) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 129.5vh;
+            }
+            .page-img {
+                margin: 0 auto;
+                margin-bottom: 35px;
+                display: flex;
+
+                @include responsive(large-screens) {
+                    margin: 0;
+                }
+                img {
+                    width: 150px;
+                    &:first-child {
+                        padding-right: 10px;
+                    }
+
+                    @include responsive(large-screens) {
+                        width: 421px;
+                    }
+
+                }
+            }
+
+            .intro-txt {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 35px;
+
+                @include responsive(large-screens) {
+                    display: block;
+                }
+
+                .intro {
+                    color: $color-main;
+                    h3 {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        font-family: $font-main;
+                        font-size: $font-size-18;
+                        margin-bottom: 35px;
+
+                        @include responsive(large-screens) {
+                            position: static; // 포지션 해제
+                            transform: translateX(0);
+                            font-size: $desktop-title-sub;
+                            font-weight: lighter;
+                            margin-bottom: 30px;
+                        }
+                    }
+                    .pbox {
+                        margin-top: 30px;
+                        p {
+                            font-family: $font-sub2;
+                            font-size: $font-size-14;
+    
+                            @include responsive(large-screens) {
+                                font-size: $font-size-20;
+                            }
+                        }
+                    }
+                } //intro
+            } //intro-txt
+
+            .more-btn {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 120px; height: 20px;
+                margin-top: 75px;
+                border: 1px solid white;
+                border-radius: 30px;
+                padding: 12px;
+                cursor: pointer;
+
+                @include responsive(large-screens) {
+                    width: 428px; height: 80px;
+                    margin-top: 40px;
+                    border-radius: 50px;
+                    padding: 30px;
+                }
+                
+                p {
+                    font-family: $font-main;
+                    font-size: $font-size-12;
+                    color: $color-main;
+
+                    @include responsive(large-screens) {
+                        font-size: $font-size-25;
+                    }
+                }
+                img {
+                    width: 25%;
+
+                    @include responsive(large-screens) {
+                        width: 38px;
+                    }
+                }
+            } //more-btn
+        }
+    } /********************** banner-design **********************/
+
+
     .cardnews-design {
         align-content: center;
-        // height: 373px; // 모바일 버전 섹션에 높이값 지정
+        // background-color: aqua;
         @include responsive(large-screens) {
             height: 1080px;
         }
@@ -698,14 +813,17 @@ main {
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 60px;
+                // margin-top: 60px;
+                background-color: red;
             }
             .page-img {
                 display: flex;
-                justify-content: center;
-
+                justify-content: space-between;
+                background-color: chartreuse;
+                
                 @include responsive(large-screens) {
-                    justify-content: space-between;
+                    width: 57.3%;
+                    justify-content:space-between;
                 }
 
                 img {

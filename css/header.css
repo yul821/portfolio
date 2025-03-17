@@ -45,7 +45,10 @@ p {
 }
 
 header {
+  background-color: red;
   position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
   font-family: "Copperplate Gothic";
   z-index: 500;

@@ -63,6 +63,7 @@ main .flex-box .intro-txt {
 }
 @media (min-width: 1440px) {
   main .flex-box .intro-txt {
+    margin-top: 150px;
     margin-bottom: 35px;
   }
 }

@@ -36,7 +36,9 @@ main {
             display: flex;
             justify-content: space-between;
 
+
             @include responsive(large-screens) {
+                margin-top: 150px;
                 margin-bottom: 35px;
             }
             .intro {

@@ -208,23 +208,68 @@ main .skill .icon-box {
   }
 }
 @media (min-width: 1440px) {
-  main .skill .icon-box .icon {
+  main .skill .icon-box .icon1,
+  main .skill .icon-box .icon2,
+  main .skill .icon-box .icon3,
+  main .skill .icon-box .icon4,
+  main .skill .icon-box .icon5,
+  main .skill .icon-box .icon6,
+  main .skill .icon-box .icon7,
+  main .skill .icon-box .icon8,
+  main .skill .icon-box .icon9 {
     margin-bottom: 30px;
   }
 }
-main .skill .icon-box .icon img {
+main .skill .icon-box .icon1 img,
+main .skill .icon-box .icon2 img,
+main .skill .icon-box .icon3 img,
+main .skill .icon-box .icon4 img,
+main .skill .icon-box .icon5 img,
+main .skill .icon-box .icon6 img,
+main .skill .icon-box .icon7 img,
+main .skill .icon-box .icon8 img,
+main .skill .icon-box .icon9 img {
   width: 100%;
 }
-main .skill .icon-box .icon10 {
-  width: 75px;
-  justify-content: flex-start;
-  margin-right: 165px;
+main .skill .icon-box .icon1:hover {
+  content: url(../images/ps_icon_2.png);
+  width: 100%;
 }
-@media (min-width: 1440px) {
-  main .skill .icon-box .icon10 {
-    width: 33.33%;
-    margin-right: 0;
-  }
+main .skill .icon-box .icon2:hover {
+  content: url(../images/ai_icon_2.png);
+  width: 100%;
+}
+main .skill .icon-box .icon3:hover {
+  content: url(../images/git_icon_2.png);
+  width: 100%;
+}
+main .skill .icon-box .icon4:hover {
+  content: url(../images/figma_icon_2.png);
+  width: 100%;
+}
+main .skill .icon-box .icon5:hover {
+  content: url(../images/jquery_icon_2.png);
+  width: 100%;
+}
+main .skill .icon-box .icon6:hover {
+  content: url(../images/sass_icon_2.png);
+  width: 100%;
+}
+main .skill .icon-box .icon7:hover {
+  content: url(../images/css_icon_2.png);
+  width: 100%;
+}
+main .skill .icon-box .icon8:hover {
+  content: url(../images/js_icon_2.png);
+  width: 100%;
+}
+main .skill .icon-box .icon9:hover {
+  content: url(../images/html_icon_2.png);
+  width: 100%;
+}
+main .skill .icon-box .icon10:hover {
+  content: url(../images/prae_icon_2.png);
+  width: 100%;
 }
 @media (min-width: 1440px) {
   main .skill .icon-box .icon10 img {
@@ -623,11 +668,11 @@ main .app-design .flex-box .page-img {
   }
 }
 main .app-design .flex-box .page-img img {
-  width: 186px;
+  width: 255px;
 }
 @media (min-width: 1440px) {
   main .app-design .flex-box .page-img img {
-    width: 504px;
+    width: 555px;
   }
 }
 main .app-design .flex-box .intro-txt {
@@ -667,7 +712,7 @@ main .app-design .flex-box .intro-txt .intro img {
 @media (min-width: 1440px) {
   main .app-design .flex-box .intro-txt .intro img {
     display: block;
-    width: 357px;
+    width: 260px;
     margin-bottom: 30px;
   }
 }
@@ -879,7 +924,7 @@ main .cardnews-design .flex-box .page-img {
   }
 }
 main .cardnews-design .flex-box .page-img img {
-  width: 152px;
+  width: 300px;
   margin: 10px;
   margin-bottom: 35px;
 }
@@ -888,7 +933,7 @@ main .cardnews-design .flex-box .page-img img:not(:last-child) {
 }
 @media (min-width: 1440px) {
   main .cardnews-design .flex-box .page-img img {
-    width: 391px;
+    width: 800px;
     margin-right: 180px;
   }
 }

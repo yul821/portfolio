@@ -166,12 +166,15 @@ main {
                 margin-bottom: 122px;
             }
             
-            .icon {
-                // display: flex;
-                // width: 40%;
-                // margin-bottom: 10px;
-                
-                
+            .icon1,
+            .icon2,
+            .icon3,
+            .icon4,
+            .icon5,
+            .icon6,
+            .icon7,
+            .icon8,
+            .icon9 {
                 @include responsive(large-screens) {
                     // width: 20%;
                     margin-bottom: 30px;
@@ -188,18 +191,85 @@ main {
                     }
                 }
             }
-            .icon10 {
-                width: 75px;
-                justify-content: flex-start;
-                margin-right: 165px;
 
-                @include responsive(large-screens) {
-                    width: calc(33.33%);
-                    margin-right: 0;
+            .icon1 {
+                &:hover {
+                    content: url(../images/ps_icon_2.png);
+                    width: 100%;
+                }
+            }
+
+            .icon2 {
+                &:hover {
+                    content: url(../images/ai_icon_2.png);
+                    width: 100%;
+                }
+            }
+
+            .icon3 {
+                &:hover {
+                    content: url(../images/git_icon_2.png);
+                    width: 100%;
+                }
+            }
+
+            .icon4 {
+                &:hover {
+                    content: url(../images/figma_icon_2.png);
+                    width: 100%;
+                }
+            }
+
+            .icon5 {
+                &:hover {
+                    content: url(../images/jquery_icon_2.png);
+                    width: 100%;
+                }
+            }
+
+            .icon6 {
+                &:hover {
+                    content: url(../images/sass_icon_2.png);
+                    width: 100%;
+                }
+            }
+
+            .icon7 {
+                &:hover {
+                    content: url(../images/css_icon_2.png);
+                    width: 100%;
+                }
+            }
+
+            .icon8 {
+                &:hover {
+                    content: url(../images/js_icon_2.png);
+                    width: 100%;
+                }
+            }
+
+            .icon9 {
+                &:hover {
+                    content: url(../images/html_icon_2.png);
+                    width: 100%;
+                }
+            }
+
+            .icon10 {
+                // width: 75px;
+                // justify-content: flex-start;
+                // margin-right: 165px;
+                &:hover {
+                    content: url(../images/prae_icon_2.png);
+                    width: 100%;
                 }
 
-                img {
+                // @include responsive(large-screens) {
+                //     width: calc(33.33%);
+                //     margin-right: 0;
+                // }
 
+                img {
                     @include responsive(large-screens) {
                         width: 250px;
                         margin: 0 auto 30px;                        
@@ -563,6 +633,7 @@ main {
     
 
     .app-design {
+        // background-color: red;
         @include responsive(large-screens) {
             height: 1080px;
         }
@@ -578,14 +649,15 @@ main {
             .page-img {
                 margin: 0 auto;
                 // justify-content: center;
-
+                
                 @include responsive(large-screens) {
                     margin: 0;
                 }
                 img {
-                    width: 186px;
+                    // background-color: red;
+                    width: 255px;
                     @include responsive(large-screens) {
-                        width: 504px;
+                        width: 555px;
                         // margin-top: 135px;
                     }
                 }
@@ -622,7 +694,7 @@ main {
     
                         @include responsive(large-screens) {
                             display: block;
-                            width: 357px;
+                            width: 260px;
                             margin-bottom: 30px;
                         }
                     }
@@ -825,7 +897,7 @@ main {
                 }
 
                 img {
-                    width: 152px;
+                    width: 300px;
                     margin: 10px;
                     margin-bottom: 35px;
 
@@ -833,7 +905,7 @@ main {
                         margin-right: 10px;
                     }
                     @include responsive(large-screens) {
-                        width: 391px;
+                        width: 800px;
                         margin-right: 180px; //임의로 위치 조정 
                         // margin-top: 135px;
                     }

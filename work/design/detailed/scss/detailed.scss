@@ -29,6 +29,7 @@ body {
 main {
     .flex-box {
         .intro-txt {
+            margin-top: 70px;
             @include responsive(large-screens) {
                 margin-top: 150px;
                 // margin-bottom: 35px;

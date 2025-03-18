@@ -29,6 +29,8 @@ body {
 main {
     .flex-box {
         .intro-txt {
+            margin-top: 70px;
+
             @include responsive(large-screens) {
                 display: flex;
                 justify-content: space-between;
@@ -58,7 +60,7 @@ main {
             align-items: center;
             justify-content: space-between;
             width: 120px; height: 20px;
-            margin-top: 124px; 
+            margin-top: 20px; 
             border: 1px solid white;
             border-radius: 30px;
             padding: 12px;
@@ -77,8 +79,7 @@ main {
                 color: $color-main;
 
                 @include responsive(large-screens) {
-                    font-size: $font-size-16;
-                    font-weight: bold;
+                    font-size: $font-size-25;
                 }
             }
             img {

@@ -60,6 +60,7 @@ body {
 main .flex-box .intro-txt {
   display: flex;
   justify-content: space-between;
+  margin-top: 70px;
 }
 @media (min-width: 1440px) {
   main .flex-box .intro-txt {

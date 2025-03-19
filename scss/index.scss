@@ -9,14 +9,16 @@ body {
     }
     background: url(../images/background_blue_mobile_2.png) no-repeat;
     background-size: cover;
+    // background-size: 100% auto;
     background-position: center;
 
     @include responsive(large-screens) {
         background: url(../images/background_blue_pc_3.png) no-repeat;
-        background-size: cover;
+        // background-size: cover;
+        background-size: 100% auto;
         background-position: center;
+
     }
-    background: url(../images/background_orange_pc.png);
 }
 
 

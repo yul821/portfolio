@@ -8,29 +8,7 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/jquery-3.6.0.min.js"></script>
-    <script>
-        const backgrounds = [
-            '../images/background_orange_pc.png','../images/background_blue_pc_3.png'
-        ];
-
-        let currentIndex = 0;
-
-        // 배경을 변경하는 함수
-        function changeBackground() {
-            // body 요소 선택
-            const body = document.body;
-
-            // 다음 배경 인덱스 계산
-            currentIndex = (currentIndex + 1) % backgrounds.length;
-
-            // 배경 이미지 변경
-            body.style.transition = 'background-image 1s ease-in-out'; // 부드러운 전환 효과
-            body.style.backgroundImage = `url(${backgrounds[currentIndex]})`;
-        }
-
-        // 1분마다 배경 변경 (60000ms)
-        setInterval(changeBackground, 30000);
-    </script>
+    <script src="./js/index.js"></script>
     <title>PortFolio</title>
 </head>
 
@@ -265,7 +243,7 @@
                             </div>
                         </div>
                         
-                        <a href="./work/design/cardnews/cardnews.html" class="more-btn"> <!-- 피그마 링크 -->
+                        <a href="./work/design/packge/packge.html" class="more-btn">
                             <p>MORE</p>
                             <img src="./images/arrow.png" alt="클릭 버튼">
                         </a> 
@@ -339,7 +317,6 @@
         <!-- 영상이나 모션그래픽 넣어야 하는지 -->
 
         <div class="top-btn">
-            <!-- <a href="#header-top">TOP</a> -->
             <a href="#header-top"><img src="./images/bobblee.png" alt="아이콘"></a>
         </div>
     </main>

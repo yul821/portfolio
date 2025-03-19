@@ -36,6 +36,7 @@ body {
   background: url(../images/background_blue_mobile_2.png) no-repeat;
   background-size: cover;
   background-position: center;
+  background: url(../images/background_orange_pc.png);
 }
 @media (min-width: 1440px) {
   body {

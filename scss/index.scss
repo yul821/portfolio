@@ -699,13 +699,14 @@ main {
                         }
                     }
                     h4 {
+                        display: none;
                         @include responsive(large-screens) {
                             font-size: $font-size-30;
                             margin-bottom: 30px;
                         }
                     }
                     .pbox {
-                        margin-top: 30px;
+                        margin-top: 70px;
                         p {
                             font-family: $font-sub2;
                             font-size: $font-size-14;
@@ -723,7 +724,7 @@ main {
                 align-items: center;
                 justify-content: space-between;
                 width: 120px; height: 20px;
-                margin-top: 124px; 
+                margin-top: 140px; 
                 border: 1px solid white;
                 border-radius: 30px;
                 padding: 12px;

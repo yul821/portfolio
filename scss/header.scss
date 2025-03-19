@@ -59,7 +59,7 @@ header {
             }
 
             #menu-box { //헤더 메뉴바
-                display: none;
+                display: none; //모바일 햄버거메뉴
 
                 @include responsive(large-screens) {
                     display: block;
@@ -71,6 +71,7 @@ header {
                     font-weight: bold;
                     li {
                         text-align: center;
+
                         .main-menu-a {
                             @include responsive(large-screens) {
                                 font-size: 20px;
@@ -83,13 +84,14 @@ header {
                                 }
                             }
                         }
+
                         .submenu {
-                            display: none;
+                            // display: none;
 
                             @include responsive(large-screens) {
                                 // display: block;
                             }
-                        }
+                        } //submenu
                     }
                 }
             }

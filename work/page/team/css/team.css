@@ -114,11 +114,15 @@ main .flex-box .more-btn p {
 }
 main .flex-box .more-btn img {
   width: 25%;
+  transition: transform 0.3s ease;
 }
 @media (min-width: 1440px) {
   main .flex-box .more-btn img {
     width: 38px;
   }
+}
+main .flex-box .more-btn img:hover {
+  transform: translateX(10px);
 }
 main .flex-box .page-img {
   margin-top: 30px;

@@ -87,9 +87,14 @@ main {
                 }
                 img {
                     width: 25%;
+                    transition: transform 0.3s ease;
 
                     @include responsive(large-screens) {
                         width: 38px;
+                    }
+
+                    &:hover {
+                        transform: translateX(10px);
                     }
                 }
             

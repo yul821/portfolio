@@ -24,7 +24,6 @@ function changeBackground() {
 setInterval(changeBackground, 30000);
 
 
-
 // top 버튼 
 $(document).ready(function() {
     $('.top-btn a').click(function(event) {

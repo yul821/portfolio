@@ -114,9 +114,13 @@ main .more-btn p {
 }
 main .more-btn img {
   width: 25%;
+  transition: transform 0.3s ease;
 }
 @media (min-width: 1440px) {
   main .more-btn img {
     width: 38px;
   }
+}
+main .more-btn img:hover {
+  transform: translateX(10px);
 }/*# sourceMappingURL=renewal.css.map */

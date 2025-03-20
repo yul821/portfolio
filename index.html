@@ -8,8 +8,19 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- top-btn효과설정을 위한 -->
+    <script src="./js/header.js"></script>
     <script src="./js/index.js"></script>
     <title>PortFolio</title>
+    <!-- <script>
+        $(document).ready(function() {
+            $('#slide-menu-bar  .main-menu-a').click(function(e) {
+                e.preventDefault(); // 기본 링크 동작 방지
+                var submenu = $(this).siblings('.submenu');
+                submenu.slideToggle(); // 서브메뉴 슬라이드 토글
+            });
+        });
+    </script> -->
 </head>
 
 <body>
@@ -20,41 +31,43 @@
                     <h1 class="logo"><a href="./index.html"><img src="./images/logo.png" alt="logo"></a></h1>
                     
                     <div id="mobile-btn-open">
-                        <span id="btn-open"><a href=""><img src="./images/ham_menu.png" alt=""></a></span>
+                        <span id="btn-open"><img src="./images/ham_menu.png" alt=""></span>
                     </div>
                     
-                    <div id="menu-box">
-                        <!-- <div id="mobile-btn-close">
+                    <div id="main-menu-box">
+                        <div id="mobile-btn-close">
                             <span id="btn-close">&gt;</span>
-                        </div> -->
-                        <nav>
-                            <ul class="gnb">
-                                <li>
-                                    <a href="#none" class="main-menu-a">ABOUT ME</a>
-                                </li>
-                                <li>
-                                    <a href="#none" class="main-menu-a">SKILL</a>
-                                </li>
-                                <li id="slide-menu-bar">
-                                    <a href="#none" class="main-menu-a">PORTFOLIO</a>
-                                    <ul class="submenu"> 
-                                        <li><a href="./work/page/renewal/renewal.html">RENEWAL PAGE</a></li> <!-- sub 페이지 html연결 -->
-                                        <li><a href="./work/design/detailed/detailed.html">DETAILED PAGE</a></li> <!-- sub 페이지 html연결 -->
-                                        <li><a href="./work/design/banner/banner.html">BANNER DESIGN</a></li> <!-- sub 페이지 html연결 -->
-                                        <li><a href="https://www.figma.com/design/B2GFolriIQXZydwH1jdsf6/%EC%95%B1%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=0-1&t=UqJ1UBBocOKtIcUO-1">APP DESIGN</a></li> <!-- sub 페이지 html연결 -->
-                                        <li><a href="./work/design/packge/packge.html">PACKGE DESIGN</a></li> <!-- sub 페이지 html연결 -->
-                                        <li><a href="https://www.figma.com/design/ZbOiMSetsKpZghFdwODehV/%EC%B9%B4%EB%93%9C-%EB%89%B4%EC%8A%A4-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=0-1&t=simdUrbt2yaEhAAk-1">CARD NEWS DESIGN</a></li> <!-- sub 페이지 html연결 -->
-                                        <li><a href="./work/page/team/team.html">TEAM PROJECT</a></li> <!-- sub 페이지 html연결 -->
-                                        <li><a href="./work/design/other/other.html">OTHER</a></li> <!-- sub 페이지 html연결 -->
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#none" class="main-menu-a">CONTACT</a>
-                                </li> 
-                            </ul> 
-                        </nav>
-                    </div>
-                </div>
+                        </div>
+                        <div id="menu-box">
+                            <nav>
+                                <ul class="gnb">
+                                    <li>
+                                        <a href="#none" class="main-menu-a">ABOUT ME</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="main-menu-a">SKILL</a>
+                                    </li>
+                                    <li id="slide-menu-bar">
+                                        <a href="#none" class="main-menu-a">PORTFOLIO</a>
+                                        <ul class="submenu"> 
+                                            <li><a href="./work/page/renewal/renewal.html">RENEWAL PAGE</a></li> <!-- sub 페이지 html연결 -->
+                                            <li><a href="./work/design/detailed/detailed.html">DETAILED PAGE</a></li> <!-- sub 페이지 html연결 -->
+                                            <li><a href="./work/design/banner/banner.html">BANNER DESIGN</a></li> <!-- sub 페이지 html연결 -->
+                                            <li><a href="https://www.figma.com/design/B2GFolriIQXZydwH1jdsf6/%EC%95%B1%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=0-1&t=UqJ1UBBocOKtIcUO-1">APP DESIGN</a></li> <!-- sub 페이지 html연결 -->
+                                            <li><a href="./work/design/packge/packge.html">PACKGE DESIGN</a></li> <!-- sub 페이지 html연결 -->
+                                            <li><a href="https://www.figma.com/design/ZbOiMSetsKpZghFdwODehV/%EC%B9%B4%EB%93%9C-%EB%89%B4%EC%8A%A4-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=0-1&t=simdUrbt2yaEhAAk-1">CARD NEWS DESIGN</a></li> <!-- sub 페이지 html연결 -->
+                                            <li><a href="./work/page/team/team.html">TEAM PROJECT</a></li> <!-- sub 페이지 html연결 -->
+                                            <li><a href="./work/design/other/other.html">OTHER</a></li> <!-- sub 페이지 html연결 -->
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="main-menu-a">CONTACT</a>
+                                    </li> 
+                                </ul> 
+                            </nav>
+                        </div> <!-- menu-box -->
+                    </div> <!-- main-menu-box -->
+                </div> <!-- menu-flex-box -->
             </div> <!-- container -->
         </div> <!-- portfolio-menu -->
     </header>
@@ -149,7 +162,7 @@
                 <div class="flex-box">
                     <div class="page-img">
                         <img src="./images/detail_page.png" alt="상세페이지">
-                    </div>
+                    </div> <!-- page-img -->
 
                     <div class="intro-txt">
                         <div class="intro">

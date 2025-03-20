@@ -28,7 +28,7 @@ header {
     }
 
     .portfolio-menu {
-        // background-color: #000;
+        background-color: #000;
         .menu-flex-box {
             display: flex;
             align-items: center;
@@ -48,16 +48,50 @@ header {
 
             #mobile-btn-open {
                 #btn-open {
-                    a {
-                        img {
-                            @include responsive(large-screens) {
-                                display: none;
-                            }
+                    img {
+                        cursor: pointer;
+
+                        @include responsive(large-screens) {
+                            display: none;
                         }
                     }
                 }
             }
 
+            #main-menu-box {
+                position: fixed;
+                top: 0;
+                right: -100vw;
+                width: 100vw;
+                height: 100vw;
+                z-index: 100;
+                background-color: $color-sub;
+                transition: all 0.4s;
+
+                @include responsive(large-screens) {
+                    position: static;
+                    display: block;
+                    right: 0;
+                    height: 100px;
+                    // width: 60%;
+                    background-color: transparent;
+                }
+
+                #mobile-btn-close {
+                    #btn-close {
+                        background-color: red;
+                        width: 8.5%;
+                        margin-left: 50px;
+                        font-size: 50px;
+                        color: $color-main;
+                        cursor: pointer;
+
+                        @include responsive(large-screens) {
+                            display: none;
+                        }
+                    }
+                }
+            }
             #menu-box { //헤더 메뉴바
                 display: none; //모바일 햄버거메뉴
 
@@ -66,13 +100,14 @@ header {
                 }
                 .gnb {
                     display: flex;
-                    justify-content: space-between;
+                    // justify-content: space-between;
                     align-items: center;
                     font-weight: bold;
                     li {
                         text-align: center;
 
                         .main-menu-a {
+                            background-color: lightseagreen;
                             @include responsive(large-screens) {
                                 font-size: 20px;
                                 // background-color: red;
@@ -85,16 +120,30 @@ header {
                             }
                         }
 
+                        #slide-menu-bar {
+                        }
                         .submenu {
                             // display: none;
-
-                            @include responsive(large-screens) {
+                            background-color: red;
+                            position: absolute;
+                            top: 100%;
+                            left: 64.5%;
+                            transform: translateX(-50%);
+                            z-index: 999;
+                            @include responsive(large-screens) {               
                                 // display: block;
+                            }
+
+                            li {
+                                padding: 10px;
+                                a {
+
+                                }
                             }
                         } //submenu
                     }
-                }
-            }
+                } //gnb
+            } //menu-box
         } //menu-flex-box
     } //portfolio-menus
 }

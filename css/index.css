@@ -45,7 +45,7 @@ body {
 @media (min-width: 1440px) {
   body {
     background: url(../images/background_blue_pc_3.png) no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     background-position: center;
   }
 }

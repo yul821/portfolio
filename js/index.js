@@ -1,27 +1,3 @@
-// const backgrounds = [
-//     '../images/background_orange_pc.png','../images/background_blue_pc_3.png'
-// ];
-
-// let currentIndex = 0;
-
-// // 배경을 변경하는 함수
-// function changeBackground() {
-//     // body 요소 선택
-//     const body = document.body;
-
-//     // 다음 배경 인덱스 계산
-//     currentIndex = (currentIndex + 1) % backgrounds.length;
-
-//     // 배경 이미지 변경
-//     body.style.transition = 'background-image 1s ease-in-out'; // 부드러운 전환 효과
-//     body.style.backgroundImage = `url(${backgrounds[currentIndex]})`;
-// }
-
-// // 1분마다 배경 변경 (60000ms)
-// setInterval(changeBackground, 30000); //일정시간이 지나면 배경 변경
-// //모바일 버전 배경도 설정해야됨
-
-
 
 // 배경 이미지 배열
 const mobileImages = [
@@ -49,11 +25,13 @@ setInterval(changeBackground, 30000);
 
 
 
+// top 버튼 
+$(document).ready(function() {
+    $('.top-btn a').click(function(event) {
+        event.preventDefault(); // 기본 클릭 동작 방지
+        $('html, body').animate({
+            scrollTop: $('#header-top').offset().top // 헤더로 스크롤
+        }, 1000); // 1000ms 동안 부드럽게 스크롤
+    });
+});
 
-// document.getElementById('scrollToTop').addEventListener('click', function(event) {
-//     event.preventDefault(); // 기본 동작 방지
-//     window.scrollTo({
-//         top: 0,
-//         behavior: 'smooth' // 부드러운 스크롤
-//     });
-// });

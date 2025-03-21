@@ -39,11 +39,6 @@ body {
 }
 @media (min-width: 1440px) {
   body {
-    height: 13505px;
-  }
-}
-@media (min-width: 1440px) {
-  body {
     background: url(../images/background_blue_pc_3.png) no-repeat;
     background-size: cover;
     background-position: center;
@@ -74,22 +69,25 @@ main .symbol {
     height: 1080px;
   }
 }
-main .symbol img:first-child {
+main .symbol h2 {
+  font-size: 0;
+}
+main .symbol .img1 {
   width: 200px;
   margin: 0 auto;
 }
 @media (min-width: 1440px) {
-  main .symbol img:first-child {
+  main .symbol .img1 {
     width: 612px;
     margin-top: 120px;
     margin-bottom: 95px;
   }
 }
-main .symbol img:last-child {
+main .symbol .img2 {
   display: none;
 }
 @media (min-width: 1440px) {
-  main .symbol img:last-child {
+  main .symbol .img2 {
     display: block;
   }
 }
@@ -103,7 +101,7 @@ main .aboutme {
     height: 1080px;
   }
 }
-main .aboutme h1 {
+main .aboutme h2 {
   font-family: "Copperplate Gothic";
   font-size: calc(25px + 0.5vw);
   text-align: center;
@@ -111,7 +109,7 @@ main .aboutme h1 {
   margin-bottom: 24px;
 }
 @media (min-width: 1440px) {
-  main .aboutme h1 {
+  main .aboutme h2 {
     font-size: calc(80px + 0.2vw);
     margin-bottom: 127px;
   }
@@ -174,7 +172,7 @@ main .aboutme .flex-box .introduc p span:hover {
     height: 1370px;
   }
 }
-main .skill h1 {
+main .skill h2 {
   font-family: "Copperplate Gothic";
   font-size: calc(25px + 0.5vw);
   text-align: center;
@@ -183,7 +181,7 @@ main .skill h1 {
   margin-bottom: 24px;
 }
 @media (min-width: 1440px) {
-  main .skill h1 {
+  main .skill h2 {
     font-size: calc(80px + 0.2vw);
     margin-top: 100px;
     margin-bottom: 127px;
@@ -282,7 +280,7 @@ main .skill .icon-box .icon10:hover {
     height: 1080px;
   }
 }
-main .renewal-page h1 {
+main .renewal-page h2 {
   font-family: "Copperplate Gothic";
   font-size: calc(25px + 0.5vw);
   text-align: center;
@@ -291,7 +289,7 @@ main .renewal-page h1 {
   margin-bottom: 35px;
 }
 @media (min-width: 1440px) {
-  main .renewal-page h1 {
+  main .renewal-page h2 {
     font-size: calc(80px + 0.2vw);
   }
 }
@@ -438,10 +436,12 @@ main .detailed-page .flex-box .page-img {
   margin-bottom: 35px;
 }
 main .detailed-page .flex-box .page-img img {
+  margin: 0 auto;
   width: 329px;
 }
 @media (min-width: 1440px) {
   main .detailed-page .flex-box .page-img img {
+    margin: 0;
     width: 840px;
   }
 }
@@ -792,11 +792,6 @@ main .app-design .flex-box .more-btn img {
 main .app-design .flex-box .more-btn img:hover {
   transform: translateX(10px);
 }
-@media (min-width: 1440px) {
-  main .package-design {
-    height: 1080px;
-  }
-}
 main .package-design .flex-box {
   display: flex;
   flex-direction: column;
@@ -807,7 +802,6 @@ main .package-design .flex-box {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 129.5vh;
   }
 }
 main .package-design .flex-box .page-img {
@@ -821,14 +815,14 @@ main .package-design .flex-box .page-img {
   }
 }
 main .package-design .flex-box .page-img img {
-  width: 150px;
+  width: 300px;
 }
 main .package-design .flex-box .page-img img:first-child {
   padding-right: 10px;
 }
 @media (min-width: 1440px) {
   main .package-design .flex-box .page-img img {
-    width: 421px;
+    width: 600px;
   }
 }
 main .package-design .flex-box .intro-txt {
@@ -948,7 +942,7 @@ main .cardnews-design .flex-box .page-img {
 }
 main .cardnews-design .flex-box .page-img img {
   width: 300px;
-  margin: 10px;
+  margin: 0 auto;
   margin-bottom: 35px;
 }
 main .cardnews-design .flex-box .page-img img:not(:last-child) {
@@ -957,6 +951,7 @@ main .cardnews-design .flex-box .page-img img:not(:last-child) {
 @media (min-width: 1440px) {
   main .cardnews-design .flex-box .page-img img {
     width: 800px;
+    margin: 0;
     margin-right: 180px;
   }
 }
@@ -985,7 +980,7 @@ main .cardnews-design .flex-box .intro-txt .intro h3 {
 }
 @media (min-width: 1440px) {
   main .cardnews-design .flex-box .intro-txt .intro h3 {
-    width: 365px;
+    width: 100%;
     text-align: left;
     position: static;
     transform: translateX(0);
@@ -1185,6 +1180,7 @@ main .top-btn {
 }
 main .top-btn a img {
   width: 20%;
+  max-width: 100px;
   position: fixed;
   right: 30px;
   bottom: 30px;

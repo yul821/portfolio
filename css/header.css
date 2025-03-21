@@ -67,10 +67,12 @@ header .portfolio-menu .menu-flex-box {
 }
 header .portfolio-menu .menu-flex-box .logo a img {
   width: 35px;
+  margin: 7px;
 }
 @media (min-width: 1440px) {
   header .portfolio-menu .menu-flex-box .logo a img {
     width: 100px;
+    padding: 5px;
   }
 }
 header .portfolio-menu .menu-flex-box #mobile-btn-open #btn-open img {
@@ -86,7 +88,7 @@ header .portfolio-menu .menu-flex-box #main-menu-box {
   top: 0;
   right: -100vw;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   z-index: 100;
   background-color: #000;
   transition: all 0.4s;
@@ -113,43 +115,52 @@ header .portfolio-menu .menu-flex-box #main-menu-box #mobile-btn-close #btn-clos
     display: none;
   }
 }
-header .portfolio-menu .menu-flex-box #menu-box {
+header .portfolio-menu .menu-flex-box #main-menu-box #menu-box {
   display: none;
 }
 @media (min-width: 1440px) {
-  header .portfolio-menu .menu-flex-box #menu-box {
+  header .portfolio-menu .menu-flex-box #main-menu-box #menu-box {
     display: block;
   }
 }
-header .portfolio-menu .menu-flex-box #menu-box .gnb {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
+@media (min-width: 1440px) {
+  header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    height: 100px;
+  }
 }
-header .portfolio-menu .menu-flex-box #menu-box .gnb li {
+header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb li {
   text-align: center;
 }
-header .portfolio-menu .menu-flex-box #menu-box .gnb li .main-menu-a {
+header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb li .main-menu-a {
   background-color: lightseagreen;
 }
 @media (min-width: 1440px) {
-  header .portfolio-menu .menu-flex-box #menu-box .gnb li .main-menu-a {
+  header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb li .main-menu-a {
     font-size: 20px;
     padding-left: 200px;
   }
-  header .portfolio-menu .menu-flex-box #menu-box .gnb li .main-menu-a:hover {
+  header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb li .main-menu-a:hover {
     text-shadow: 0px 5px 5px lightblue;
     transition: 0.5s;
   }
 }
-header .portfolio-menu .menu-flex-box #menu-box .gnb li .submenu {
-  background-color: red;
-  position: absolute;
-  top: 100%;
-  left: 64.5%;
-  transform: translateX(-50%);
+header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb #slide-menu-bar {
+  position: relative;
+}
+header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb #slide-menu-bar .submenu {
   z-index: 999;
 }
-header .portfolio-menu .menu-flex-box #menu-box .gnb li .submenu li {
-  padding: 10px;
+@media (min-width: 1440px) {
+  header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb #slide-menu-bar .submenu {
+    position: absolute;
+    top: 60px;
+    right: -32px;
+  }
+}
+header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb #slide-menu-bar .submenu li {
+  background-color: darkmagenta;
+  padding: 12px;
 }/*# sourceMappingURL=header.css.map */

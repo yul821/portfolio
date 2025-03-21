@@ -23,11 +23,12 @@ footer {
         @include responsive(large-screens) {
         }
         .flex-box {
-            margin-top: 70px;
+            margin-top: 50px;
             margin-bottom: 50px;
             
             @include responsive(large-screens) {
-                height: 1080px;
+            height: 1080px;
+            margin: 0;
                 // margin: 0 auto;
             display: flex;
             flex-direction: row-reverse;

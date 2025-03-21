@@ -1,11 +1,11 @@
-  @import "./style.scss";
+@import "./style.scss";
 @import "./reset.scss";
 @import "./mixin.scss";
 
 
 body {
     @include responsive(large-screens) {
-        height: 13505px; // 페이지 전체의 높이값 지정.
+        // height: 13505px; // 페이지 전체의 높이값 지정.
     }
     background: url(../images/background_blue_mobile_2.png) no-repeat;
     background-size: cover;
@@ -36,23 +36,24 @@ main {
             height: 1080px;
         }
         
-        img {
-            &:first-child {
-                width: 200px;
-                margin: 0 auto; 
-    
-                @include responsive(large-screens) {
-                    width: 612px;
-                    margin-top: 120px;
-                    margin-bottom: 95px;
-                }
+        h2 {
+            font-size: 0;
+        }
+        .img1 {
+            width: 200px;
+            margin: 0 auto;
+
+            @include responsive(large-screens) {
+                width: 612px;
+                margin-top: 120px;
+                margin-bottom: 95px;
             }
-            &:last-child {
-                display: none;
-    
-                @include responsive(large-screens) {
-                    display: block;
-                }
+        }
+        .img2 {
+            display: none;
+
+            @include responsive(large-screens) {
+                display: block;
             }
         }
     } /**********************symbol**********************/
@@ -65,7 +66,7 @@ main {
         @include responsive(large-screens) {
             height: 1080px; // 섹션명에 높이값 지정 1080px
         }
-        h1 {
+        h2 {
             font-family: $font-main;
             font-size: $mobile-title-main;
             text-align: center;
@@ -135,7 +136,7 @@ main {
         @include responsive(large-screens) {
             height: 1370px; // 섹션명에 높이값 지정 
         }
-        h1 {
+        h2 {
             font-family: $font-main;
             font-size: $mobile-title-main;
             text-align: center;
@@ -288,7 +289,7 @@ main {
         @include responsive(large-screens) {
             height: 1080px; // 섹션명에 높이값 지정 1080px
         }
-        h1 {
+        h2 {
             // position: relative;
             font-family: $font-main;
             font-size: $mobile-title-main;
@@ -439,8 +440,10 @@ main {
                 // margin-top: 44px;
                 margin-bottom: 35px;
                 img {
+                    margin: 0 auto;
                     width:329px;
                     @include responsive(large-screens) {
+                        margin: 0;
                         width: 840px;
                         // margin-top: 135px;
                     }
@@ -784,7 +787,6 @@ main {
 
     .package-design {
         @include responsive(large-screens) {
-            height: 1080px; // 섹션명에 높이값 지정 1080px
         }
         .flex-box {
             display: flex;
@@ -794,7 +796,7 @@ main {
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                height: 129.5vh;
+                // height: 129.5vh;
             }
             .page-img {
                 margin: 0 auto;
@@ -805,13 +807,13 @@ main {
                     margin: 0;
                 }
                 img {
-                    width: 150px;
+                    width: 300px;
                     &:first-child {
                         padding-right: 10px;
                     }
 
                     @include responsive(large-screens) {
-                        width: 421px;
+                        width: 600px;
                     }
 
                 }
@@ -929,7 +931,8 @@ main {
 
                 img {
                     width: 300px;
-                    margin: 10px;
+                    // margin: 10px;
+                    margin: 0 auto;
                     margin-bottom: 35px;
 
                     &:not(:last-child) { //사이의 마진을 제외한 나머지 없애기
@@ -937,6 +940,7 @@ main {
                     }
                     @include responsive(large-screens) {
                         width: 800px;
+                        margin: 0;
                         margin-right: 180px; //임의로 위치 조정 
                         // margin-top: 135px;
                     }
@@ -967,7 +971,7 @@ main {
                         margin-bottom: 35px;
 
                         @include responsive(large-screens) {
-                            width: 365px;
+                            width: 100%;
                             text-align: left;
                             position: static;
                             transform: translateX(0);
@@ -1170,6 +1174,7 @@ main {
         a {
             img {
                 width: 20%;
+                max-width: 100px; // 최대 이사이즈 까지만 늘어나게 고정
                 position: fixed;
                 right: 30px;
                 bottom: 30px;

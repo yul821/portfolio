@@ -1,0 +1,68 @@
+@import "../../../../scss/style.scss";
+@import "../../../../scss/reset.scss";
+@import "../../../../scss/mixin.scss";
+
+.container {
+    // background-color: cornflowerblue;
+    width: $width-wide;
+    max-width: $break-large;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include responsive(large-screens) {
+        padding: 0 10px;
+    }
+}
+
+body { 
+    background: url(../../../../images/background_blue_mobile_2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include responsive(large-screens) {
+        background: url(../../../../images/background_blue_pc_2.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+main {
+    .flex-box {
+        .intro-txt {
+            margin-top: 70px;
+            @include responsive(large-screens) {
+                margin-top: 150px;
+                // margin-bottom: 35px;
+            }
+            .intro {
+                h3 {
+                    color: $color-main;
+                    font-family: $font-main;
+                    margin-bottom: 30px;
+                    @include responsive(large-screens) {
+                        font-size: $desktop-content-sub2;   
+                        margin-bottom: 30px;
+                    }
+
+                    .pbox {
+                        p {
+                            font-size: $font-size-18;
+                        }
+                    }
+                }
+            } //intro
+        } //intro-txt
+
+        .page-img {
+            margin-top: 30px;
+            @include responsive(large-screens) {
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            img {
+                width: 100%; height: 100%;
+            }
+        }
+    }
+}

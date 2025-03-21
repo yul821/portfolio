@@ -38,9 +38,10 @@ header {
                 a {
                     img {
                         width: 35px;
-
+                        margin: 7px;
                         @include responsive(large-screens) {
                             width: 100px; 
+                            padding: 5px;
                         }
                     }
                 }
@@ -63,7 +64,7 @@ header {
                 top: 0;
                 right: -100vw;
                 width: 100vw;
-                height: 100vw;
+                height: 100vh;
                 z-index: 100;
                 background-color: $color-sub;
                 transition: all 0.4s;
@@ -91,59 +92,64 @@ header {
                         }
                     }
                 }
-            }
-            #menu-box { //헤더 메뉴바
-                display: none; //모바일 햄버거메뉴
-
-                @include responsive(large-screens) {
-                    display: block;
-                }
-                .gnb {
-                    display: flex;
-                    // justify-content: space-between;
-                    align-items: center;
-                    font-weight: bold;
-                    li {
-                        text-align: center;
-
-                        .main-menu-a {
-                            background-color: lightseagreen;
-                            @include responsive(large-screens) {
-                                font-size: 20px;
-                                // background-color: red;
-                                padding-left: 200px;
-
-                                &:hover {
-                                    text-shadow:  0px 5px 5px lightblue;
-                                    transition: 0.5s;
-                                }
-                            }
-                        }
-
-                        #slide-menu-bar {
-                        }
-                        .submenu {
-                            // display: none;
-                            background-color: red;
-                            position: absolute;
-                            top: 100%;
-                            left: 64.5%;
-                            transform: translateX(-50%);
-                            z-index: 999;
-                            @include responsive(large-screens) {               
-                                // display: block;
-                            }
-
-                            li {
-                                padding: 10px;
-                                a {
-
-                                }
-                            }
-                        } //submenu
+                #menu-box { //헤더 메뉴바
+                    display: none; //모바일 햄버거메뉴
+    
+                    @include responsive(large-screens) {
+                        display: block;
                     }
-                } //gnb
-            } //menu-box
+                    .gnb {
+                        
+                        @include responsive(large-screens) {
+                            display: flex;
+                            // justify-content: space-between;
+                            align-items: center;
+                            font-weight: bold;
+                            height: 100px;
+                        
+                        }
+                        li {
+                            text-align: center;
+    
+                            .main-menu-a {
+                                background-color: lightseagreen;
+                                @include responsive(large-screens) {
+                                    font-size: 20px;
+                                    // background-color: red;
+                                    padding-left: 200px;
+    
+                                    &:hover {
+                                        text-shadow:  0px 5px 5px lightblue;
+                                        transition: 0.5s;
+                                    }
+                                }
+                            }
+    
+                        }
+                        #slide-menu-bar {
+                            position: relative;
+    
+                            .submenu {
+                                // display: none;
+                                // left: 64.5%;
+                                // transform: translateX(-50%);
+                                z-index: 999;
+                                @include responsive(large-screens) {               
+                                    position: absolute;
+                                    top: 60px;
+                                    right: -32px;
+                                    // display: block;
+                                }
+        
+                                li {
+                                    background-color: darkmagenta;
+                                    padding: 12px;
+                                }
+                            } //submenu
+                        }
+                    } //gnb
+                } //menu-box
+            }
         } //menu-flex-box
     } //portfolio-menus
 }

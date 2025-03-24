@@ -541,7 +541,6 @@ main {
     } /********************** detailed-page **********************/
 
     .banner-design {
-        // background-color: red;
         @include responsive(large-screens) {
             height: 1080px; // 섹션명에 높이값 지정 1080px
         }
@@ -553,6 +552,7 @@ main {
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 align-items: center;
+                padding-top: 150px;
             }
             .page-img {
                 margin: 0 auto;
@@ -661,7 +661,6 @@ main {
     
 
     .app-design {
-        // background-color: red;
         @include responsive(large-screens) {
             height: 1080px;
         }
@@ -673,6 +672,7 @@ main {
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 align-items: center;
+                padding-top: 240px;
             }
             .page-img {
                 margin: 0 auto;
@@ -792,6 +792,7 @@ main {
 
     .package-design {
         @include responsive(large-screens) {
+            height: 1080px;
         }
         .flex-box {
             display: flex;
@@ -801,6 +802,7 @@ main {
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                padding-top: 240px;
                 // height: 129.5vh;
             }
             .page-img {

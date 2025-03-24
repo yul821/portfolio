@@ -14,21 +14,36 @@
     }
 }
 
-body {
-    @include responsive(large-screens) {
-        //height: 11275px; // 페이지 전체의 높이값 지정.
-    }
+// body {
+//     @include responsive(large-screens) {
+//         //height: 11275px; // 페이지 전체의 높이값 지정.
+//     }
     
+//     background: url(../../../../images/background_orange_mobile.png) no-repeat;
+//     background-size: cover;
+//     background-position: center;
+
+//     @include responsive(large-screens) {
+//         background: url(../../../../images/background_orange_pc.png) no-repeat;
+//         background-size: cover;
+//         background-position: center;
+//     }
+// }
+
+body {
     background: url(../../../../images/background_orange_mobile.png) no-repeat;
     background-size: cover;
+    // background-size: 100% auto;
     background-position: center;
 
     @include responsive(large-screens) {
-        background: url(../../../../images/background_orange_pc.png) no-repeat;
+        background: url(../../../../images/background_orange_pc.png) no-repeat top left;
         background-size: cover;
+        // background-size: 100% auto;
         background-position: center;
     }
 }
+
 
 main {
     .flex-box {
@@ -45,6 +60,7 @@ main {
             .intro {
                 h3 {
                     color: $color-main;
+                    margin-bottom: 30px;
 
                     @include responsive(large-screens) {
                         font-family: $font-main;
@@ -81,7 +97,7 @@ main {
                     color: $color-main;
 
                     @include responsive(large-screens) {
-                        font-size: $font-size-16;
+                        font-size: $font-size-18;
                         font-weight: bold;
                     }
                 }
@@ -98,6 +114,26 @@ main {
                     }
                 }
             
+            }
+
+            .top-btn {
+                z-index: 999;
+                a {
+                    img {
+                        width: 20%;
+                        max-width: 100px; // 최대 이사이즈 까지만 늘어나게 고정
+                        position: fixed;
+                        right: 30px;
+                        bottom: 30px;
+        
+                        @include responsive(large-screens) {
+                            width: 5%;
+                        }
+                    }
+                    &:hover {
+                        font-weight: bold;
+                    }
+                }
             }
 
 }

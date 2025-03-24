@@ -547,6 +547,7 @@ main .banner-design .flex-box {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    padding-top: 150px;
   }
 }
 main .banner-design .flex-box .page-img {
@@ -670,6 +671,7 @@ main .app-design .flex-box {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    padding-top: 240px;
   }
 }
 main .app-design .flex-box .page-img {
@@ -793,6 +795,11 @@ main .app-design .flex-box .more-btn img {
 main .app-design .flex-box .more-btn img:hover {
   transform: translateX(10px);
 }
+@media (min-width: 1440px) {
+  main .package-design {
+    height: 1080px;
+  }
+}
 main .package-design .flex-box {
   display: flex;
   flex-direction: column;
@@ -803,6 +810,7 @@ main .package-design .flex-box {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 240px;
   }
 }
 main .package-design .flex-box .page-img {

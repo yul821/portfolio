@@ -85,3 +85,18 @@ $(function () {
 
 
     //헤더 서브메뉴 
+    $(document).ready(function() {
+        // 메뉴 클릭 시 부드러운 스크롤 효과
+        $('.submenu-a').on('click', function(event) {
+            // 기본 클릭 이벤트 방지
+            event.preventDefault();
+
+            // 클릭한 링크의 href 속성 값 가져오기
+            var target = $(this).attr('href');
+
+            // 해당 섹션으로 부드럽게 스크롤
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 800); // 800ms 동안 스크롤
+        });
+    });

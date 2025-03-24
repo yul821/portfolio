@@ -14,14 +14,16 @@
     }
 }
 
-body { 
-    background: url(../../../../images/background_blue_mobile_2.png) no-repeat;
+body {
+    background: url(../../../../images/background_orange_mobile.png) no-repeat;
     background-size: cover;
+    // background-size: 100% auto;
     background-position: center;
 
     @include responsive(large-screens) {
-        background: url(../../../../images/background_blue_pc_2.png) no-repeat;
+        background: url(../../../../images/background_orange_pc.png) no-repeat top left;
         background-size: cover;
+        // background-size: 100% auto;
         background-position: center;
     }
 }
@@ -118,6 +120,26 @@ main {
                 @include responsive(large-screens) {
                     width: 50%;
                 }
+            }
+        }
+    }
+
+    .top-btn {
+        z-index: 999;
+        a {
+            img {
+                width: 20%;
+                max-width: 100px; // 최대 이사이즈 까지만 늘어나게 고정
+                position: fixed;
+                right: 30px;
+                bottom: 30px;
+
+                @include responsive(large-screens) {
+                    width: 5%;
+                }
+            }
+            &:hover {
+                font-weight: bold;
             }
         }
     }

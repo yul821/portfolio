@@ -22,13 +22,16 @@ header {
     // height: 60px;
     font-family: $font-main;
     z-index: 500;
+    overflow: hidden;
 
     @include responsive(large-screens) {
         height: 100px;
+        overflow: visible;
+
     }
 
     .portfolio-menu {
-        background-color: #000;
+        // background-color: #000;
         .menu-flex-box {
             display: flex;
             align-items: center;
@@ -80,7 +83,7 @@ header {
 
                 #mobile-btn-close {
                     #btn-close {
-                        background-color: red;
+                        // background-color: red;
                         width: 8.5%;
                         margin-left: 50px;
                         font-size: 50px;
@@ -93,7 +96,7 @@ header {
                     }
                 }
                 #menu-box { //헤더 메뉴바
-                    display: none; //모바일 햄버거메뉴
+                    // display: none; //모바일 햄버거메뉴
     
                     @include responsive(large-screens) {
                         display: block;
@@ -109,41 +112,54 @@ header {
                         
                         }
                         li {
+                            text-align: right;
+                            margin-right: 30px;
+                            padding: 30px 0;
+                            font-size: $font-size-20;
+                            @include responsive(large-screens) {
                             text-align: center;
-    
+                            margin-right: 0;
+                            font-size: $font-size-16;
+                            }
                             .main-menu-a {
-                                background-color: lightseagreen;
+                                // background-color: lightseagreen;
                                 @include responsive(large-screens) {
                                     font-size: 20px;
                                     // background-color: red;
                                     padding-left: 200px;
     
-                                    &:hover {
-                                        text-shadow:  0px 5px 5px lightblue;
-                                        transition: 0.5s;
-                                    }
+                                }
+                                &:hover {
+                                    text-shadow:  0px 5px 5px lightblue;
+                                    transition: 0.5s;
                                 }
                             }
     
                         }
                         #slide-menu-bar {
                             position: relative;
-    
                             .submenu {
                                 // display: none;
                                 // left: 64.5%;
                                 // transform: translateX(-50%);
+                                margin-right: -30px;
                                 z-index: 999;
                                 @include responsive(large-screens) {               
                                     position: absolute;
                                     top: 60px;
-                                    right: -32px;
+                                    right: -27px;
                                     // display: block;
+                                    margin-right: 0;
                                 }
         
                                 li {
-                                    background-color: darkmagenta;
-                                    padding: 12px;
+                                    // background-color: $color-sub;
+                                    padding: 20px 0;
+                                    // text-align: right;
+                                    @include responsive(large-screens) {               
+                                        background-color: rgba($color-sub, 50%);
+
+                                    }
                                 }
                             } //submenu
                         }

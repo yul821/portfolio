@@ -13,11 +13,10 @@ body {
     background-position: center;
 
     @include responsive(large-screens) {
-        background: url(../images/background_blue_pc_3.png) no-repeat;
+        background: url(../images/background_blue_pc_3.png) no-repeat top left;
         background-size: cover;
         // background-size: 100% auto;
         background-position: center;
-
     }
 }
 
@@ -89,7 +88,7 @@ main {
             }
             img {
                 margin: 0 auto;
-                width: 117px;
+                width: 230px;
 
 
                 @include responsive(large-screens) {
@@ -132,9 +131,12 @@ main {
         }
     } /********************** aboutme **********************/
 
-    .skill {
+    .skill { 
+        // background-color: aquamarine;
         @include responsive(large-screens) {
             height: 1370px; // 섹션명에 높이값 지정 
+            // height: 1080px;
+            padding-top: 40px;
         }
         h2 {
             font-family: $font-main;
@@ -146,8 +148,8 @@ main {
 
             @include responsive(large-screens) {
                 font-size: $desktop-title-main;
-                margin-top: 100px;
-                margin-bottom: 127px;
+                // margin-top: 100px;
+                // margin-bottom: 127px;
             }
         }
         .icon-box {
@@ -168,6 +170,7 @@ main {
                 grid-template-columns: repeat(5, 18%);
                 grid-column-gap: 2.5%;
                 grid-row-gap: 7px;
+                margin-top: 200px;
                 margin-bottom: 122px;
             }
             
@@ -287,6 +290,7 @@ main {
 
     .renewal-page {
         @include responsive(large-screens) {
+
             height: 1080px; // 섹션명에 높이값 지정 1080px
         }
         h2 {
@@ -300,6 +304,7 @@ main {
 
             @include responsive(large-screens) {
                 font-size: $desktop-title-main;
+                padding-top: 100px;
             }
         }
         .flex-box {

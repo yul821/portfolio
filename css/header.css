@@ -51,14 +51,13 @@ header {
   width: 100%;
   font-family: "Copperplate Gothic";
   z-index: 500;
+  overflow: hidden;
 }
 @media (min-width: 1440px) {
   header {
     height: 100px;
+    overflow: visible;
   }
-}
-header .portfolio-menu {
-  background-color: #000;
 }
 header .portfolio-menu .menu-flex-box {
   display: flex;
@@ -103,7 +102,6 @@ header .portfolio-menu .menu-flex-box #main-menu-box {
   }
 }
 header .portfolio-menu .menu-flex-box #main-menu-box #mobile-btn-close #btn-close {
-  background-color: red;
   width: 8.5%;
   margin-left: 50px;
   font-size: 50px;
@@ -114,9 +112,6 @@ header .portfolio-menu .menu-flex-box #main-menu-box #mobile-btn-close #btn-clos
   header .portfolio-menu .menu-flex-box #main-menu-box #mobile-btn-close #btn-close {
     display: none;
   }
-}
-header .portfolio-menu .menu-flex-box #main-menu-box #menu-box {
-  display: none;
 }
 @media (min-width: 1440px) {
   header .portfolio-menu .menu-flex-box #main-menu-box #menu-box {
@@ -132,35 +127,48 @@ header .portfolio-menu .menu-flex-box #main-menu-box #menu-box {
   }
 }
 header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb li {
-  text-align: center;
+  text-align: right;
+  margin-right: 30px;
+  padding: 30px 0;
+  font-size: 20px;
 }
-header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb li .main-menu-a {
-  background-color: lightseagreen;
+@media (min-width: 1440px) {
+  header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb li {
+    text-align: center;
+    margin-right: 0;
+    font-size: 16px;
+  }
 }
 @media (min-width: 1440px) {
   header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb li .main-menu-a {
     font-size: 20px;
     padding-left: 200px;
   }
-  header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb li .main-menu-a:hover {
-    text-shadow: 0px 5px 5px lightblue;
-    transition: 0.5s;
-  }
+}
+header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb li .main-menu-a:hover {
+  text-shadow: 0px 5px 5px lightblue;
+  transition: 0.5s;
 }
 header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb #slide-menu-bar {
   position: relative;
 }
 header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb #slide-menu-bar .submenu {
+  margin-right: -30px;
   z-index: 999;
 }
 @media (min-width: 1440px) {
   header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb #slide-menu-bar .submenu {
     position: absolute;
     top: 60px;
-    right: -32px;
+    right: -27px;
+    margin-right: 0;
   }
 }
 header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb #slide-menu-bar .submenu li {
-  background-color: darkmagenta;
-  padding: 12px;
+  padding: 20px 0;
+}
+@media (min-width: 1440px) {
+  header .portfolio-menu .menu-flex-box #main-menu-box #menu-box .gnb #slide-menu-bar .submenu li {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }/*# sourceMappingURL=header.css.map */

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +33,26 @@ p {
   line-height: 1.8;
 }
 
+@keyframes slide-lf-to-rt {
+  from {
+    transform: translateX(-50%); /* 화면 왼쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateX(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
+@keyframes slide-rt-to-lf {
+  from {
+    transform: translateX(50%); /* 화면 오른쪽 밖으로 */
+    opacity: 0; /* 투명도 0 */
+  }
+  to {
+    transform: translateX(0); /* 정중앙으로 */
+    opacity: 1; /* 완전 불투명 */
+  }
+}
 body {
   background: url(../images/background_blue_mobile_2.png) no-repeat;
   background-size: cover;
@@ -275,6 +296,10 @@ main .skill .icon-box .icon10:hover {
     margin: 0 auto 30px;
   }
 }
+main .renewal-page {
+  position: relative;
+  animation: none;
+}
 @media (min-width: 1440px) {
   main .renewal-page {
     height: 1080px;
@@ -419,6 +444,9 @@ main .renewal-page .flex-box .intro-txt .more-btn img {
 }
 main .renewal-page .flex-box .intro-txt .more-btn img:hover {
   transform: translateX(10px);
+}
+main .renewal-page-ani {
+  animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
 }
 @media (min-width: 1440px) {
   main .detailed-page {

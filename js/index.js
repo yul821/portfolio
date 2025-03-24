@@ -34,3 +34,20 @@ $(document).ready(function() {
     });
 });
 
+
+// 스크롤 이벤트
+$(document).ready(function() {
+    $(window).scroll(function() {
+        const enjoyScrollTop = $('.renewal-page').offset().top;
+        console.log (window.scrollY);
+        console.log (enjoyScrollTop);
+    
+        if ($(this).scrollTop() >= enjoyScrollTop) {
+            $('.renewal-page').addClass('renewal-page-ani');
+            console.log ($(this).scrollTop());
+        } else {
+            $('.renewal-page').removeClass('renewal-page-ani');
+        }
+    });
+});
+

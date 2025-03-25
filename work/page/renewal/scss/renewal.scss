@@ -68,6 +68,20 @@ main {
                         margin-bottom: 30px;
                     }
                 }
+
+                .pbox {
+                    p {
+                        &:last-child {
+                            br {
+                                display: block;
+
+                            @include responsive(large-screens) {
+                                display: none;
+                            }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -114,26 +128,6 @@ main {
                     }
                 }
             
-            }
-
-            .top-btn {
-                z-index: 999;
-                a {
-                    img {
-                        width: 20%;
-                        max-width: 100px; // 최대 이사이즈 까지만 늘어나게 고정
-                        position: fixed;
-                        right: 30px;
-                        bottom: 30px;
-        
-                        @include responsive(large-screens) {
-                            width: 5%;
-                        }
-                    }
-                    &:hover {
-                        font-weight: bold;
-                    }
-                }
             }
 
 }

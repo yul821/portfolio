@@ -103,22 +103,4 @@ main .flex-box .page-img img:first-child {
   main .flex-box .page-img img {
     width: 50%;
   }
-}
-main .top-btn {
-  z-index: 999;
-}
-main .top-btn a img {
-  width: 20%;
-  max-width: 100px;
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-}
-@media (min-width: 1440px) {
-  main .top-btn a img {
-    width: 5%;
-  }
-}
-main .top-btn a:hover {
-  font-weight: bold;
 }/*# sourceMappingURL=banner.css.map */

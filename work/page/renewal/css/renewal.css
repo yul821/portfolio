@@ -79,6 +79,14 @@ main .flex-box .intro-txt .intro h3 {
     margin-bottom: 30px;
   }
 }
+main .flex-box .intro-txt .intro .pbox p:last-child br {
+  display: block;
+}
+@media (min-width: 1440px) {
+  main .flex-box .intro-txt .intro .pbox p:last-child br {
+    display: none;
+  }
+}
 main .more-btn {
   display: flex;
   align-items: center;
@@ -124,22 +132,4 @@ main .more-btn img {
 }
 main .more-btn img:hover {
   transform: translateX(10px);
-}
-main .top-btn {
-  z-index: 999;
-}
-main .top-btn a img {
-  width: 20%;
-  max-width: 100px;
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-}
-@media (min-width: 1440px) {
-  main .top-btn a img {
-    width: 5%;
-  }
-}
-main .top-btn a:hover {
-  font-weight: bold;
 }/*# sourceMappingURL=renewal.css.map */

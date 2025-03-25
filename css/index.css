@@ -60,13 +60,14 @@ body {
 }
 @media (min-width: 1440px) {
   body {
-    background: url(../images/background_blue_pc_3.png) no-repeat top left;
+    background: url(../images/background_blue_pc_test.png) no-repeat top left;
     background-size: cover;
     background-position: center;
   }
 }
 
 main {
+  overflow: hidden;
   /**********************symbol**********************/
   /********************** aboutme **********************/
   /********************** skill **********************/
@@ -79,6 +80,7 @@ main {
   /********************** cardnews-design **********************/
 }
 main .symbol {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,6 +98,7 @@ main .symbol h2 {
 main .symbol .img1 {
   width: 200px;
   margin: 0 auto;
+  z-index: 500;
 }
 @media (min-width: 1440px) {
   main .symbol .img1 {
@@ -111,6 +114,10 @@ main .symbol .img2 {
   main .symbol .img2 {
     display: block;
   }
+}
+main .symbol #blue_main {
+  display: none;
+  position: absolute;
 }
 main .aboutme {
   display: flex;
@@ -150,12 +157,20 @@ main .aboutme .flex-box {
 main .aboutme .flex-box img {
   margin: 0 auto;
   width: 230px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
 }
 @media (min-width: 1440px) {
   main .aboutme .flex-box img {
     width: 390px;
     margin-right: 330px;
   }
+}
+main .aboutme .flex-box .introduc {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
 }
 @media (min-width: 1440px) {
   main .aboutme .flex-box .introduc {
@@ -307,6 +322,8 @@ main .renewal-page {
   }
 }
 main .renewal-page h2 {
+  z-index: 500;
+  position: relative;
   font-family: "Copperplate Gothic";
   font-size: calc(25px + 0.5vw);
   text-align: center;
@@ -383,6 +400,21 @@ main .renewal-page .flex-box .intro-txt .intro h3 {
     margin-bottom: 30px;
   }
 }
+main .renewal-page .flex-box .intro-txt .intro #blue-star {
+  display: none;
+  position: absolute;
+  width: 260px;
+  top: -550px;
+  left: 300px;
+  transform: translateX(-50%);
+}
+@media (min-width: 1440px) {
+  main .renewal-page .flex-box .intro-txt .intro #blue-star {
+    width: 1254px;
+    top: -850px;
+    left: 1200px;
+  }
+}
 main .renewal-page .flex-box .intro-txt .intro .pbox {
   margin-top: 30px;
 }
@@ -449,6 +481,10 @@ main .renewal-page .flex-box .intro-txt .more-btn img:hover {
 main .renewal-page-ani {
   opacity: 1;
   animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+}
+main .detailed-page {
+  opacity: 0;
+  animation: none;
 }
 @media (min-width: 1440px) {
   main .detailed-page {
@@ -561,6 +597,14 @@ main .detailed-page .flex-box .more-btn img {
 }
 main .detailed-page .flex-box .more-btn img:hover {
   transform: translateX(10px);
+}
+main .detailed-page-ani {
+  opacity: 1;
+  animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+}
+main .banner-design {
+  opacity: 0;
+  animation: none;
 }
 @media (min-width: 1440px) {
   main .banner-design {
@@ -686,6 +730,14 @@ main .banner-design .flex-box .more-btn img {
 main .banner-design .flex-box .more-btn img:hover {
   transform: translateX(10px);
 }
+main .banner-design-ani {
+  opacity: 1;
+  animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+}
+main .app-design {
+  opacity: 0;
+  animation: none;
+}
 @media (min-width: 1440px) {
   main .app-design {
     height: 1080px;
@@ -706,6 +758,21 @@ main .app-design .flex-box {
 }
 main .app-design .flex-box .page-img {
   margin: 0 auto;
+  z-index: 500;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+main .app-design .flex-box .page-img .image-float {
+  animation: float 2s ease-in-out infinite;
 }
 @media (min-width: 1440px) {
   main .app-design .flex-box .page-img {
@@ -721,6 +788,7 @@ main .app-design .flex-box .page-img img {
   }
 }
 main .app-design .flex-box .intro-txt {
+  z-index: 500;
   display: flex;
   justify-content: space-between;
   margin-bottom: 35px;
@@ -824,6 +892,19 @@ main .app-design .flex-box .more-btn img {
 }
 main .app-design .flex-box .more-btn img:hover {
   transform: translateX(10px);
+}
+main .app-design #blue_semicircle {
+  display: none;
+  position: absolute;
+  top: -25px;
+}
+main .app-design-ani {
+  opacity: 1;
+  animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+}
+main .package-design {
+  opacity: 0;
+  animation: none;
 }
 @media (min-width: 1440px) {
   main .package-design {
@@ -949,8 +1030,14 @@ main .package-design .flex-box .more-btn img {
 main .package-design .flex-box .more-btn img:hover {
   transform: translateX(10px);
 }
+main .package-design-ani {
+  opacity: 1;
+  animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+}
 main .cardnews-design {
   align-content: center;
+  opacity: 0;
+  animation: none;
 }
 @media (min-width: 1440px) {
   main .cardnews-design {
@@ -1083,6 +1170,14 @@ main .cardnews-design .flex-box .more-btn img {
 main .cardnews-design .flex-box .more-btn img:hover {
   transform: translateX(10px);
 }
+main .cardnews-design-ani {
+  opacity: 1;
+  animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+}
+main .teamproject {
+  opacity: 0;
+  animation: none;
+}
 @media (min-width: 1440px) {
   main .teamproject {
     height: 1780px;
@@ -1214,12 +1309,16 @@ main .teamproject .flex-box .more-btn img {
 main .teamproject .flex-box .more-btn img:hover {
   transform: translateX(10px);
 }
+main .teamproject-ani {
+  opacity: 1;
+  animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+}
 main .top-btn {
   z-index: 999;
 }
 main .top-btn a img {
-  width: 20%;
-  max-width: 100px;
+  width: 15%;
+  max-width: 120px;
   position: fixed;
   right: 30px;
   bottom: 30px;
@@ -1227,6 +1326,8 @@ main .top-btn a img {
 @media (min-width: 1440px) {
   main .top-btn a img {
     width: 5%;
+    right: 100px;
+    bottom: 30px;
   }
 }
 main .top-btn a:hover {

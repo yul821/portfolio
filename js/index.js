@@ -6,7 +6,7 @@ const mobileImages = [
 ];
 
 const desktopImages = [
-    '../images/background_blue_pc_3.png',
+    '../images/background_blue_pc_test.png',
     '../images/background_orange_pc.png'
 ];
 
@@ -17,16 +17,81 @@ let currentIndex = 0;
 // 배경 이미지 변경 함수
 function changeBackground() {
     currentIndex = (currentIndex + 1) % currentImages.length;
-    document.body.style.transition = 'background-image 1s ease-in-out'; 
+    document.body.style.transition = 'background-image 1s ease-in-out';
     document.body.style.backgroundImage = `url(${currentImages[currentIndex]})`;
 }
 
 setInterval(changeBackground, 30000);
 
 
+
+// #blue-star 이미지 
+$(document).ready(function () {
+    function toggleStar() {
+        $('#blue_main').fadeIn(1000, function () {
+            setTimeout(function () {
+                $('#blue_main').fadeOut(1000);
+            }, 29000);
+        });
+    }
+
+    toggleStar();
+
+    setInterval(toggleStar, 30000);
+});
+
+
+// #blue-star 이미지 
+$(document).ready(function () {
+    function toggleStar() {
+        $('#blue-star').fadeIn(1000, function () {
+            setTimeout(function () {
+                $('#blue-star').fadeOut(1000);
+            }, 29000);
+        });
+    }
+
+    toggleStar();
+
+    setInterval(toggleStar, 30000);
+});
+
+
+// #blue_semicircle 이미지 
+$(document).ready(function () {
+    function toggleStar() {
+        $('#blue_semicircle').fadeIn(1000, function () {
+            setTimeout(function () {
+                $('#blue_semicircle').fadeOut(1000);
+            }, 29000);
+        });
+    }
+
+    toggleStar();
+
+    setInterval(toggleStar, 30000);
+});
+
+
+// #blue_contact 이미지 
+$(document).ready(function () {
+    function toggleStar() {
+        $('#blue_contact').fadeIn(1000, function () {
+            setTimeout(function () {
+                $('#blue_contact').fadeOut(1000);
+            }, 29000);
+        });
+    }
+
+    toggleStar();
+
+    setInterval(toggleStar, 30000);
+});
+
+
 // top 버튼 
-$(document).ready(function() {
-    $('.top-btn a').click(function(event) {
+$(document).ready(function () {
+    $('.top-btn a').click(function (event) {
         event.preventDefault(); // 기본 클릭 동작 방지
         $('html, body').animate({
             scrollTop: $('#header-top').offset().top // 헤더로 스크롤
@@ -35,32 +100,143 @@ $(document).ready(function() {
 });
 
 
-// // 스크롤 이벤트
-// $(document).ready(function() {
-//     $(window).scroll(function() {
-//         const enjoyScrollTop = $('.renewal-page').offset().top;
-//         console.log (window.scrollY);
-//         console.log (enjoyScrollTop);
-    
-//         if ($(this).scrollTop() >= enjoyScrollTop) {
-//             $('.renewal-page').addClass('renewal-page-ani');
-//             console.log ($(this).scrollTop());
-//         } else {
-//             $('.renewal-page').removeClass('renewal-page-ani');
-//         }
-//     });
-// });
 
-window.addEventListener('scroll', function(event) {
+// aboutme
+var windowWidth = $(window).width();
+
+// 초기 상태 설정
+
+$(`.aboutme img`).css({ 'opacity': 0, 'transform': 'translateX(-100px)' });
+$(`.introduc`).css({ 'opacity': 0, 'transform': 'translateX(100px)' });
+
+
+
+$(window).scroll(function () {
+    var scrollTop = $(this).scrollTop();
+
+    // 모든 화면 크기에서 적용되는 애니메이션
+    $(`.aboutme img`).each(function () {
+        var offsetTop = $(this).offset().top;
+            $(this).css({ 'opacity': 1, 'transform': 'translateX(0)' });
+    });
+    $(`.introduc`).each(function () {
+        var offsetTop = $(this).offset().top;
+        if (scrollTop + $(window).height() > offsetTop && $(this).css('opacity') == 0) {
+            $(this).css({ 'opacity': 1, 'transform': 'translateX(0)' });
+        }
+    });
+
+});
+
+
+
+
+
+
+
+
+
+//리뉴얼 페이지 스크롤 애니메이션
+window.addEventListener('scroll', function (event) {
     event.preventDefault(); // 기본 스크롤 동작 방지
 
     const section = document.getElementById('renewal');
     const sectionPosition = section.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.2; 
+    const screenPosition = window.innerHeight / 1.2;
 
     if (sectionPosition < screenPosition) {
-        section.classList.add('renewal-page-ani'); 
+        section.classList.add('renewal-page-ani');
     } else {
-        section.classList.remove('renewal-page-ani'); 
+        section.classList.remove('renewal-page-ani');
+    }
+});
+
+//상세페이지 스크롤 애니메이션
+window.addEventListener('scroll', function (event) {
+    event.preventDefault(); // 기본 스크롤 동작 방지
+
+    const section = document.getElementById('detailed');
+    const sectionPosition = section.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+
+    if (sectionPosition < screenPosition) {
+        section.classList.add('detailed-page-ani');
+    } else {
+        section.classList.remove('detailed-page-ani');
+    }
+});
+
+//배너디자인 스크롤 애니메이션
+window.addEventListener('scroll', function (event) {
+    event.preventDefault(); // 기본 스크롤 동작 방지
+
+    const section = document.getElementById('banner');
+    const sectionPosition = section.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+
+    if (sectionPosition < screenPosition) {
+        section.classList.add('banner-design-ani');
+    } else {
+        section.classList.remove('banner-design-ani');
+    }
+});
+
+//앱디자인 스크롤 애니메이션
+window.addEventListener('scroll', function (event) {
+    event.preventDefault(); // 기본 스크롤 동작 방지
+
+    const section = document.getElementById('app');
+    const sectionPosition = section.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+
+    if (sectionPosition < screenPosition) {
+        section.classList.add('app-design-ani');
+    } else {
+        section.classList.remove('app-design-ani');
+    }
+});
+
+//패키지디자인 스크롤 애니메이션
+window.addEventListener('scroll', function (event) {
+    event.preventDefault(); // 기본 스크롤 동작 방지
+
+    const section = document.getElementById('packge');
+    const sectionPosition = section.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+
+    if (sectionPosition < screenPosition) {
+        section.classList.add('package-design-ani');
+    } else {
+        section.classList.remove('package-design-ani');
+    }
+});
+
+//카드뉴스디자인 스크롤 애니메이션
+window.addEventListener('scroll', function (event) {
+    event.preventDefault(); // 기본 스크롤 동작 방지
+
+    const section = document.getElementById('cardnews');
+    const sectionPosition = section.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+
+    if (sectionPosition < screenPosition) {
+        section.classList.add('cardnews-design-ani');
+    } else {
+        section.classList.remove('cardnews-design-ani');
+    }
+});
+
+//팀 프로젝트 스크롤 애니메이션
+window.addEventListener('scroll', function (event) {
+    event.preventDefault(); // 기본 스크롤 동작 방지
+
+    const section = document.getElementById('team');
+    const sectionPosition = section.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+
+    if (sectionPosition < screenPosition) {
+        section.classList.add('teamproject-ani');
+    } else {
+        section.classList.remove('teamproject-ani');
     }
 });

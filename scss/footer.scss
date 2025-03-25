@@ -23,6 +23,7 @@ footer {
         @include responsive(large-screens) {
         }
         .flex-box {
+            position: relative; //그라데이션 원 고정을 위한 포지션
             margin-top: 50px;
             margin-bottom: 50px;
             
@@ -36,6 +37,7 @@ footer {
             align-items: center;
         }
         .contact {
+            z-index: 500;
             font-family: $font-main;
             // font-weight: bold;
             font-size: 35px;
@@ -52,7 +54,22 @@ footer {
                     font-size: 25px;
                 }
             }
-
         }
-    }
+
+        #blue_contact {  // 그라데이션 원 
+            z-index: -1;
+            display: none;
+            position: absolute;
+            top: -70px;
+            left: 170px;
+            width: 200px;
+            transform: translateX(-50%);
+            
+            @include responsive(large-screens) {
+                top: 50px;
+                left: 990px;
+                width: 990px;
+            }
+        }
+    }  //flex-box
 }

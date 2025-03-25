@@ -45,6 +45,7 @@ p {
 }
 
 footer .flex-box {
+  position: relative;
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -59,6 +60,7 @@ footer .flex-box {
   }
 }
 footer .flex-box .contact {
+  z-index: 500;
   font-family: "Copperplate Gothic";
   font-size: 35px;
   text-align: center;
@@ -77,5 +79,21 @@ footer .flex-box .p-txt p {
 @media (min-width: 1440px) {
   footer .flex-box .p-txt p {
     font-size: 25px;
+  }
+}
+footer .flex-box #blue_contact {
+  z-index: -1;
+  display: none;
+  position: absolute;
+  top: -70px;
+  left: 170px;
+  width: 200px;
+  transform: translateX(-50%);
+}
+@media (min-width: 1440px) {
+  footer .flex-box #blue_contact {
+    top: 50px;
+    left: 990px;
+    width: 990px;
   }
 }/*# sourceMappingURL=footer.css.map */

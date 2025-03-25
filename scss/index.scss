@@ -15,7 +15,7 @@ body {
     background-position: center;
 
     @include responsive(large-screens) {
-        background: url(../images/background_blue_pc_3.png) no-repeat top left;
+        background: url(../images/background_blue_pc_test.png) no-repeat top left;
         background-size: cover;
         // background-size: 100% auto;
         background-position: center;
@@ -25,13 +25,16 @@ body {
 
 
 main {
+    overflow: hidden;
     .symbol {
+        position: relative;   ////////////blue_main 이미지 위치 고정
         display: flex; // flexbox 사용
         flex-direction: column; // 세로 방향으로 정렬
         align-items: center; // 수평 중앙 정렬
         justify-content: center; // 수직 중앙 정렬
         height: 50vh;
         // height: 330px; // 모바일 버전 섹션에 높이값 지정
+
     
         @include responsive(large-screens) {
             height: 1080px;
@@ -43,6 +46,7 @@ main {
         .img1 {
             width: 200px;
             margin: 0 auto;
+            z-index: 500;
 
             @include responsive(large-screens) {
                 width: 612px;
@@ -56,6 +60,11 @@ main {
             @include responsive(large-screens) {
                 display: block;
             }
+        }
+
+        #blue_main {
+            display: none;
+            position: absolute;
         }
     } /**********************symbol**********************/
 
@@ -92,13 +101,18 @@ main {
                 margin: 0 auto;
                 width: 230px;
 
-
+                opacity: 0;
+                transform: translateX(-100px);
+                transition: opacity 0.9s ease, transform 0.9s ease;
                 @include responsive(large-screens) {
                     width: 390px;
                     margin-right: 330px;
                 }
             }
             .introduc {
+                opacity: 0;
+                transform: translateX(100px);
+                transition: opacity 0.9s ease, transform 0.9s ease;
                 @include responsive(large-screens) {
                     text-align: left;
                 }
@@ -292,7 +306,7 @@ main {
 
     .renewal-page {
         position: relative;
-        // overflow: hidden; 브라우저 창하단에 스크롤 바가 나타남
+        // overflow: hidden; 
         opacity: 0;
         animation: none;
         @include responsive(large-screens) {
@@ -300,7 +314,8 @@ main {
         }
 
         h2 {
-            // position: relative;
+            z-index: 500;
+            position: relative; ///////////////////////별 3개 위치 조정
             font-family: $font-main;
             font-size: $mobile-title-main;
             text-align: center;
@@ -351,6 +366,8 @@ main {
 
                 .intro {
                     color: $color-main;
+
+                    
                     h3 {
                         position: absolute;
                         left: 50%;
@@ -358,7 +375,7 @@ main {
                         font-family: $font-main;
                         font-size: $font-size-18;
                         margin-bottom: 35px;
-
+                        
                         @include responsive(large-screens) {
                             position: static; // 포지션 해제
                             transform: translateX(0);
@@ -367,6 +384,22 @@ main {
                             margin-bottom: 30px;
                         }
                     }
+
+                    #blue-star { //별 이미지
+                        display: none;
+                        position: absolute;
+                        width: 260px;
+                        top: -550px;
+                        left: 300px;
+                        transform: translateX(-50%);
+                        
+                        @include responsive(large-screens) {
+                            width: 1254px;
+                            top: -850px;
+                            left: 1200px;
+                        }
+                    }
+
                     .pbox {
                         margin-top: 30px;
                         p {
@@ -440,6 +473,8 @@ main {
         animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
     }
     .detailed-page {
+        opacity: 0;
+        animation: none;
         // background-color: red;
         @include responsive(large-screens) {
             height: 1400px; // 섹션명에 높이값 지정 1080px
@@ -550,7 +585,14 @@ main {
         }
     } /********************** detailed-page **********************/
 
+    .detailed-page-ani {
+        opacity: 1;
+        animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+    }
+
     .banner-design {
+        opacity: 0;
+        animation: none;
         @include responsive(large-screens) {
             height: 1080px; // 섹션명에 높이값 지정 1080px
         }
@@ -670,10 +712,19 @@ main {
     } /********************** banner-design **********************/
     
 
+    .banner-design-ani {
+        opacity: 1;
+        animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+    }
+
     .app-design {
+        opacity: 0;
+        animation: none;
+
         @include responsive(large-screens) {
             height: 1080px;
         }
+
         .flex-box {
             display: flex;
             flex-direction: column;
@@ -686,8 +737,25 @@ main {
             }
             .page-img {
                 margin: 0 auto;
-                // justify-content: center;
+                z-index: 500;
+                    
+                @keyframes float {
+                0% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-50px); // 위로 이동
+                }
+                100% {
+                    transform: translateY(0);
+                }
+                }
                 
+                .image-float {
+                animation: float 2s ease-in-out infinite; //애니메이션 반복
+                }
+                
+
                 @include responsive(large-screens) {
                     margin: 0;
                 }
@@ -701,6 +769,7 @@ main {
                 }
             }
             .intro-txt{
+                z-index: 500;
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 35px;
@@ -798,9 +867,23 @@ main {
                 }
             } //more-btn
         } //flex-box
+
+        #blue_semicircle {
+            display: none;
+            position: absolute;
+            top: -25px;
+        }
     } /********************** app-design **********************/
 
+    .app-design-ani {
+        opacity: 1;
+        animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+    }
+
     .package-design {
+        opacity: 0;
+        animation: none;
+
         @include responsive(large-screens) {
             height: 1080px;
         }
@@ -920,9 +1003,15 @@ main {
         }
     } /********************** banner-design **********************/
 
+    .package-design-ani {
+        opacity: 1;
+        animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+    }
 
     .cardnews-design {
         align-content: center;
+        opacity: 0;
+        animation: none;
         // background-color: aqua;
         @include responsive(large-screens) {
             height: 1080px;
@@ -1056,7 +1145,14 @@ main {
         
     } /********************** cardnews-design **********************/
 
+    .cardnews-design-ani {
+        opacity: 1;
+        animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+    }
+
     .teamproject {
+        opacity: 0;
+        animation: none;
         // background-color: cadetblue;
         @include responsive(large-screens) {
             height: 1780px;
@@ -1186,18 +1282,25 @@ main {
         }
     } /********************** cardnews-design **********************/
 
+    .teamproject-ani {
+        opacity: 1;
+        animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
+    }
+
     .top-btn {
         z-index: 999;
         a {
             img {
-                width: 20%;
-                max-width: 100px; // 최대 이사이즈 까지만 늘어나게 고정
+                width: 15%;
+                max-width: 120px; // 최대 이사이즈 까지만 늘어나게 고정
                 position: fixed;
                 right: 30px;
                 bottom: 30px;
-
+                
                 @include responsive(large-screens) {
                     width: 5%;
+                    right: 100px;
+                    bottom: 30px;
                 }
             }
             &:hover {

@@ -35,19 +35,32 @@ $(document).ready(function() {
 });
 
 
-// 스크롤 이벤트
-$(document).ready(function() {
-    $(window).scroll(function() {
-        const enjoyScrollTop = $('.renewal-page').offset().top;
-        console.log (window.scrollY);
-        console.log (enjoyScrollTop);
+// // 스크롤 이벤트
+// $(document).ready(function() {
+//     $(window).scroll(function() {
+//         const enjoyScrollTop = $('.renewal-page').offset().top;
+//         console.log (window.scrollY);
+//         console.log (enjoyScrollTop);
     
-        if ($(this).scrollTop() >= enjoyScrollTop) {
-            $('.renewal-page').addClass('renewal-page-ani');
-            console.log ($(this).scrollTop());
-        } else {
-            $('.renewal-page').removeClass('renewal-page-ani');
-        }
-    });
-});
+//         if ($(this).scrollTop() >= enjoyScrollTop) {
+//             $('.renewal-page').addClass('renewal-page-ani');
+//             console.log ($(this).scrollTop());
+//         } else {
+//             $('.renewal-page').removeClass('renewal-page-ani');
+//         }
+//     });
+// });
 
+window.addEventListener('scroll', function(event) {
+    event.preventDefault(); // 기본 스크롤 동작 방지
+
+    const section = document.getElementById('renewal');
+    const sectionPosition = section.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2; 
+
+    if (sectionPosition < screenPosition) {
+        section.classList.add('renewal-page-ani'); 
+    } else {
+        section.classList.remove('renewal-page-ani'); 
+    }
+});

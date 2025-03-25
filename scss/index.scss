@@ -292,6 +292,8 @@ main {
 
     .renewal-page {
         position: relative;
+        // overflow: hidden; 브라우저 창하단에 스크롤 바가 나타남
+        opacity: 0;
         animation: none;
         @include responsive(large-screens) {
             height: 1080px; // 섹션명에 높이값 지정 1080px
@@ -434,6 +436,7 @@ main {
     } /********************** renewal-page **********************/
 
     .renewal-page-ani {
+        opacity: 1;
         animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
     }
     .detailed-page {

@@ -298,6 +298,7 @@ main .skill .icon-box .icon10:hover {
 }
 main .renewal-page {
   position: relative;
+  opacity: 0;
   animation: none;
 }
 @media (min-width: 1440px) {
@@ -446,6 +447,7 @@ main .renewal-page .flex-box .intro-txt .more-btn img:hover {
   transform: translateX(10px);
 }
 main .renewal-page-ani {
+  opacity: 1;
   animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
 }
 @media (min-width: 1440px) {

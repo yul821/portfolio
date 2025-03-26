@@ -45,6 +45,9 @@ p {
   }
 }
 
+footer {
+  overflow: hidden;
+}
 footer .flex-box {
   position: relative;
   margin-top: 50px;
@@ -111,4 +114,24 @@ footer .flex-box #blue_contact {
     left: 990px;
     width: 990px;
   }
+}
+footer .top-btn {
+  z-index: 999;
+}
+footer .top-btn a img {
+  width: 15%;
+  max-width: 120px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+@media (min-width: 1440px) {
+  footer .top-btn a img {
+    width: 5%;
+    right: 100px;
+    bottom: 30px;
+  }
+}
+footer .top-btn a:hover {
+  font-weight: bold;
 }/*# sourceMappingURL=footer.css.map */

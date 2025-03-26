@@ -6,13 +6,14 @@
 
 
 body {
-    @include responsive(large-screens) {
-        // height: 13505px; // 페이지 전체의 높이값 지정.
-    }
-    background: url(../images/background_blue_mobile_2.png) no-repeat;
+    height: 100%;
+    width: 100%;
+
+    background: url(../images/background_blue_mobile_2.png) no-repeat top left;
     background-size: cover;
     // background-size: 100% auto;
-    background-position: center;
+    background-position: center; 
+    transition: background-image 1s ease-in-out;
 
     @include responsive(large-screens) {
         background: url(../images/background_blue_pc_test.png) no-repeat top left;
@@ -25,6 +26,7 @@ body {
 
 
 main {
+    width: 100%;
     overflow: hidden;
     .symbol {
         position: relative;   ////////////blue_main 이미지 위치 고정
@@ -49,14 +51,37 @@ main {
             z-index: 1;
             cursor: pointer;
 
-            animation: rotate 15s linear infinite;
+            // animation: rotate 15s linear infinite;
+
+            // @keyframes rotate {
+            //     from {
+            //         transform: rotate(0deg); 
+            //     }
+            //     to {
+            //         transform: rotate(360deg); 
+            //     }
+            // }
+
+            animation: rotate 30s linear infinite;
 
             @keyframes rotate {
-                from {
+                0% {
                     transform: rotate(0deg); 
                 }
-                to {
-                    transform: rotate(360deg); 
+                12.5% {
+                    transform: rotate(-45deg); // 왼쪽으로 45도 회전
+                }
+                37.5% {
+                    transform: rotate(315deg); // (360도 - 45도)
+                }
+                62.5% {
+                    transform: rotate(360deg); // 원래 위치로
+                }
+                75% {
+                    transform: rotate(315deg); // 왼쪽으로 45도 회전
+                }
+                100% {
+                    transform: rotate(0deg); // 다시 원래 위치로
                 }
             }
 
@@ -85,7 +110,7 @@ main {
         }
 
         #orange_main {
-            // display: none;
+            display: none;
             position: absolute;
         }
     } /**********************symbol**********************/
@@ -556,6 +581,12 @@ main {
                     padding: 12px;
                     cursor: pointer;
 
+                    &:hover {
+                        img {
+                            transform: translateX(10px);
+                        }
+                    }
+
                     @include responsive(large-screens) {
                         width: 428px; height: 80px;
                         margin-top: 40px;
@@ -674,6 +705,12 @@ main {
                 border-radius: 30px;
                 padding: 12px;
                 cursor: pointer;
+
+                &:hover {
+                    img {
+                        transform: translateX(10px);
+                    }
+                }
 
                 @include responsive(large-screens) {
                     width: 428px; height: 80px;
@@ -800,6 +837,12 @@ main {
                 border-radius: 30px;
                 padding: 12px;
                 cursor: pointer;
+
+                &:hover {
+                    img {
+                        transform: translateX(10px);
+                    }
+                }
 
                 @include responsive(large-screens) {
                     width: 428px; height: 80px;
@@ -959,6 +1002,11 @@ main {
                 padding: 12px;
                 cursor: pointer;
 
+                &:hover {
+                    img {
+                        transform: translateX(10px);
+                    }
+                }
                 @include responsive(large-screens) {
                     width: 428px; height: 80px;
                     margin-top: 40px;
@@ -1092,6 +1140,12 @@ main {
                 border-radius: 30px;
                 padding: 12px;
                 cursor: pointer;
+
+                &:hover {
+                    img {
+                        transform: translateX(10px);
+                    }
+                }
 
                 @include responsive(large-screens) {
                     width: 428px; height: 80px;
@@ -1233,6 +1287,12 @@ main {
                 padding: 12px;
                 cursor: pointer;
 
+                &:hover {
+                    img {
+                        transform: translateX(10px);
+                    }
+                }
+
                 @include responsive(large-screens) {
                     width: 428px; height: 80px;
                     margin-top: 40px;
@@ -1372,6 +1432,12 @@ main {
                 padding: 12px;
                 cursor: pointer;
 
+                &:hover {
+                    img {
+                        transform: translateX(10px);
+                    }
+                }
+
                 @include responsive(large-screens) {
                     width: 428px; height: 80px;
                     margin-top: 40px;
@@ -1409,26 +1475,6 @@ main {
         animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
     }
 
-    .top-btn {
-        z-index: 999;
-        a {
-            img {
-                width: 15%;
-                max-width: 120px; // 최대 이사이즈 까지만 늘어나게 고정
-                position: fixed;
-                right: 30px;
-                bottom: 30px;
-                
-                @include responsive(large-screens) {
-                    width: 5%;
-                    right: 100px;
-                    bottom: 30px;
-                }
-            }
-            &:hover {
-                font-weight: bold;
-            }
-        }
-    }
+
 
 } ////////////////////////////// main ///////////////////////////////////

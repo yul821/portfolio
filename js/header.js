@@ -59,6 +59,24 @@ $(function () {
           // 서브메뉴가 없는 경우에는 기본 a 태그 동작 (페이지 이동)
         });
 
+
+        $('.main-menu-a').click(function (e) {
+            var $submenu = $(this).next('.submenu'); // 현재 클릭한 메뉴의 서브메뉴 선택
+
+            if ($submenu.length > 0) { // 서브메뉴가 있는 경우
+                e.preventDefault(); // 기본 링크 이동 방지 (서브메뉴가 있는 경우만)
+                
+                if ($submenu.is(":visible")) {
+                    $submenu.stop(true, true).slideUp();
+                } else {
+                $(".submenu").stop(true, true).slideUp(); // 다른 서브메뉴 닫기
+                $submenu.stop(true, true).slideDown(); // 현재 서브메뉴 열기
+                }
+                }
+            // 서브메뉴가 없는 경우에는 기본 a 태그 동작 (페이지 이동)
+        });
+
+            
         $('.main-menu-a').mouseover(function (e) {
             var $submenu = $(this).next('.submenu'); // 현재 클릭한 메뉴의 서브메뉴 선택
         
@@ -100,3 +118,27 @@ $(function () {
             }, 800); // 800ms 동안 스크롤
         });
     });
+
+
+
+
+
+
+    // `.main-menu-a` 클릭 이벤트 처리
+$('.main-menu-a').click(function (e) {
+    var $submenu = $(this).next('.submenu'); // 현재 클릭한 메뉴의 서브메뉴 선택
+
+    if ($submenu.length > 0) { // 서브메뉴가 있는 경우
+        e.preventDefault(); // 기본 링크 이동 방지 (서브메뉴가 있는 경우만)
+        
+        if ($submenu.is(":visible")) {
+            $submenu.stop(true, true).slideUp();
+        } else {
+            $('.submenu').stop(true, true).slideUp(); // 다른 서브메뉴 닫기
+            $submenu.stop(true, true).slideDown(); // 현재 서브메뉴 열기
+        }
+    } else {
+        // 서브메뉴가 없는 경우, 햄버거 메뉴 닫기
+        $('#main-menu-box').css({ right: "-100vw" });
+    }
+});

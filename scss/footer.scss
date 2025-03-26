@@ -16,6 +16,7 @@
 
 
 footer {
+    overflow: hidden;
     // background-color: greenyellow;
         @include responsive(large-screens) {
         }
@@ -91,7 +92,29 @@ footer {
             }
         }
     }  //flex-box
-}
+
+    .top-btn {
+        z-index: 999;
+        a {
+            img {
+                width: 15%;
+                max-width: 120px; // 최대 이사이즈 까지만 늘어나게 고정
+                position: fixed;
+                right: 30px;
+                bottom: 30px;
+                
+                @include responsive(large-screens) {
+                    width: 5%;
+                    right: 100px;
+                    bottom: 30px;
+                }
+            }
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
+}  
 
 // .contact-ani {
 //     opacity: 1;

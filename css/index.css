@@ -54,9 +54,12 @@ p {
   }
 }
 body {
-  background: url(../images/background_blue_mobile_2.png) no-repeat;
+  height: 100%;
+  width: 100%;
+  background: url(../images/background_blue_mobile_2.png) no-repeat top left;
   background-size: cover;
   background-position: center;
+  transition: background-image 1s ease-in-out;
 }
 @media (min-width: 1440px) {
   body {
@@ -67,6 +70,7 @@ body {
 }
 
 main {
+  width: 100%;
   overflow: hidden;
   /**********************symbol**********************/
   /********************** aboutme **********************/
@@ -100,14 +104,26 @@ main .symbol .img1 {
   margin: 0 auto;
   z-index: 1;
   cursor: pointer;
-  animation: rotate 15s linear infinite;
+  animation: rotate 30s linear infinite;
 }
 @keyframes rotate {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  12.5% {
+    transform: rotate(-45deg);
+  }
+  37.5% {
+    transform: rotate(315deg);
+  }
+  62.5% {
     transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(315deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 main .symbol .img1:hover {
@@ -134,6 +150,7 @@ main .symbol #blue_main {
   position: absolute;
 }
 main .symbol #orange_main {
+  display: none;
   position: absolute;
 }
 main .aboutme {
@@ -521,6 +538,9 @@ main .renewal-page .flex-box .intro-txt .more-btn {
   padding: 12px;
   cursor: pointer;
 }
+main .renewal-page .flex-box .intro-txt .more-btn:hover img {
+  transform: translateX(10px);
+}
 @media (min-width: 1440px) {
   main .renewal-page .flex-box .intro-txt .more-btn {
     width: 428px;
@@ -640,6 +660,9 @@ main .detailed-page .flex-box .more-btn {
   border-radius: 30px;
   padding: 12px;
   cursor: pointer;
+}
+main .detailed-page .flex-box .more-btn:hover img {
+  transform: translateX(10px);
 }
 @media (min-width: 1440px) {
   main .detailed-page .flex-box .more-btn {
@@ -772,6 +795,9 @@ main .banner-design .flex-box .more-btn {
   border-radius: 30px;
   padding: 12px;
   cursor: pointer;
+}
+main .banner-design .flex-box .more-btn:hover img {
+  transform: translateX(10px);
 }
 @media (min-width: 1440px) {
   main .banner-design .flex-box .more-btn {
@@ -936,6 +962,9 @@ main .app-design .flex-box .more-btn {
   padding: 12px;
   cursor: pointer;
 }
+main .app-design .flex-box .more-btn:hover img {
+  transform: translateX(10px);
+}
 @media (min-width: 1440px) {
   main .app-design .flex-box .more-btn {
     width: 428px;
@@ -1072,6 +1101,9 @@ main .package-design .flex-box .more-btn {
   border-radius: 30px;
   padding: 12px;
   cursor: pointer;
+}
+main .package-design .flex-box .more-btn:hover img {
+  transform: translateX(10px);
 }
 @media (min-width: 1440px) {
   main .package-design .flex-box .more-btn {
@@ -1213,6 +1245,9 @@ main .cardnews-design .flex-box .more-btn {
   padding: 12px;
   cursor: pointer;
 }
+main .cardnews-design .flex-box .more-btn:hover img {
+  transform: translateX(10px);
+}
 @media (min-width: 1440px) {
   main .cardnews-design .flex-box .more-btn {
     width: 428px;
@@ -1352,6 +1387,9 @@ main .teamproject .flex-box .more-btn {
   padding: 12px;
   cursor: pointer;
 }
+main .teamproject .flex-box .more-btn:hover img {
+  transform: translateX(10px);
+}
 @media (min-width: 1440px) {
   main .teamproject .flex-box .more-btn {
     width: 428px;
@@ -1386,24 +1424,4 @@ main .teamproject .flex-box .more-btn img:hover {
 main .teamproject-ani {
   opacity: 1;
   animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
-}
-main .top-btn {
-  z-index: 999;
-}
-main .top-btn a img {
-  width: 15%;
-  max-width: 120px;
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-}
-@media (min-width: 1440px) {
-  main .top-btn a img {
-    width: 5%;
-    right: 100px;
-    bottom: 30px;
-  }
-}
-main .top-btn a:hover {
-  font-weight: bold;
 }/*# sourceMappingURL=index.css.map */

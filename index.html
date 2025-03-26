@@ -11,11 +11,12 @@
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- top-btn효과설정을 위한 -->
     <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
     <script src="./js/index.js"></script>
     <title>PortFolio</title>
 </head>
 
-<body>
+<body id="body"> <!-- 배경설정을 위한아이디 -->
     <header>
         <div class="portfolio-menu">
             <div class="container">
@@ -338,24 +339,25 @@
 
         <!-- 영상,모션 그래픽 -->
 
-        <div class="top-btn">
-            <a href="#header-top"><img src="./images/bobblee.png" alt="아이콘"></a>
-        </div>
     </main>
-
+    
     <footer>
         <div class="container">
             <div class="flex-box">
                 <p class="contact" id="contact">CONTACT</p>
-
+                
                 <div class="p-txt">
                     <p>Email: <a href="wxl750@naver.com">wxl750@naver.com</a></p>
                     <p>Phone: <a href="tel:01053540212">010-5354-0212</a></p>
                     <p>Copyright © Lee Yu Rim. All rights reserved.</p>
                 </div>
-
+                
                 <img src="./images/blue_contact.png" alt="그라데이션 원" id="blue_contact">
             </div>
+        </div>
+
+        <div class="top-btn">
+            <a href="#header-top"><img src="./images/bobblee.png" alt="아이콘"></a>
         </div>
     </footer>
 </body>

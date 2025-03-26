@@ -307,17 +307,34 @@ $(document).ready(function () {
     });
 });
 
-//푸터 애니메이션
-// window.addEventListener('scroll', function (event) {
-//     event.preventDefault(); // 기본 스크롤 동작 방지
+// $(document).ready(function() {
+//     $(window).scroll(function() {
+//         var scrollTop = $(this).scrollTop();
+//         var contactOffset = $('.contact').offset().top;
 
-//     const section = document.getElementById('footer');
-//     const sectionPosition = section.getBoundingClientRect().top;
-//     const screenPosition = window.innerHeight / 1.2;
-
-//     if (sectionPosition < screenPosition) {
-//         section.classList.add('contact-ani');
-//     } else {
-//         section.classList.remove('contact-ani');
-//     }
+//         // 스크롤 위치가 #contact 요소의 위치에 도달했을 때
+//         if (scrollTop + $(window).height() > contactOffset) {
+//             $('.contact').addClass('visible');
+//             $('.p-txt').addClass('visible');
+//         }
+//     });
 // });
+
+
+
+$(document).ready(function() {
+    $(window).scroll(function() {
+        var scrollTop = $(this).scrollTop();
+        var contactOffset = $('.contact').offset().top;
+
+        // 스크롤 위치가 #contact 요소의 위치에 도달했을 때
+        if (scrollTop + $(window).height() > contactOffset) {
+            $('.contact').addClass('visible');
+            $('.p-txt').addClass('visible');
+        } else {
+            // 스크롤이 #contact 요소의 위치를 벗어났을 때 클래스를 제거
+            $('.contact').removeClass('visible');
+            $('.p-txt').removeClass('visible');
+        }
+    });
+});

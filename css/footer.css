@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -64,6 +65,13 @@ footer .flex-box .contact {
   font-family: "Copperplate Gothic";
   font-size: 35px;
   text-align: center;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 4s ease, transform 0.3s ease;
+}
+footer .flex-box .contact.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 @media (min-width: 1440px) {
   footer .flex-box .contact {
@@ -72,6 +80,13 @@ footer .flex-box .contact {
 }
 footer .flex-box .p-txt {
   font-family: "Noto Sans KR";
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 4s ease, transform 0.3s ease; /* 여기서 0.3s를 원하는 시간으로 변경하세요 */
+}
+footer .flex-box .p-txt.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 footer .flex-box .p-txt p {
   font-size: 14px;

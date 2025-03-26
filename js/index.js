@@ -7,7 +7,7 @@ const mobileImages = [
 
 const desktopImages = [
     '../images/background_blue_pc_test.png',
-    '../images/background_orange_pc.png'
+    '../images/background_orange_pc_test.png'
 ];
 
 // 현재 화면 크기에 따라 사용할 이미지 배열 선택
@@ -25,12 +25,27 @@ setInterval(changeBackground, 30000);
 
 
 
-// #blue-star 이미지 
+// #blue-main 이미지 
 $(document).ready(function () {
     function toggleStar() {
         $('#blue_main').fadeIn(1000, function () {
             setTimeout(function () {
                 $('#blue_main').fadeOut(1000);
+            }, 29000);
+        });
+    }
+
+    toggleStar();
+
+    setInterval(toggleStar, 30000);
+});
+
+// #orange_main 이미지 
+$(document).ready(function () {
+    function toggleStar() {
+        $('#orange_main').fadeOut(1000, function () {
+            setTimeout(function () {
+                $('#orange_main').fadeIn(1000);
             }, 29000);
         });
     }
@@ -60,9 +75,9 @@ $(document).ready(function () {
 // #blue_semicircle 이미지 
 $(document).ready(function () {
     function toggleStar() {
-        $('#blue_semicircle').fadeIn(1000, function () {
+        $('#blue_semicircle').fadeOut(1000, function () {
             setTimeout(function () {
-                $('#blue_semicircle').fadeOut(1000);
+                $('#blue_semicircle').fadeIn(1000);
             }, 29000);
         });
     }
@@ -89,6 +104,28 @@ $(document).ready(function () {
 });
 
 
+//skill h2 애니메이션
+$(document).ready(function() {
+    $(window).scroll(function() {
+        $('.h2-ani').each(function() {
+            var position = $(this).offset().top;
+            var scroll = $(window).scrollTop() + $(window).height();
+            
+            if (scroll > position) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    });
+});
+
+
+
+
+
+
+
 // top 버튼 
 $(document).ready(function () {
     $('.top-btn a').click(function (event) {
@@ -101,13 +138,13 @@ $(document).ready(function () {
 
 
 
-// aboutme
+// aboutme  애니메이션
 var windowWidth = $(window).width();
 
 // 초기 상태 설정
 
-$(`.aboutme img`).css({ 'opacity': 0, 'transform': 'translateX(-100px)' });
-$(`.introduc`).css({ 'opacity': 0, 'transform': 'translateX(100px)' });
+$(`.aboutme img`).css({ 'opacity': 0, 'transform': 'translateX(-400px)' });
+$(`.introduc`).css({ 'opacity': 0, 'transform': 'translateX(400px)' });
 
 
 
@@ -127,7 +164,6 @@ $(window).scroll(function () {
     });
 
 });
-
 
 
 
@@ -240,3 +276,7 @@ window.addEventListener('scroll', function (event) {
         section.classList.remove('teamproject-ani');
     }
 });
+
+
+
+

@@ -26,7 +26,7 @@ footer {
             position: relative; //그라데이션 원 고정을 위한 포지션
             margin-top: 50px;
             margin-bottom: 50px;
-            
+
             @include responsive(large-screens) {
             height: 1080px;
             margin: 0;

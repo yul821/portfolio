@@ -104,38 +104,6 @@ $(document).ready(function () {
 });
 
 
-//skill h2 애니메이션
-$(document).ready(function() {
-    $(window).scroll(function() {
-        $('.h2-ani').each(function() {
-            var position = $(this).offset().top;
-            var scroll = $(window).scrollTop() + $(window).height();
-            
-            if (scroll > position) {
-                $(this).addClass('active');
-            } else {
-                $(this).removeClass('active');
-            }
-        });
-    });
-});
-
-
-
-
-
-
-
-// top 버튼 
-$(document).ready(function () {
-    $('.top-btn a').click(function (event) {
-        event.preventDefault(); // 기본 클릭 동작 방지
-        $('html, body').animate({
-            scrollTop: $('#header-top').offset().top // 헤더로 스크롤
-        }, 1000); // 1000ms 동안 부드럽게 스크롤
-    });
-});
-
 
 
 // aboutme  애니메이션
@@ -166,7 +134,56 @@ $(window).scroll(function () {
 });
 
 
+//skill h2 애니메이션
+$(document).ready(function() {
+    $(window).scroll(function() {
+        $('.about-ani').each(function() {
+            var position = $(this).offset().top;
+            var scroll = $(window).scrollTop() + $(window).height();
+            
+            if (scroll > position) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    });
+});
 
+
+
+//skill h2 애니메이션
+$(document).ready(function() {
+    $(window).scroll(function() {
+        $('.h2-ani').each(function() {
+            var position = $(this).offset().top;
+            var scroll = $(window).scrollTop() + $(window).height();
+            
+            if (scroll > position) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    });
+});
+
+            
+            
+// //skill > .icon-box 애니메이션
+$(document).ready(function() {
+    $(window).on('scroll', function() {
+        var scrollTop = $(this).scrollTop();
+        var iconBoxOffset = $('.icon-box').offset().top;
+        var windowHeight = $(window).height();
+
+        if (scrollTop + windowHeight > iconBoxOffset) {
+            $('.icon-box').addClass('visible');
+        } else {
+            $('.icon-box').removeClass('visible');
+        }
+    });
+});
 
 
 
@@ -280,3 +297,27 @@ window.addEventListener('scroll', function (event) {
 
 
 
+// top 버튼 
+$(document).ready(function () {
+    $('.top-btn a').click(function (event) {
+        event.preventDefault(); // 기본 클릭 동작 방지
+        $('html, body').animate({
+            scrollTop: $('#header-top').offset().top // 헤더로 스크롤
+        }, 1000); // 1000ms 동안 부드럽게 스크롤
+    });
+});
+
+//푸터 애니메이션
+// window.addEventListener('scroll', function (event) {
+//     event.preventDefault(); // 기본 스크롤 동작 방지
+
+//     const section = document.getElementById('footer');
+//     const sectionPosition = section.getBoundingClientRect().top;
+//     const screenPosition = window.innerHeight / 1.2;
+
+//     if (sectionPosition < screenPosition) {
+//         section.classList.add('contact-ani');
+//     } else {
+//         section.classList.remove('contact-ani');
+//     }
+// });

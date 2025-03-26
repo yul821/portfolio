@@ -42,6 +42,12 @@ footer {
             // font-weight: bold;
             font-size: 35px;
             text-align: center;
+
+            // .contact-ani {
+            //     opacity: 1;
+            //     animation: slide-lf-to-rt 1.5s ease forwards; /* 애니메이션 적용 */
+            // }
+
             @include responsive(large-screens) {
                 font-size: 150px;
             }

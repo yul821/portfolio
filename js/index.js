@@ -45,9 +45,9 @@ $(document).ready(function() {
     function changeBackground() {
         currentIndex = (currentIndex + 1) % currentImages.length;
         $('body').css({
-            'background-image': `url(${currentImages[currentIndex]})`,
-            'background-repeat': 'no-repeat',
-            'background-position': 'top left',
+            'background': `url(${currentImages[currentIndex]}) no-repeat top left`,
+            // 'background-repeat': 'no-repeat',
+            // 'background-position': 'top left',
             'background-size': 'cover',
             'transition': 'background-image 1s ease-in-out'
         });

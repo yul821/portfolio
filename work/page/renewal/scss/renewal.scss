@@ -31,13 +31,13 @@
 // }
 
 body {
-    background: url(../../../../images/background_orange_mobile.png) no-repeat;
+    background: url(../../../../images/background_orange_mobile.jpg) no-repeat;
     background-size: cover;
     // background-size: 100% auto;
     background-position: center;
 
     @include responsive(large-screens) {
-        background: url(../../../../images/background_orange_pc.png) no-repeat top left;
+        background: url(../../../../images/background_orange_sub.jpg) no-repeat top left;
         background-size: cover;
         // background-size: 100% auto;
         background-position: center;
@@ -70,6 +70,7 @@ main {
                 }
 
                 .pbox {
+                    margin-bottom: 30px;
                     p {
                         &:last-child {
                             br {
@@ -94,6 +95,12 @@ main {
                 border: 1px solid white;
                 border-radius: 30px;
                 padding: 12px;
+
+                &:hover {
+                    img {
+                        transform: translateX(10px);
+                    }
+                }
 
                 @include responsive(large-screens) {
                     width: 428px; height: 80px;

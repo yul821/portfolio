@@ -45,13 +45,13 @@ p {
 }
 
 body {
-  background: url(../../../../images/background_blue_mobile_2.png) no-repeat;
+  background: url(../../../../images/background_blue_mobile_2.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (min-width: 1440px) {
   body {
-    background: url(../../../../images/background_blue_pc_3.png) no-repeat;
+    background: url(../../../../images/background_blue_pc_test.jpg) no-repeat;
     background-size: cover;
     background-position: center;
   }

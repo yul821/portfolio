@@ -28,42 +28,44 @@
 // }
 
 
-$(document).ready(function() {
-    const mobileImages = [
-        '../images/background_blue_mobile_2.jpg',
-        '../images/background_orange_mobile.jpg'
-    ];
 
-    const desktopImages = [
-        '../images/background_blue_pc_test.jpg',
-        '../images/background_orange_pc_test.jpg'
-    ];
+//////////////////
+// $(document).ready(function() {
+//     const mobileImages = [
+//         '../images/background_blue_mobile_2.jpg',
+//         '../images/background_orange_mobile.jpg'
+//     ];
 
-    let currentImages = $(window).width() < 768 ? mobileImages : desktopImages;
-    let currentIndex = 0;
+//     const desktopImages = [
+//         '../images/background_blue_pc_test.jpg',
+//         '../images/background_orange_pc_test.jpg'
+//     ];
 
-    function changeBackground() {
-        currentIndex = (currentIndex + 1) % currentImages.length;
-        $('body').css({
-            'background': `url(${currentImages[currentIndex]}) no-repeat top left`,
-            // 'background-repeat': 'no-repeat',
-            // 'background-position': 'top left',
-            'background-size': 'cover',
-            'transition': 'background-image 1s ease-in-out'
-        });
-    }
+//     let currentImages = $(window).width() < 768 ? mobileImages : desktopImages;
+//     let currentIndex = 0;
 
-    // 초기 배경 이미지 설정
-    $('body').css('background-image', `url(${currentImages[currentIndex]})`);
+//     function changeBackground() {
+//         currentIndex = (currentIndex + 1) % currentImages.length;
+//         $('body').css({
+//             'background': `url(${currentImages[currentIndex]}) no-repeat top left`,
+//             // 'background-repeat': 'no-repeat',
+//             // 'background-position': 'top left',
+//             'background-size': 'cover',
+//             'transition': 'background-image 1s ease-in-out'
+//         });
+//     }
 
-    setInterval(changeBackground, 30000);
+//     // 초기 배경 이미지 설정
+//     $('body').css('background-image', `url(${currentImages[currentIndex]})`);
 
-    $(window).resize(function() {
-        currentImages = $(window).width() < 768 ? mobileImages : desktopImages;
-        currentIndex = 0; // 인덱스를 초기화하여 새로 고침
-        $('body').css('background-image', `url(${currentImages[currentIndex]})`);
-    });
-});
+//     setInterval(changeBackground, 30000);
+
+//     $(window).resize(function() {
+//         currentImages = $(window).width() < 768 ? mobileImages : desktopImages;
+//         currentIndex = 0; // 인덱스를 초기화하여 새로 고침
+//         $('body').css('background-image', `url(${currentImages[currentIndex]})`);
+//     });
+// });
 
 
 
@@ -134,28 +136,80 @@ $(document).ready(function() {
                                                 // });
                                                 
 // #orange_main 이미지 
-$(document).ready(function () {
-    function toggleOrange() {
-        $('#orange_main').fadeOut(1000, function () {
-            setTimeout(function () {
-                $('#orange_main').fadeIn(1000);
-            }, 29000);
-        });
+
+
+var winWidth = "";
+if (window.innerWidth != null) {
+    winWidth = window.innerWidth + "";
+} else if (window.document != null && window.document.documentElement != null && window.document.documentElement.clientWidth != null) {
+    winWidth = window.document.documentElement.clientWidth + "";
+} else if (window.document != null && window.document.body != null && window.document.body.offsetWidth != null) {
+    winWidth = window.document.body.offsetWidth + "";
+}
+console.log(winWidth);
+    
+
+$(function() {
+    function mobile() {
+        $(".body-back-mobile img:gt(0)").hide(); // hide()는 숨기는 기능
+    
+        // fadeOut(), fadeIn()
+        setInterval(function() {
+            $(".body-back-mobile img:first").fadeOut()
+            .next('img').fadeIn()
+            .end().appendTo('.body-back-mobile'); 
+        }, 30000);
     }
+    function pc() {
+        $(".body-back-pc img:gt(0)").hide(); // hide()는 숨기는 기능
+    
+        // fadeOut(), fadeIn()
+        setInterval(function() {
+            $(".body-back-pc img:first").fadeOut()
+            .next('img').fadeIn()
+            .end().appendTo('.body-back-pc'); 
+        }, 30000);
+    }
+    
 
-    toggleOrange();
-
-    setInterval(toggleOrange, 30000);
+    $(window).load( function() {
+        if (winWidth >= 1024) {
+            pc();
+        } else {
+            mobile();
+        }
+    });
 });
 
-//고정 이미지 
+
+
+
 $(document).ready(function () {
+    function isMobile() {
+        return $(window).width() < 768; 
+    }
+
+    function toggleOrange() {
+        if (!isMobile()) { // 모바일이 아닐 때만 실행
+            $('#orange_main').fadeIn(1000, function () {
+                setTimeout(function () {
+                    $('#orange_main').fadeOut(1000);
+                }, 29000);
+            });
+        }
+    }
+
+    setTimeout(toggleOrange, 30000); // 30초 후에 처음으로 호출
+    setInterval(toggleOrange, 30000); // 이후 30초마다 호출
+
     function toggleElement(selector) {
-        $(selector).fadeIn(1000, function () {
-            setTimeout(function () {
-                $(selector).fadeOut(1000);
-            }, 29000);
-        });
+        if (!isMobile()) { // 모바일이 아닐 때만 실행
+            $(selector).fadeIn(1000, function () {
+                setTimeout(function () {
+                    $(selector).fadeOut(1000);
+                }, 29000);
+            });
+        }
     }
 
     function toggleElements() {
@@ -163,12 +217,54 @@ $(document).ready(function () {
         toggleElement('#blue-star');
         toggleElement('#blue_contact');
         toggleElement('#blue_semicircle');
+        toggleElement('#blue_semicircle2');
     }
 
     toggleElements();
 
     setInterval(toggleElements, 30000);
 });
+
+// //고정 이미지
+// $(document).ready(function () {
+//     function toggleOrange() {
+//         $('#orange_main').fadeIn(1000, function () {
+//             setTimeout(function () {
+//                 $('#orange_main').fadeOut(1000);
+//             }, 29000);
+//         });
+//     }
+
+//     setTimeout(toggleOrange, 30000); // 30초 후에 처음으로 호출
+//     setInterval(toggleOrange, 30000); // 이후 30초마다 호출
+
+//     // toggleOrange();
+
+//     // setInterval(toggleOrange, 30000);
+// });
+
+// //고정 이미지 
+// $(document).ready(function () {
+//     function toggleElement(selector) {
+//         $(selector).fadeIn(1000, function () {
+//             setTimeout(function () {
+//                 $(selector).fadeOut(1000);
+//             }, 29000);
+//         });
+//     }
+
+//     function toggleElements() {
+//         toggleElement('#blue_main');
+//         toggleElement('#blue-star');
+//         toggleElement('#blue_contact');
+//         toggleElement('#blue_semicircle');
+//         toggleElement('#blue_semicircle2');
+//     }
+
+//     toggleElements();
+
+//     setInterval(toggleElements, 30000);
+// });
 
 
 
@@ -380,20 +476,23 @@ window.addEventListener('scroll', function (event) {
 // });
 
 
-// footer 애니메이션 
-$(document).ready(function() {
-    $(window).scroll(function() {
-        var scrollTop = $(this).scrollTop();
-        var contactOffset = $('.contact').offset().top;
 
-        // 스크롤 위치가 #contact 요소의 위치에 도달했을 때
-        if (scrollTop + $(window).height() > contactOffset) {
-            $('.contact').addClass('visible');
-            $('.p-txt').addClass('visible');
-        } else {
-            // 스크롤이 #contact 요소의 위치를 벗어났을 때 클래스를 제거
-            $('.contact').removeClass('visible');
-            $('.p-txt').removeClass('visible');
-        }
-    });
-});
+// 얘가 인덱스에 들어가 있어서, 먹혓던 거임.
+
+// footer 애니메이션 
+// $(document).ready(function() {
+//     $(window).scroll(function() {
+//         var scrollTop = $(this).scrollTop();
+//         var contactOffset = $('.contact').offset().top;
+
+//         // 스크롤 위치가 #contact 요소의 위치에 도달했을 때
+//         if (scrollTop + $(window).height() > contactOffset) {
+//             $('.contact').addClass('visible');
+//             $('.p-txt').addClass('visible');
+//         } else {
+//             // 스크롤이 #contact 요소의 위치를 벗어났을 때 클래스를 제거
+//             $('.contact').removeClass('visible');
+//             $('.p-txt').removeClass('visible');
+//         }
+//     });
+// });

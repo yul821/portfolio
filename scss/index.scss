@@ -4,32 +4,69 @@
 @include lf-to-rt;
 @include rt-to-lf;
 
-
 body {
-    height: 100%;
-    width: 100%;
-
-    // background-image: '../images/background_blue_mobile_2.jpg';
-    background: url(../images/background_blue_mobile_2.jpg) no-repeat top left;
-    background-size: cover;
-    // background-size: 100% auto;
-    background-position: center; 
-    transition: background-image 1s ease-in-out; //// 수정
-
-    @include responsive(large-screens) {
-        // background-image: '../images/background_blue_pc_test.jpg';
-        background: url(../images/background_blue_pc_test.jpg) no-repeat top left;
-        background-size: cover;
-        // background-size: 100% auto;
-        background-position: center;
-    }
+    margin: 0;
+    background-color: $color-sub;
+    font-family: $font-main;
 }
 
-
-
-main {
-    width: 100%;
-    overflow: hidden;
+// body {
+    //     height: 100%;
+    //     width: 100%;
+    
+    //     // background-image: '../images/background_blue_mobile_2.jpg';
+    //     background: url(../images/background_blue_mobile_2.jpg) no-repeat top left;
+    //     background-size: cover;
+    //     // background-size: 100% auto;
+    //     background-position: center; 
+    //     transition: background-image 1s ease-in-out; //// 수정
+    
+    //     @include responsive(large-screens) {
+        //         // background-image: '../images/background_blue_pc_test.jpg';
+        //         background: url(../images/background_blue_pc_test.jpg) no-repeat top left;
+        //         background-size: cover;
+        //         // background-size: 100% auto;
+        //         background-position: center;
+        //     }
+        // }
+        
+        
+        
+    main {
+        width: 100%;
+        overflow: hidden;
+    .back-image {
+        // position: relative;
+        z-index: -1;
+        
+        .body-back-mobile {
+            display: block;
+            position: absolute;
+            left: 0; top: 0;
+            width: 100vw;
+    
+            @media (min-width: 1024px) {
+                display: none;
+            }
+    
+            img {
+                width: 100vw;
+            }
+        }
+        .body-back-pc {
+            display: none;
+            position: absolute;
+            left: 0; top: 0;
+            width: 100vw;
+            @media  (min-width: 1024px) {
+                display: block;
+            }
+            
+            img {
+                width: 100vw;
+            }
+        }
+    }
     .symbol {
         position: relative;   ////////////blue_main 이미지 위치 고정
         display: flex; 
@@ -316,6 +353,7 @@ main {
             grid-template-rows: auto;
             grid-column-gap: 10%;
             grid-row-gap: 30px;
+            
             // flex-wrap: wrap;
             // align-items: center;
             // justify-content: space-evenly;
@@ -348,6 +386,7 @@ main {
             .icon7,
             .icon8,
             .icon9 {
+                cursor: pointer;
                 @include responsive(large-screens) {
                     // width: 20%;
                     margin-bottom: 30px;
@@ -356,7 +395,8 @@ main {
                 
                 img {
                     width: 100%;
-
+                    // z-index: 100;
+                    
                     @include responsive(large-screens) {
 
                         // margin-left: 85px;
@@ -1179,6 +1219,13 @@ main {
                 }
             } //more-btn
         }
+
+        #blue_semicircle2 {
+            display: none;
+            position: absolute;
+            top: -250px;
+            z-index: -1;
+        }
     } /********************** banner-design **********************/
 
     .package-design-ani {
@@ -1364,6 +1411,7 @@ main {
                         }
                     }
                     &:last-child {
+                        z-index: 500;
                         @include responsive(large-screens) {
                             width: 573px;
                         }

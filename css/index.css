@@ -54,19 +54,9 @@ p {
   }
 }
 body {
-  height: 100%;
-  width: 100%;
-  background: url(../images/background_blue_mobile_2.jpg) no-repeat top left;
-  background-size: cover;
-  background-position: center;
-  transition: background-image 1s ease-in-out;
-}
-@media (min-width: 1440px) {
-  body {
-    background: url(../images/background_blue_pc_test.jpg) no-repeat top left;
-    background-size: cover;
-    background-position: center;
-  }
+  margin: 0;
+  background-color: #000;
+  font-family: "Copperplate Gothic";
 }
 
 main {
@@ -82,6 +72,39 @@ main {
   /********************** banner-design **********************/
   /********************** cardnews-design **********************/
   /********************** cardnews-design **********************/
+}
+main .back-image {
+  z-index: -1;
+}
+main .back-image .body-back-mobile {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+}
+@media (min-width: 1024px) {
+  main .back-image .body-back-mobile {
+    display: none;
+  }
+}
+main .back-image .body-back-mobile img {
+  width: 100vw;
+}
+main .back-image .body-back-pc {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+}
+@media (min-width: 1024px) {
+  main .back-image .body-back-pc {
+    display: block;
+  }
+}
+main .back-image .body-back-pc img {
+  width: 100vw;
 }
 main .symbol {
   position: relative;
@@ -331,6 +354,17 @@ main .skill .icon-box.visible {
     margin-top: 200px;
     margin-bottom: 122px;
   }
+}
+main .skill .icon-box .icon1,
+main .skill .icon-box .icon2,
+main .skill .icon-box .icon3,
+main .skill .icon-box .icon4,
+main .skill .icon-box .icon5,
+main .skill .icon-box .icon6,
+main .skill .icon-box .icon7,
+main .skill .icon-box .icon8,
+main .skill .icon-box .icon9 {
+  cursor: pointer;
 }
 @media (min-width: 1440px) {
   main .skill .icon-box .icon1,
@@ -1136,6 +1170,12 @@ main .package-design .flex-box .more-btn img {
 main .package-design .flex-box .more-btn img:hover {
   transform: translateX(10px);
 }
+main .package-design #blue_semicircle2 {
+  display: none;
+  position: absolute;
+  top: -250px;
+  z-index: -1;
+}
 main .package-design-ani {
   opacity: 1;
   animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
@@ -1317,6 +1357,9 @@ main .teamproject .flex-box .page-img img {
     height: 580px;
     margin-top: 280px;
   }
+}
+main .teamproject .flex-box .page-img img:last-child {
+  z-index: 500;
 }
 @media (min-width: 1440px) {
   main .teamproject .flex-box .page-img img:last-child {

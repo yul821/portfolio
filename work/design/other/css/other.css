@@ -45,13 +45,13 @@ p {
 }
 
 body {
-  background: url(../../../../images/background_orange_mobile.png) no-repeat;
+  background: url(../../../../images/background_orange_mobile.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (min-width: 1440px) {
   body {
-    background: url(../../../../images/background_orange_pc.png) no-repeat top left;
+    background: url(../../../../images/background_orange_pc_test.jpg) no-repeat top left;
     background-size: cover;
     background-position: center;
   }
@@ -78,6 +78,9 @@ main .flex-box .intro-txt .intro h3 {
     font-size: calc(30px + 0.5vw);
     margin-bottom: 30px;
   }
+}
+main .flex-box .intro-txt .intro .pbox {
+  margin-bottom: 30px;
 }
 main .more-btn {
   display: flex;

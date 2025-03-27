@@ -30,13 +30,13 @@
 
 $(document).ready(function() {
     const mobileImages = [
-        '../images/background_blue_mobile_2.png',
-        '../images/background_orange_mobile.png'
+        '../images/background_blue_mobile_2.jpg',
+        '../images/background_orange_mobile.jpg'
     ];
 
     const desktopImages = [
-        '../images/background_blue_pc_test.png',
-        '../images/background_orange_pc_test.png'
+        '../images/background_blue_pc_test.jpg',
+        '../images/background_orange_pc_test.jpg'
     ];
 
     let currentImages = $(window).width() < 768 ? mobileImages : desktopImages;

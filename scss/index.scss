@@ -9,14 +9,14 @@ body {
     height: 100%;
     width: 100%;
 
-    background: url(../images/background_blue_mobile_2.png) no-repeat top left;
+    background: url(../images/background_blue_mobile_2.jpg) no-repeat top left;
     background-size: cover;
     // background-size: 100% auto;
     background-position: center; 
     transition: background-image 1s ease-in-out;
 
     @include responsive(large-screens) {
-        background: url(../images/background_blue_pc_test.png) no-repeat top left;
+        background: url(../images/background_blue_pc_test.jpg) no-repeat top left;
         background-size: cover;
         // background-size: 100% auto;
         background-position: center;

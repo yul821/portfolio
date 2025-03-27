@@ -1,142 +1,12 @@
-// window.onload = function() {
-//     // 배경 이미지 배열
-//     const mobileImages = [
-//         '../images/background_blue_mobile_2.png',
-//         '../images/background_orange_mobile.png'
-//     ];
-    
-//     const desktopImages = [
-//         '../images/background_blue_pc_test.png',
-//         '../images/background_orange_pc_test.png'
-//     ];
-    
-//     // 현재 화면 크기에 따라 사용할 이미지 배열 선택
-//     let currentImages = window.innerWidth < 768 ? mobileImages : desktopImages;
-//     let currentIndex = 0;
-    
-//     // 배경 이미지 변경 함수
-//     function changeBackground() {
-//         currentIndex = (currentIndex + 1) % currentImages.length;
-//         document.body.style.background = `url(${currentImages[currentIndex]}) no-repeat top left`;
-//         document.body.style.backgroundSize = `cover`; 
-//         document.body.style.backgroundPosition = `center`; 
-//         document.body.style.transition = 'background-image 1s ease-in-out';
 
-//     }
-    
-//     setInterval(changeBackground, 30000);
-// }
+//아이콘 호버
+function resetHover() {
+    $('.icon1, .icon2, .icon3, .icon4, .icon5, .icon6, .icon7, .icon8, .icon9, .icon10').removeClass('hover');
+}
 
-
-
-//////////////////
-// $(document).ready(function() {
-//     const mobileImages = [
-//         '../images/background_blue_mobile_2.jpg',
-//         '../images/background_orange_mobile.jpg'
-//     ];
-
-//     const desktopImages = [
-//         '../images/background_blue_pc_test.jpg',
-//         '../images/background_orange_pc_test.jpg'
-//     ];
-
-//     let currentImages = $(window).width() < 768 ? mobileImages : desktopImages;
-//     let currentIndex = 0;
-
-//     function changeBackground() {
-//         currentIndex = (currentIndex + 1) % currentImages.length;
-//         $('body').css({
-//             'background': `url(${currentImages[currentIndex]}) no-repeat top left`,
-//             // 'background-repeat': 'no-repeat',
-//             // 'background-position': 'top left',
-//             'background-size': 'cover',
-//             'transition': 'background-image 1s ease-in-out'
-//         });
-//     }
-
-//     // 초기 배경 이미지 설정
-//     $('body').css('background-image', `url(${currentImages[currentIndex]})`);
-
-//     setInterval(changeBackground, 30000);
-
-//     $(window).resize(function() {
-//         currentImages = $(window).width() < 768 ? mobileImages : desktopImages;
-//         currentIndex = 0; // 인덱스를 초기화하여 새로 고침
-//         $('body').css('background-image', `url(${currentImages[currentIndex]})`);
-//     });
-// });
-
-
-
-
-
-// // #blue-main 이미지 
-// $(document).ready(function () {
-//     function toggleBlue() {
-//         $('#blue_main').fadeIn(1000, function () {
-//             setTimeout(function () {
-//                 $('#blue_main').fadeOut(1000);
-//             }, 29000);
-//         });
-//     }
-
-//     toggleBlue();
-
-//     setInterval(toggleBlue, 30000);
-// });
-
-
-
-// // #blue-star 이미지 
-// $(document).ready(function () {
-    //     function toggleStar() {
-        //         $('#blue-star').fadeIn(1000, function () {
-            //             setTimeout(function () {
-                //                 $('#blue-star').fadeOut(1000);
-                //             }, 29000);
-                //         });
-                //     }
-                
-                //     toggleStar();
-                
-                //     setInterval(toggleStar, 30000);
-                // });
-                
-                
-                // // #blue_semicircle 이미지 
-                // $(document).ready(function () {
-                    //     function toggleSemicircle() {
-                        //         $('#blue_semicircle').fadeOut(1000, function () {
-                            //             setTimeout(function () {
-                                //                 $('#blue_semicircle').fadeIn(1000);
-                                //             }, 29000);
-                                //         });
-                                //     }
-                                
-                                //     toggleSemicircle();
-                                
-                                //     setInterval(toggleSemicircle, 30000);
-                                // });
-                                
-                                
-                                // // #blue_contact 이미지 
-                                // $(document).ready(function () {
-                                    //     function toggleContact() {
-                                        //         $('#blue_contact').fadeIn(1000, function () {
-                                            //             setTimeout(function () {
-                                                //                 $('#blue_contact').fadeOut(1000);
-                                                //             }, 29000);
-                                                //         });
-                                                //     }
-                                                
-                                                //     toggleContact();
-                                                
-                                                //     setInterval(toggleContact, 30000);
-                                                // });
-                                                
-// #orange_main 이미지 
-
+setInterval(function() {
+    resetHover();
+}, 30000);
 
 var winWidth = "";
 if (window.innerWidth != null) {
@@ -148,6 +18,9 @@ if (window.innerWidth != null) {
 }
 console.log(winWidth);
     
+
+
+
 
 $(function() {
     function mobile() {

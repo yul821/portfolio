@@ -346,6 +346,8 @@ body {
         }
         .icon-box {
             // background-color: blue;
+            position: relative; //파란 배경일때 아이콘 호버를 위함
+            z-index: 10;//파란 배경일때 아이콘 호버를 위함
             width: 90%;
             margin: 0 auto;
             display: grid;

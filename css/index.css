@@ -330,6 +330,8 @@ main .skill h2.active {
   }
 }
 main .skill .icon-box {
+  position: relative;
+  z-index: 10;
   width: 90%;
   margin: 0 auto;
   display: grid;

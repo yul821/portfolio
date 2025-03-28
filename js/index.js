@@ -24,7 +24,7 @@ console.log(winWidth);
 
 $(function() {
     function mobile() {
-        $(".body-back-mobile img:gt(0)").hide(); // hide()는 숨기는 기능
+        $(".body-back-mobile img:gt(0)").hide(); 
     
         // fadeOut(), fadeIn()
         setInterval(function() {
@@ -34,7 +34,7 @@ $(function() {
         }, 30000);
     }
     function pc() {
-        $(".body-back-pc img:gt(0)").hide(); // hide()는 숨기는 기능
+        $(".body-back-pc img:gt(0)").hide(); 
     
         // fadeOut(), fadeIn()
         setInterval(function() {
@@ -98,46 +98,6 @@ $(document).ready(function () {
     setInterval(toggleElements, 30000);
 });
 
-// //고정 이미지
-// $(document).ready(function () {
-//     function toggleOrange() {
-//         $('#orange_main').fadeIn(1000, function () {
-//             setTimeout(function () {
-//                 $('#orange_main').fadeOut(1000);
-//             }, 29000);
-//         });
-//     }
-
-//     setTimeout(toggleOrange, 30000); // 30초 후에 처음으로 호출
-//     setInterval(toggleOrange, 30000); // 이후 30초마다 호출
-
-//     // toggleOrange();
-
-//     // setInterval(toggleOrange, 30000);
-// });
-
-// //고정 이미지 
-// $(document).ready(function () {
-//     function toggleElement(selector) {
-//         $(selector).fadeIn(1000, function () {
-//             setTimeout(function () {
-//                 $(selector).fadeOut(1000);
-//             }, 29000);
-//         });
-//     }
-
-//     function toggleElements() {
-//         toggleElement('#blue_main');
-//         toggleElement('#blue-star');
-//         toggleElement('#blue_contact');
-//         toggleElement('#blue_semicircle');
-//         toggleElement('#blue_semicircle2');
-//     }
-
-//     toggleElements();
-
-//     setInterval(toggleElements, 30000);
-// });
 
 
 
@@ -333,39 +293,3 @@ window.addEventListener('scroll', function (event) {
 
 
 
-
-
-// $(document).ready(function() {
-//     $(window).scroll(function() {
-//         var scrollTop = $(this).scrollTop();
-//         var contactOffset = $('.contact').offset().top;
-
-//         // 스크롤 위치가 #contact 요소의 위치에 도달했을 때
-//         if (scrollTop + $(window).height() > contactOffset) {
-//             $('.contact').addClass('visible');
-//             $('.p-txt').addClass('visible');
-//         }
-//     });
-// });
-
-
-
-// 얘가 인덱스에 들어가 있어서, 먹혓던 거임.
-
-// footer 애니메이션 
-// $(document).ready(function() {
-//     $(window).scroll(function() {
-//         var scrollTop = $(this).scrollTop();
-//         var contactOffset = $('.contact').offset().top;
-
-//         // 스크롤 위치가 #contact 요소의 위치에 도달했을 때
-//         if (scrollTop + $(window).height() > contactOffset) {
-//             $('.contact').addClass('visible');
-//             $('.p-txt').addClass('visible');
-//         } else {
-//             // 스크롤이 #contact 요소의 위치를 벗어났을 때 클래스를 제거
-//             $('.contact').removeClass('visible');
-//             $('.p-txt').removeClass('visible');
-//         }
-//     });
-// });

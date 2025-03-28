@@ -1,4 +1,4 @@
-// 각 메뉴를 클릭했을때 해당 섹션으로 부드럽게 스크롤     ******************작동이 안됨 
+// 각 메뉴를 클릭했을때 해당 섹션으로 부드럽게 스크롤=
 $(document).ready(function() {
     $('.main-menu-a').on('click', function(event) {
         event.preventDefault();
@@ -127,26 +127,6 @@ $(function () {
             $(".submenu").stop(true).slideUp(); // 서브메뉴 닫기
         });
     });
-
-    // //헤더 서브메뉴 
-    // $(document).ready(function() {
-    //     // 메뉴 클릭 시 부드러운 스크롤 효과
-    //     $('.submenu-a').on('click', function(event) {
-    //         // 기본 클릭 이벤트 방지
-    //         event.preventDefault();
-
-    //         var target = $(this).attr('href');
-
-    //         $('html, body').animate({
-    //             scrollTop: $(target).offset().top
-    //         }, 800); // 800ms 동안 스크롤
-
-    //         $('.submenu').css({ right: "-100vw" }); /// 서브메뉴 닫기
-    //     });
-    // });
-
-
-
 
 
 

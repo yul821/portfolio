@@ -38,12 +38,14 @@ body {
     .back-image {
         // position: relative;
         z-index: -1;
-        
+        overflow: hidden; //푸터 아래로 공간이 생김,,
+        // height: 100vh;
         .body-back-mobile {
             display: block;
             position: absolute;
             left: 0; top: 0;
             width: 100vw;
+            // height: 100vw;
     
             @media (min-width: 1024px) {
                 display: none;
@@ -356,10 +358,6 @@ body {
             grid-column-gap: 10%;
             grid-row-gap: 30px;
             
-            // flex-wrap: wrap;
-            // align-items: center;
-            // justify-content: space-evenly;
-
             opacity: 0;
 
             transform: translateY(100px); // 아래에서 올라오는 효과
@@ -390,20 +388,13 @@ body {
             .icon9 {
                 cursor: pointer;
                 @include responsive(large-screens) {
-                    // width: 20%;
                     margin-bottom: 30px;
-                    // background-color: green;
                 }
                 
                 img {
                     width: 100%;
                     // z-index: 100;
-                    
-                    @include responsive(large-screens) {
 
-                        // margin-left: 85px;
-                        // margin-right: 85px;
-                    }
                 }
             }
 
@@ -472,9 +463,6 @@ body {
             }
 
             .icon10 {
-                // width: 75px;
-                // justify-content: flex-start;
-                // margin-right: 165px;
                 &:hover {
                     content: url(../images/prae_icon_2.png);
                     width: 100%;

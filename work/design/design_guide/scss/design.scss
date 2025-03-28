@@ -1,0 +1,108 @@
+@import "../../../../scss/style.scss";
+@import "../../../../scss/reset.scss";
+@import "../../../../scss/mixin.scss";
+
+.container {
+    // background-color: cornflowerblue;
+    width: $width-wide;
+    max-width: $break-large;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include responsive(large-screens) {
+        padding: 0 10px;
+    }
+}
+
+body { 
+    background: url(../../../../images/background_blue_mobile_2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include responsive(large-screens) {
+        background: url(../../../../images/background_blue_pc_test.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+main {
+    .flex-box {
+        .intro-txt {
+            margin-top: 70px;
+            @include responsive(large-screens) {
+                margin-top: 150px;
+                // margin-bottom: 35px;
+            }
+            .intro {
+                h3 {
+                    color: $color-main;
+                    font-family: $font-main;
+                    margin-bottom: 30px;
+                    @include responsive(large-screens) {
+                        font-size: $desktop-content-sub2;   
+                        margin-bottom: 30px;
+                    }
+
+                    .pbox {
+                        p {
+                            font-size: $font-size-18;
+                        }
+                    }
+                }
+            } //intro
+        } //intro-txt
+
+        .page-img {
+            margin-top: 30px;
+            @include responsive(large-screens) {
+                width: 100%;
+                object-fit: cover;
+                // display: flex;
+                // justify-content: space-between;
+                
+            }
+            img {
+                width: 100%; height: 100%;
+
+                // &:first-child {
+                //     margin-bottom: 50px;
+
+                //     @include responsive(large-screens) {
+                //         width: 600px;
+                //         margin-right: 20px;
+                //     }
+                // }
+                // &:last-child {
+                //     @include responsive(large-screens) {
+                //         width: 600px;
+                //     }
+                // }
+                
+                // @include responsive(large-screens) {
+                //     width: 50%;
+                // }
+            }
+        }
+    }
+
+    .top-btn {
+        z-index: 999;
+        a {
+            img {
+                width: 20%;
+                max-width: 100px; // 최대 이사이즈 까지만 늘어나게 고정
+                position: fixed;
+                right: 30px;
+                bottom: 30px;
+
+                @include responsive(large-screens) {
+                    width: 5%;
+                }
+            }
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -84,54 +84,57 @@ body {
         h2 {
             font-size: 0;
         }
-        .img1 {
-            width: 200px;
-            margin: 0 auto;
-            z-index: 1;
-            cursor: pointer;
-
-            // animation: rotate 15s linear infinite;
-
-            // @keyframes rotate {
-            //     from {
-            //         transform: rotate(0deg); 
-            //     }
-            //     to {
-            //         transform: rotate(360deg); 
-            //     }
-            // }
-
-            animation: rotate 30s linear infinite;
-
-            @keyframes rotate {
-                0% {
-                    transform: rotate(0deg); 
+        a {
+            z-index: 10;
+            .img1 {
+                width: 200px;
+                margin: 0 auto;
+                z-index: 1;
+                cursor: pointer;
+    
+                // animation: rotate 15s linear infinite;
+    
+                // @keyframes rotate {
+                //     from {
+                //         transform: rotate(0deg); 
+                //     }
+                //     to {
+                //         transform: rotate(360deg); 
+                //     }
+                // }
+    
+                animation: rotate 30s linear infinite;
+    
+                @keyframes rotate {
+                    0% {
+                        transform: rotate(0deg); 
+                    }
+                    12.5% {
+                        transform: rotate(-45deg); // 왼쪽으로 45도 회전
+                    }
+                    37.5% {
+                        transform: rotate(315deg); // (360도 - 45도)
+                    }
+                    62.5% {
+                        transform: rotate(360deg); // 원래 위치로
+                    }
+                    75% {
+                        transform: rotate(315deg); // 왼쪽으로 45도 회전
+                    }
+                    100% {
+                        transform: rotate(0deg); // 다시 원래 위치로
+                    }
                 }
-                12.5% {
-                    transform: rotate(-45deg); // 왼쪽으로 45도 회전
+    
+                &:hover {
+                    animation-play-state: paused; // 애니메이션 일시 정지
                 }
-                37.5% {
-                    transform: rotate(315deg); // (360도 - 45도)
+    
+                @include responsive(large-screens) {
+                    width: 612px;
+                    margin-top: 120px;
+                    margin-bottom: 95px;
                 }
-                62.5% {
-                    transform: rotate(360deg); // 원래 위치로
-                }
-                75% {
-                    transform: rotate(315deg); // 왼쪽으로 45도 회전
-                }
-                100% {
-                    transform: rotate(0deg); // 다시 원래 위치로
-                }
-            }
-
-            &:hover {
-                animation-play-state: paused; // 애니메이션 일시 정지
-            }
-
-            @include responsive(large-screens) {
-                width: 612px;
-                margin-top: 120px;
-                margin-bottom: 95px;
             }
         }
         .img2 {

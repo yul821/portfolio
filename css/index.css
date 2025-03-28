@@ -75,7 +75,6 @@ main {
 }
 main .back-image {
   z-index: -1;
-  overflow: hidden;
 }
 main .back-image .body-back-mobile {
   display: block;

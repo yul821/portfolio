@@ -771,14 +771,14 @@ main .banner-design .flex-box .page-img {
   }
 }
 main .banner-design .flex-box .page-img img {
-  width: 150px;
+  width: 340px;
 }
 main .banner-design .flex-box .page-img img:first-child {
   padding-right: 10px;
 }
 @media (min-width: 1440px) {
   main .banner-design .flex-box .page-img img {
-    width: 421px;
+    width: 700px;
   }
 }
 main .banner-design .flex-box .intro-txt {

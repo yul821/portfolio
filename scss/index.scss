@@ -808,13 +808,15 @@ body {
                     margin: 0;
                 }
                 img {
-                    width: 150px;
+                    // width: 150px;
+                    width: 340px;
                     &:first-child {
                         padding-right: 10px;
                     }
 
                     @include responsive(large-screens) {
-                        width: 421px;
+                        // width: 421px;
+                        width: 700px;
                     }
 
                 }

@@ -101,6 +101,6 @@ main .flex-box .page-img img:first-child {
 }
 @media (min-width: 1440px) {
   main .flex-box .page-img img {
-    width: 50%;
+    width: 100%;
   }
 }/*# sourceMappingURL=banner.css.map */

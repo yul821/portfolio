@@ -56,7 +56,7 @@ main {
             margin-top: 30px;
             
             @include responsive(large-screens) {
-                display: flex;
+                // display: flex;
                 
             }
             img {

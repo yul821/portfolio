@@ -763,7 +763,6 @@ main .banner-design .flex-box {
 main .banner-design .flex-box .page-img {
   margin: 0 auto;
   margin-bottom: 35px;
-  display: flex;
 }
 @media (min-width: 1440px) {
   main .banner-design .flex-box .page-img {
@@ -774,7 +773,7 @@ main .banner-design .flex-box .page-img img {
   width: 340px;
 }
 main .banner-design .flex-box .page-img img:first-child {
-  padding-right: 10px;
+  padding-bottom: 20px;
 }
 @media (min-width: 1440px) {
   main .banner-design .flex-box .page-img img {

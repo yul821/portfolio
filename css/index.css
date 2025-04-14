@@ -777,7 +777,7 @@ main .banner-design .flex-box .page-img img:first-child {
 }
 @media (min-width: 1440px) {
   main .banner-design .flex-box .page-img img {
-    width: 700px;
+    width: 650px;
   }
 }
 main .banner-design .flex-box .intro-txt {

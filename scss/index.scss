@@ -4,34 +4,13 @@
 @include lf-to-rt;
 @include rt-to-lf;
 
+
 body {
     margin: 0;
     background-color: $color-sub;
     font-family: $font-main;
 }
 
-// body {
-    //     height: 100%;
-    //     width: 100%;
-    
-    //     // background-image: '../images/background_blue_mobile_2.jpg';
-    //     background: url(../images/background_blue_mobile_2.jpg) no-repeat top left;
-    //     background-size: cover;
-    //     // background-size: 100% auto;
-    //     background-position: center; 
-    //     transition: background-image 1s ease-in-out; //// 수정
-    
-    //     @include responsive(large-screens) {
-        //         // background-image: '../images/background_blue_pc_test.jpg';
-        //         background: url(../images/background_blue_pc_test.jpg) no-repeat top left;
-        //         background-size: cover;
-        //         // background-size: 100% auto;
-        //         background-position: center;
-        //     }
-        // }
-        
-        
-        
     main {
         width: 100%;
         overflow: hidden;

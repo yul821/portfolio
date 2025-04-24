@@ -577,6 +577,9 @@ main .renewal-page .flex-box .intro-txt .more-btn {
   padding: 12px;
   cursor: pointer;
 }
+main .renewal-page .flex-box .intro-txt .more-btn:hover {
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3), -3px 3px 3px rgba(255, 255, 255, 0.3), 3px -3px 3px rgba(255, 255, 255, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.3);
+}
 main .renewal-page .flex-box .intro-txt .more-btn:hover img {
   transform: translateX(10px);
 }
@@ -699,6 +702,10 @@ main .detailed-page .flex-box .more-btn {
   border-radius: 30px;
   padding: 12px;
   cursor: pointer;
+}
+main .detailed-page .flex-box .more-btn:hover {
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3), -3px 3px 3px rgba(255, 255, 255, 0.3), 3px -3px 3px rgba(255, 255, 255, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease;
 }
 main .detailed-page .flex-box .more-btn:hover img {
   transform: translateX(10px);
@@ -833,6 +840,9 @@ main .banner-design .flex-box .more-btn {
   border-radius: 30px;
   padding: 12px;
   cursor: pointer;
+}
+main .banner-design .flex-box .more-btn:hover {
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3), -3px 3px 3px rgba(255, 255, 255, 0.3), 3px -3px 3px rgba(255, 255, 255, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.3);
 }
 main .banner-design .flex-box .more-btn:hover img {
   transform: translateX(10px);
@@ -1000,6 +1010,9 @@ main .app-design .flex-box .more-btn {
   padding: 12px;
   cursor: pointer;
 }
+main .app-design .flex-box .more-btn:hover {
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3), -3px 3px 3px rgba(255, 255, 255, 0.3), 3px -3px 3px rgba(255, 255, 255, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.3);
+}
 main .app-design .flex-box .more-btn:hover img {
   transform: translateX(10px);
 }
@@ -1139,6 +1152,9 @@ main .package-design .flex-box .more-btn {
   border-radius: 30px;
   padding: 12px;
   cursor: pointer;
+}
+main .package-design .flex-box .more-btn:hover {
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3), -3px 3px 3px rgba(255, 255, 255, 0.3), 3px -3px 3px rgba(255, 255, 255, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.3);
 }
 main .package-design .flex-box .more-btn:hover img {
   transform: translateX(10px);
@@ -1289,6 +1305,9 @@ main .cardnews-design .flex-box .more-btn {
   padding: 12px;
   cursor: pointer;
 }
+main .cardnews-design .flex-box .more-btn:hover {
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3), -3px 3px 3px rgba(255, 255, 255, 0.3), 3px -3px 3px rgba(255, 255, 255, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.3);
+}
 main .cardnews-design .flex-box .more-btn:hover img {
   transform: translateX(10px);
 }
@@ -1433,6 +1452,9 @@ main .teamproject .flex-box .more-btn {
   border-radius: 30px;
   padding: 12px;
   cursor: pointer;
+}
+main .teamproject .flex-box .more-btn:hover {
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3), -3px 3px 3px rgba(255, 255, 255, 0.3), 3px -3px 3px rgba(255, 255, 255, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.3);
 }
 main .teamproject .flex-box .more-btn:hover img {
   transform: translateX(10px);

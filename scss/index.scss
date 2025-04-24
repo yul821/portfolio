@@ -595,6 +595,10 @@ body {
                     cursor: pointer;
 
                     &:hover {
+                        box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3),
+                        -3px 3px 3px rgba(255, 255, 255, 0.3),
+                        3px -3px 3px rgba(255, 255, 255, 0.3),
+                        -3px -3px 3px rgba(255, 255, 255, 0.3);
                         img {
                             transform: translateX(10px);
                         }
@@ -720,6 +724,11 @@ body {
                 cursor: pointer;
 
                 &:hover {
+                    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3),
+                    -3px 3px 3px rgba(255, 255, 255, 0.3),
+                    3px -3px 3px rgba(255, 255, 255, 0.3),
+                    -3px -3px 3px rgba(255, 255, 255, 0.3);
+                    transition: box-shadow 0.3s ease;
                     img {
                         transform: translateX(10px);
                     }
@@ -855,6 +864,10 @@ body {
                 cursor: pointer;
 
                 &:hover {
+                    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3),
+                    -3px 3px 3px rgba(255, 255, 255, 0.3),
+                    3px -3px 3px rgba(255, 255, 255, 0.3),
+                    -3px -3px 3px rgba(255, 255, 255, 0.3);
                     img {
                         transform: translateX(10px);
                     }
@@ -1019,6 +1032,10 @@ body {
                 cursor: pointer;
 
                 &:hover {
+                    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3),
+                    -3px 3px 3px rgba(255, 255, 255, 0.3),
+                    3px -3px 3px rgba(255, 255, 255, 0.3),
+                    -3px -3px 3px rgba(255, 255, 255, 0.3);
                     img {
                         transform: translateX(10px);
                     }
@@ -1158,6 +1175,10 @@ body {
                 cursor: pointer;
 
                 &:hover {
+                    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3),
+                    -3px 3px 3px rgba(255, 255, 255, 0.3),
+                    3px -3px 3px rgba(255, 255, 255, 0.3),
+                    -3px -3px 3px rgba(255, 255, 255, 0.3);
                     img {
                         transform: translateX(10px);
                     }
@@ -1311,6 +1332,10 @@ body {
                 cursor: pointer;
 
                 &:hover {
+                    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3),
+                    -3px 3px 3px rgba(255, 255, 255, 0.3),
+                    3px -3px 3px rgba(255, 255, 255, 0.3),
+                    -3px -3px 3px rgba(255, 255, 255, 0.3);
                     img {
                         transform: translateX(10px);
                     }
@@ -1457,6 +1482,10 @@ body {
                 cursor: pointer;
 
                 &:hover {
+                    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3),
+                    -3px 3px 3px rgba(255, 255, 255, 0.3),
+                    3px -3px 3px rgba(255, 255, 255, 0.3),
+                    -3px -3px 3px rgba(255, 255, 255, 0.3);
                     img {
                         transform: translateX(10px);
                     }

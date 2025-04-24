@@ -101,6 +101,9 @@ main .more-btn {
   border-radius: 30px;
   padding: 12px;
 }
+main .more-btn:hover {
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3), -3px 3px 3px rgba(255, 255, 255, 0.3), 3px -3px 3px rgba(255, 255, 255, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.3);
+}
 main .more-btn:hover img {
   transform: translateX(10px);
 }

@@ -93,6 +93,9 @@ main .flex-box .more-btn {
   padding: 12px;
   cursor: pointer;
 }
+main .flex-box .more-btn:hover {
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.3), -3px 3px 3px rgba(255, 255, 255, 0.3), 3px -3px 3px rgba(255, 255, 255, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.3);
+}
 main .flex-box .more-btn:hover img {
   transform: translateX(10px);
 }

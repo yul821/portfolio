@@ -15,11 +15,17 @@ header {
     width: 100%; 
     padding: 30px 0;
     z-index: 999;
-    font-family: Arial;
+    font-family: 'Noto Sans KR';
+    background-color: transparent;
+    transition: background-color 0.3 ease;
 }
+
+#header.scrolled {
+    background-color: #000;
+}
+
 .header-menu {
     /* background-color: #000; */
-    
 }
 .menu-logo-flexbox {
     display: flex;
@@ -76,7 +82,7 @@ header {
     transform: rotate(-90deg);
     color: white;
     font-family: 'Berlin Sans FB';
-    font-size: 18px;
+    font-size: 20px;
 }
 .concept-img-list {
     position: relative;
@@ -333,7 +339,7 @@ header {
 .talk {
     position: fixed;
     right: 10%;
-    bottom: 196px;
+    bottom: 130px;
     display: flex;
     align-items: center;
     justify-content: flex-end;

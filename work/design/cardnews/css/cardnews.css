@@ -90,6 +90,38 @@ main .flex-box .intro-txt .intro .pbox p:last-child br {
     display: none;
   }
 }
+main .flex-box .page-img {
+  margin-top: 30px;
+}
+@media (min-width: 1440px) {
+  main .flex-box .page-img {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+main .flex-box .page-img img {
+  width: 100%;
+  height: 100%;
+}
+main .flex-box .page-img img:first-child {
+  margin-bottom: 50px;
+}
+@media (min-width: 1440px) {
+  main .flex-box .page-img img:first-child {
+    width: 600px;
+    margin-right: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  main .flex-box .page-img img:last-child {
+    width: 600px;
+  }
+}
+@media (min-width: 1440px) {
+  main .flex-box .page-img img {
+    width: 50%;
+  }
+}
 main .more-btn {
   display: flex;
   align-items: center;

@@ -66,8 +66,7 @@ body {
         a {
             z-index: 10;
             .img1 {
-                width: 200px; //gif 기준
-                // width: 200px;
+                width: 200px; 
                 margin: 0 auto;
                 z-index: 1;
                 cursor: pointer;
@@ -100,10 +99,10 @@ body {
                 // }
     
                 @include responsive(large-screens) {
-                    width: 600px; //gif 기준
-                    // width: 612px;
-                    margin-top: 120px;
-                    margin-bottom: 50px; //gif 기준
+                    width: 700px; 
+                    // width: 612px; 
+                    margin-top: 110px;
+                    margin-bottom: 50px; 
                     // margin-bottom: 95px;
                 }
             }

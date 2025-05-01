@@ -126,7 +126,7 @@ main .symbol a {
   z-index: 10;
 }
 main .symbol a .img1 {
-  width: 200px;
+  width: 230px;
   margin: 0 auto;
   z-index: 1;
   cursor: pointer;

@@ -14,16 +14,15 @@ body {
     main {
         width: 100%;
         overflow: hidden;
+
     .back-image {
-        // position: relative;
         z-index: -1;
-        // height: 100vh;
+
         .body-back-mobile {
             display: block;
             position: absolute;
             left: 0; top: 0;
             width: 100vw;
-            // height: 100vw;
     
             @media (min-width: 1024px) {
                 display: none;
@@ -71,39 +70,10 @@ body {
                 z-index: 1;
                 cursor: pointer;
     
-                // animation: rotate 30s linear infinite;
-    
-                // @keyframes rotate {
-                //     0% {
-                //         transform: rotate(0deg); 
-                //     }
-                //     12.5% {
-                //         transform: rotate(-45deg); // 왼쪽으로 45도 회전
-                //     }
-                //     37.5% {
-                //         transform: rotate(315deg); // (360도 - 45도)
-                //     }
-                //     62.5% {
-                //         transform: rotate(360deg); // 원래 위치로
-                //     }
-                //     75% {
-                //         transform: rotate(315deg); // 왼쪽으로 45도 회전
-                //     }
-                //     100% {
-                //         transform: rotate(0deg); // 다시 원래 위치로
-                //     }
-                // }
-    
-                // &:hover {
-                //     animation-play-state: paused; // 애니메이션 일시 정지
-                // }
-    
                 @include responsive(large-screens) {
                     width: 700px; 
-                    // width: 612px; 
                     margin-top: 110px;
                     margin-bottom: 50px; 
-                    // margin-bottom: 95px;
                 }
             }
         }
@@ -133,7 +103,7 @@ body {
         justify-content: center;
 
         @include responsive(large-screens) {
-            height: 1080px; // 섹션명에 높이값 지정 1080px
+            height: 1080px; 
         }
         h2 {
             font-family: $font-main;
@@ -252,11 +222,8 @@ body {
     } /********************** aboutme **********************/
 
     .skill { 
-        
-        // background-color: aquamarine;
         @include responsive(large-screens) {
-            height: 1370px; // 섹션명에 높이값 지정 
-            // height: 1080px;
+            height: 1370px; 
             padding-top: 40px;
         }
         h2 {
@@ -314,12 +281,9 @@ body {
 
             @include responsive(large-screens) {
                 font-size: $desktop-title-main;
-                // margin-top: 100px;
-                // margin-bottom: 127px;
             }
         }
         .icon-box {
-            // background-color: blue;
             position: relative; //파란 배경일때 아이콘 호버를 위함
             z-index: 10;//파란 배경일때 아이콘 호버를 위함
             width: 90%;
@@ -359,14 +323,13 @@ body {
             .icon8,
             .icon9 {
                 cursor: pointer;
+
                 @include responsive(large-screens) {
                     margin-bottom: 30px;
                 }
                 
                 img {
                     width: 100%;
-                    // z-index: 100;
-
                 }
             }
 
@@ -440,11 +403,6 @@ body {
                     width: 100%;
                 }
 
-                // @include responsive(large-screens) {
-                //     width: calc(33.33%);
-                //     margin-right: 0;
-                // }
-
                 img {
                     @include responsive(large-screens) {
                         width: 250px;
@@ -457,16 +415,15 @@ body {
 
     .renewal-page {
         position: relative;
-        // overflow: hidden; 
         opacity: 0;
         animation: none;
         @include responsive(large-screens) {
-            height: 1080px; // 섹션명에 높이값 지정 1080px
+            height: 1080px; 
         }
 
         h2 {
             z-index: 500;
-            position: relative; ///////////////////////별 3개 위치 조정
+            position: relative; //별 3개 위치 조정
             font-family: $font-main;
             font-size: $mobile-title-main;
             text-align: center;
@@ -482,6 +439,7 @@ body {
         .flex-box {
             display: flex;
             flex-direction: column;
+
             @include responsive(large-screens) {
                 display: flex;
                 flex-direction: row-reverse;
@@ -491,14 +449,16 @@ body {
             }
             .page-img {
                 margin: 0 auto;
-                // background-color: greenyellow;
+
                 @include responsive(large-screens) {
                     margin: 0;
                 }
+
                 img {
                     width: 194px; 
                     height: 358px;
                     margin-bottom: 48px;
+
                     @include responsive(large-screens) {
                         width: 454px;
                         height: 824px;
@@ -518,7 +478,6 @@ body {
                 .intro {
                     color: $color-main;
 
-                    
                     h3 {
                         position: absolute;
                         left: 50%;
@@ -553,6 +512,7 @@ body {
 
                     .pbox {
                         margin-top: 30px;
+
                         p {
                             font-family: $font-sub2;
                             font-size: $font-size-14;
@@ -590,6 +550,7 @@ body {
                         -3px 3px 3px rgba(255, 255, 255, 0.3),
                         3px -3px 3px rgba(255, 255, 255, 0.3),
                         -3px -3px 3px rgba(255, 255, 255, 0.3);
+
                         img {
                             transform: translateX(10px);
                         }
@@ -633,12 +594,13 @@ body {
         opacity: 1;
         animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
     }
+
     .detailed-page {
         opacity: 0;
         animation: none;
-        // background-color: red;
+
         @include responsive(large-screens) {
-            height: 1400px; // 섹션명에 높이값 지정 1080px
+            height: 1400px; 
         }
         .flex-box {
             @include responsive(large-screens) {
@@ -647,16 +609,17 @@ body {
                 align-items: center;
                 margin-top: 80px;
             }
+
             .page-img {
-                // margin-top: 44px;
                 margin-bottom: 35px;
+
                 img {
                     margin: 0 auto;
                     width:329px;
+
                     @include responsive(large-screens) {
                         margin: 0;
                         width: 840px;
-                        // margin-top: 135px;
                     }
                 }
             }
@@ -691,6 +654,7 @@ body {
                     }
                     .pbox {
                         margin-top: 30px;
+
                         p {
                             font-family: $font-sub2;
                             font-size: $font-size-14;
@@ -720,6 +684,7 @@ body {
                     3px -3px 3px rgba(255, 255, 255, 0.3),
                     -3px -3px 3px rgba(255, 255, 255, 0.3);
                     transition: box-shadow 0.3s ease;
+
                     img {
                         transform: translateX(10px);
                     }
@@ -765,12 +730,15 @@ body {
     .banner-design {
         opacity: 0;
         animation: none;
+
         @include responsive(large-screens) {
-            height: 1080px; // 섹션명에 높이값 지정 1080px
+            height: 1080px; 
         }
+
         .flex-box {
             display: flex;
             flex-direction: column;
+
             @include responsive(large-screens) {
                 display: flex;
                 flex-direction: row-reverse;
@@ -778,27 +746,25 @@ body {
                 align-items: center;
                 padding-top: 150px;
             }
+
             .page-img {
                 margin: 0 auto;
                 margin-bottom: 35px;
-                // display: flex;
 
                 @include responsive(large-screens) {
                     margin: 0;
                 }
+
                 img {
-                    // width: 150px;
                     width: 340px;
+
                     &:first-child {
-                        // padding-right: 10px;
                         padding-bottom: 20px;
                     }
 
                     @include responsive(large-screens) {
-                        // width: 421px;
                         width: 650px;
                     }
-
                 }
             }
 
@@ -831,6 +797,7 @@ body {
                     }
                     .pbox {
                         margin-top: 30px;
+
                         p {
                             font-family: $font-sub2;
                             font-size: $font-size-14;
@@ -859,6 +826,7 @@ body {
                     -3px 3px 3px rgba(255, 255, 255, 0.3),
                     3px -3px 3px rgba(255, 255, 255, 0.3),
                     -3px -3px 3px rgba(255, 255, 255, 0.3);
+
                     img {
                         transform: translateX(10px);
                     }
@@ -913,6 +881,7 @@ body {
         .flex-box {
             display: flex;
             flex-direction: column;
+
             @include responsive(large-screens) {
                 display: flex;
                 flex-direction: row-reverse;
@@ -920,6 +889,7 @@ body {
                 align-items: center;
                 padding-top: 240px;
             }
+
             .page-img {
                 margin: 0 auto;
                 z-index: 500;
@@ -945,11 +915,10 @@ body {
                     margin: 0;
                 }
                 img {
-                    // background-color: red;
                     width: 255px;
+
                     @include responsive(large-screens) {
                         width: 555px;
-                        // margin-top: 135px;
                     }
                 }
             }
@@ -964,6 +933,7 @@ body {
                 }
                 .intro {
                     color: $color-main;
+
                     h3 {
                         position: absolute;
                         left: 50%;
@@ -992,6 +962,7 @@ body {
                     }
                     h4 {
                         display: none;
+
                         @include responsive(large-screens) {
                             font-size: $font-size-30;
                             margin-bottom: 30px;
@@ -999,6 +970,7 @@ body {
                     }
                     .pbox {
                         margin-top: 70px;
+
                         p {
                             font-family: $font-sub2;
                             font-size: $font-size-14;
@@ -1027,6 +999,7 @@ body {
                     -3px 3px 3px rgba(255, 255, 255, 0.3),
                     3px -3px 3px rgba(255, 255, 255, 0.3),
                     -3px -3px 3px rgba(255, 255, 255, 0.3);
+
                     img {
                         transform: translateX(10px);
                     }
@@ -1084,13 +1057,13 @@ body {
         .flex-box {
             display: flex;
             flex-direction: column;
+
             @include responsive(large-screens) {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
                 padding-top: 240px;
-                // height: 129.5vh;
             }
             .page-img {
                 margin: 0 auto;
@@ -1124,6 +1097,7 @@ body {
 
                 .intro {
                     color: $color-main;
+
                     h3 {
                         position: absolute;
                         left: 50%;
@@ -1142,6 +1116,7 @@ body {
                     }
                     .pbox {
                         margin-top: 30px;
+
                         p {
                             font-family: $font-sub2;
                             font-size: $font-size-14;
@@ -1170,6 +1145,7 @@ body {
                     -3px 3px 3px rgba(255, 255, 255, 0.3),
                     3px -3px 3px rgba(255, 255, 255, 0.3),
                     -3px -3px 3px rgba(255, 255, 255, 0.3);
+
                     img {
                         transform: translateX(10px);
                     }
@@ -1223,20 +1199,21 @@ body {
         align-content: center;
         opacity: 0;
         animation: none;
-        // background-color: aqua;
+
         @include responsive(large-screens) {
             height: 1080px;
         }
         .flex-box {
             display: flex;
             flex-direction: column;
+
             @include responsive(large-screens) {
                 display: flex;
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 align-items: center;
-                // margin-top: 60px;
             }
+
             .page-img {
                 display: flex;
                 justify-content: space-between;
@@ -1248,7 +1225,6 @@ body {
 
                 img {
                     width: 300px;
-                    // margin: 10px;
                     margin: 0 auto;
                     margin-bottom: 35px;
 
@@ -1270,7 +1246,6 @@ body {
                 margin-bottom: 35px;
                 
                 @include responsive(large-screens) {
-                    // justify-content: space-between;
                     display: block;
                 }
 
@@ -1299,6 +1274,7 @@ body {
                     }
                     .pbox {
                         margin-top: 30px;
+
                         p {
                             font-family: $font-sub2;
                             font-size: $font-size-14;
@@ -1327,6 +1303,7 @@ body {
                     -3px 3px 3px rgba(255, 255, 255, 0.3),
                     3px -3px 3px rgba(255, 255, 255, 0.3),
                     -3px -3px 3px rgba(255, 255, 255, 0.3);
+
                     img {
                         transform: translateX(10px);
                     }
@@ -1374,13 +1351,14 @@ body {
     .teamproject {
         opacity: 0;
         animation: none;
-        // background-color: cadetblue;
+
         @include responsive(large-screens) {
             height: 1780px;
         }
         .flex-box {
             display: flex;
             flex-direction: column;
+
             .page-img {
                 margin: 0 auto;
                 margin-bottom: 35px;
@@ -1391,6 +1369,7 @@ body {
                     justify-content: space-between;
                     margin: 0;
                 }
+
                 img {
                     width: 291px;
 
@@ -1419,8 +1398,10 @@ body {
                     font-size: $font-size-20;
                     margin-top: -750px;
                 }
+
                 .intro {
                     color: $color-main;
+
                     h3 {
                         position: absolute;
                         left: 50%;
@@ -1439,6 +1420,7 @@ body {
                     }
                     .pbox {
                         margin-top: 35px;
+
                         p {
                             font-family: $font-sub2;
                             font-size: $font-size-14;
@@ -1477,6 +1459,7 @@ body {
                     -3px 3px 3px rgba(255, 255, 255, 0.3),
                     3px -3px 3px rgba(255, 255, 255, 0.3),
                     -3px -3px 3px rgba(255, 255, 255, 0.3);
+
                     img {
                         transform: translateX(10px);
                     }
@@ -1518,7 +1501,4 @@ body {
         opacity: 1;
         animation: slide-rt-to-lf 1.5s ease forwards; /* 애니메이션 적용 */
     }
-
-
-
 } ////////////////////////////// main ///////////////////////////////////
